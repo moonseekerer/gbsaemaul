@@ -402,7 +402,7 @@ class GyeongbukMapEngine {
       <div style="background:#ffffff; border:1px solid var(--border-color); border-radius:8px; padding:10px 12px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; border-bottom:1px solid var(--border-color); padding-bottom:4px;">
           <span style="font-size:12px; font-weight:800; color:var(--primary); display:flex; align-items:center; gap:4px;">
-            📰 ${regionName} 새마을 뉴스 아카이브 (전수)
+            📰 ${regionName} 새마을 뉴스 아카이브
           </span>
           <span style="font-size:10.5px; background:var(--primary-light); color:var(--primary); padding:2px 6px; border-radius:4px; font-weight:700;">
             총 ${(typeof muniNewsArchive !== 'undefined' && muniNewsArchive[regionName]) ? muniNewsArchive[regionName].length : 0}건 수집

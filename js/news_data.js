@@ -42,11 +42,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "근면·자조·협동의 정신 재조명…포항시,새마을문화제 성료",
-      "url": "https://www.sentv.co.kr/article/view/sentv202604240136",
-      "press": "언론사"
-    },
-    {
       "title": "포항시, 공동체 가치 확산 주력…새마을정신 계승부터 스마트 안심마을",
       "url": "https://view.asiae.co.kr/article/2026042413051378510",
       "press": "언론사"
@@ -60,11 +55,6 @@ const muniNewsArchive = {
       "title": "포항시,새마을의 날 기념식·문화제 개최…공동체 가치 재조명",
       "url": "http://www.metroseoul.co.kr/article/20260424500322",
       "press": "메트로신문"
-    },
-    {
-      "title": "근면·자조·협동의 정신 재조명…포항시 새마을문화제 성료",
-      "url": "https://www.hidomin.com/news/articleView.html?idxno=702813",
-      "press": "경북도민일보"
     },
     {
       "title": "“근면·자조·협동 정신 되새겼다”… 포항새마을문화제 성황",
@@ -232,11 +222,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "나부터 시작하는 지구 지키기…포항시 새마을회, 친환경 실천 캠페인 펼",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3045416",
-      "press": "언론사"
-    },
-    {
       "title": "직ㆍ공장새마을운동포항시협의회, 생수나눔 행사",
       "url": "https://www.ksmnews.co.kr/news/view.php?idx=554076",
       "press": "언론사"
@@ -322,11 +307,6 @@ const muniNewsArchive = {
       "press": "뉴스1"
     },
     {
-      "title": "새마을 운동정신으로",
-      "url": "https://www.news1.kr/photos/7254225",
-      "press": "뉴스1"
-    },
-    {
       "title": "'농촌 활력 넘치는 화합 장터' 제11회 기계면 농·특산물 홍보판매 축제",
       "url": "http://www.newsprime.co.kr/news/article.html?no=711005",
       "press": "언론사"
@@ -402,16 +382,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영호남새마을지도자협의회, 포항새마을운동발상지 기념관 방문",
-      "url": "https://www.ksmnews.co.kr/news/view.php?idx=546824",
-      "press": "언론사"
-    },
-    {
-      "title": "영호남새마을지도자협의회, 포항새마을운동발상지 기념관 방문",
-      "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4044869",
-      "press": "경북일보"
-    },
-    {
       "title": "직·공장새마을운동포항시협의회, 다문화가정 장기 유배문화 체험활동",
       "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4025417",
       "press": "경북일보"
@@ -472,11 +442,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "포항시새마을회, ‘사랑의 김장 담그기&나눔 행사’로 이웃 사랑 실천",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=726929",
-      "press": "언론사"
-    },
-    {
       "title": "포항시새마을부녀회, 공경문화운동실천",
       "url": "http://www.ksmnews.co.kr/news/view.php?idx=481421",
       "press": "언론사"
@@ -487,18 +452,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "포항시의회, 제324회 제1차 정례회 폐회",
-      "url": "https://tk.newdaily.co.kr/site/data/html/2025/07/01/2025070100005.html",
-      "press": "언론사"
-    },
-    {
       "title": "포항시의회 제1차 정례회 폐회… 행감 결과보고서 채택",
       "url": "https://www.joongdo.co.kr/web/view.php?key=20250630010009390",
-      "press": "언론사"
-    },
-    {
-      "title": "포항시의회, 제324회 제1차 정례회 폐회",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=763548",
       "press": "언론사"
     },
     {
@@ -509,11 +464,6 @@ const muniNewsArchive = {
     {
       "title": "포항시의회, 제324회 제1차 정례회 폐회… 21일간의 일정 마무리",
       "url": "https://www.polinews.co.kr/news/articleView.html?idxno=699368",
-      "press": "언론사"
-    },
-    {
-      "title": "포항시의회, 제324회 제1차 정례회 폐회",
-      "url": "http://www.segye.com/newsView/20250630517645?OutUrl=naver",
       "press": "언론사"
     },
     {
@@ -641,11 +591,6 @@ const muniNewsArchive = {
     {
       "title": "시민과 함께 만든 성과,경주시 새마을 운동'도내 최고'",
       "url": "https://www.onews.tv/news/articleView.html?idxno=267400",
-      "press": "언론사"
-    },
-    {
-      "title": "시민과 함께 만든 성과,경주시 새마을운동'도내 최고'",
-      "url": "https://www.pointe.co.kr/news/articleView.html?idxno=64650",
       "press": "언론사"
     },
     {
@@ -789,11 +734,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "베트남 후에시새마을지도자,경주시방문…선진 농업현장 체험",
-      "url": "https://www.kbsm.net/news/view.php?idx=481055",
-      "press": "경북신문"
-    },
-    {
       "title": "베트남 후에시새마을지도자들, 경주서 '선진 농업현장' 체험",
       "url": "https://www.nocutnews.co.kr/news/6363716?utm_source=naver&utm_medium=article&utm_campaign=20250702045825",
       "press": "언론사"
@@ -819,33 +759,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "경주시, 경북도새마을운동읍면동 평가'우수상'수상",
-      "url": "http://www.m-i.kr/news/articleView.html?idxno=1186447",
-      "press": "언론사"
-    },
-    {
-      "title": "경주시, 경북도새마을운동읍면동 평가 '우수상' 수상",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=473097",
-      "press": "도민일보"
-    },
-    {
-      "title": "경주시, 경북도새마을운동읍면동 평가 ‘우수상’ 수상",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=730383",
-      "press": "언론사"
-    },
-    {
-      "title": "경주시, 경북도새마을운동읍면동 평가 '우수상' 수상",
-      "url": "https://www.nocutnews.co.kr/news/6256115?utm_source=naver&utm_medium=article&utm_campaign=20241205042849",
-      "press": "언론사"
-    },
-    {
       "title": "브레이크뉴스",
       "url": "http://www.breaknews.com",
-      "press": "언론사"
-    },
-    {
-      "title": "경주시, 경북도새마을운동읍면동 평가‘우수상’수상",
-      "url": "http://www.breaknews.com/1076315",
       "press": "언론사"
     },
     {
@@ -892,16 +807,6 @@ const muniNewsArchive = {
       "title": "경주시,새마을운동활성화 다짐대회 성료",
       "url": "https://www.nspna.com/news/?mode=view&newsid=694870",
       "press": "언론사"
-    },
-    {
-      "title": "경주시,새마을운동활성화 다짐대회 성료",
-      "url": "http://www.seoulwire.com/news/articleView.html?idxno=606966",
-      "press": "언론사"
-    },
-    {
-      "title": "경주시,새마을운동활성화 다짐대회 성료",
-      "url": "http://www.kbsm.net/news/view.php?idx=430926",
-      "press": "경북신문"
     },
     {
       "title": "경주시,새마을운동활성화 다짐대회 열어",
@@ -1036,16 +941,6 @@ const muniNewsArchive = {
     {
       "title": "경주시, 2020새마을운동시·군 종합평가 대상",
       "url": "http://www.newstown.co.kr/news/articleView.html?idxno=479435",
-      "press": "언론사"
-    },
-    {
-      "title": "경주시, 2020새마을운동시·군 종합평가 '대상' 수상",
-      "url": "http://www.newsworks.co.kr/news/articleView.html?idxno=513075",
-      "press": "언론사"
-    },
-    {
-      "title": "경주시, '2020새마을운동시·군 종합평가' 대상 수상",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1355863",
       "press": "언론사"
     },
     {
@@ -1306,11 +1201,6 @@ const muniNewsArchive = {
       "press": "대구일보"
     },
     {
-      "title": "‘김천시새마을운동50년사’ 발간",
-      "url": "http://www.kbsm.net/news/view.php?idx=374795",
-      "press": "경북신문"
-    },
-    {
       "title": "브레이크뉴스",
       "url": "http://www.breaknews.com",
       "press": "언론사"
@@ -1396,11 +1286,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "김천시, 경북도새마을운동종합평가 '대상' 수상",
-      "url": "https://bit.ly/3lw1qmG",
-      "press": "언론사"
-    },
-    {
       "title": "김천시새마을회 정기총회 개최…\"따뜻한 공동체 만들기 앞장\"",
       "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4063003",
       "press": "경북일보"
@@ -1414,11 +1299,6 @@ const muniNewsArchive = {
       "title": "김천시새마을회, 올해 첫 정기총회 개최",
       "url": "https://www.idaegu.co.kr/news/articleView.html?idxno=537358",
       "press": "대구일보"
-    },
-    {
-      "title": "김천시새마을회, 2026년 정기총회 개최",
-      "url": "https://www.ksmnews.co.kr/news/view.php?idx=587883",
-      "press": "언론사"
     },
     {
       "title": "김천시,새마을운동종합평가 대상·우수상 차지",
@@ -1478,11 +1358,6 @@ const muniNewsArchive = {
       "press": "매일신문"
     },
     {
-      "title": "안동시새마을회,안동시청년새마을연대 발대식 개최",
-      "url": "https://www.kbsm.net/news/view.php?idx=524226",
-      "press": "경북신문"
-    },
-    {
       "title": "경북도민일보",
       "url": "http://www.hidomin.com",
       "press": "경북도민일보"
@@ -1493,18 +1368,8 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "안동시, 2025년새마을운동읍면동 특수시책 평가 ‘우수상’ 수상",
-      "url": "https://biz.heraldcorp.com/article/10628403?ref=naver",
-      "press": "언론사"
-    },
-    {
       "title": "안동시,새마을운동시군·읍면동 평가 우수",
       "url": "https://www.ksmnews.co.kr/news/view.php?idx=578544",
-      "press": "언론사"
-    },
-    {
-      "title": "안동시, 2025년새마을운동읍면동 특수시책 평가 ‘우수상’ 수상",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2156420",
       "press": "언론사"
     },
     {
@@ -1545,16 +1410,6 @@ const muniNewsArchive = {
     {
       "title": "직․공장새마을운동안동시협의회, 어르신 위한 장수사진 촬영",
       "url": "https://www.nbntv.co.kr/news/articleView.html?idxno=3033853",
-      "press": "언론사"
-    },
-    {
-      "title": "직 · 공장새마을운동안동시협의회, 어르신 위한 장수사진 촬영",
-      "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2240621",
-      "press": "언론사"
-    },
-    {
-      "title": "직․공장새마을운동안동시협의회, 어르신 위한 장수사진 촬영",
-      "url": "http://www.bzeronews.com/news/articleView.html?idxno=699729",
       "press": "언론사"
     },
     {
@@ -1808,11 +1663,6 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "안동새마을과 바르게살기운동코로나19 극복위해 함께 뛰어요",
-      "url": "http://www.metroseoul.co.kr/article/20200322500036",
-      "press": "메트로신문"
-    },
-    {
       "title": "경북안동시“2018년새마을사랑의 연탄나누기운동” 전개",
       "url": "http://www.viva100.com/main/view.php?key=20181206010001987",
       "press": "브릿지경제"
@@ -1868,11 +1718,6 @@ const muniNewsArchive = {
       "press": "도민일보"
     },
     {
-      "title": "안동시새마을부녀회,새마을환경살리기 ‘3R 자원모으기운동’ 실시",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2131552",
-      "press": "언론사"
-    },
-    {
       "title": "안동시 새마을부녀회, 3R 자원모으기운동",
       "url": "https://www.ksmnews.co.kr/news/view.php?idx=569325",
       "press": "언론사"
@@ -1916,11 +1761,6 @@ const muniNewsArchive = {
       "title": "안동, 2015년새마을운동종합평가 “최우수상”수상",
       "url": "http://www.yeongnam.com/mnews/newsview.do?mode=newsView&newskey=20151215.990011452273392",
       "press": "영남일보"
-    },
-    {
-      "title": "안동시, 2017새마을운동종합평가 최우수 기관상 수상",
-      "url": "http://www.ilyoseoul.co.kr/news/articleView.html?idxno=214641",
-      "press": "언론사"
     },
     {
       "title": "경북도,안동시·도산서원과 서울 경복궁에서 제6회 ‘퇴계선생 마지막",
@@ -2260,11 +2100,6 @@ const muniNewsArchive = {
       "press": "매일신문"
     },
     {
-      "title": "구미시, 제22회 자연보호 백일장 시상식 개최",
-      "url": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160288875401022",
-      "press": "언론사"
-    },
-    {
       "title": "구미시, 제6기 아동참여위원회 정책제안 워크숍",
       "url": "https://www.kbsm.net/news/view.php?idx=502150",
       "press": "경북신문"
@@ -2325,16 +2160,6 @@ const muniNewsArchive = {
       "press": "도민일보"
     },
     {
-      "title": "외국인 유학생,새마을운동체험하며 구미 알린다",
-      "url": "https://www.idaegu.co.kr/news/articleView.html?idxno=503641",
-      "press": "대구일보"
-    },
-    {
-      "title": "외국인 유학생,새마을운동체험하며 구미 알린다",
-      "url": "http://www.hidomin.com/news/articleView.html?idxno=575185",
-      "press": "경북도민일보"
-    },
-    {
       "title": "구미시, ‘구미농아인의 날 기념식’ 개최...소통과 공감의 장 마련",
       "url": "https://www.nspna.com/news/?mode=view&newsid=788333",
       "press": "언론사"
@@ -2352,16 +2177,6 @@ const muniNewsArchive = {
     {
       "title": "구미시, '2026년 시민제안사업' 심의 열려",
       "url": "https://view.asiae.co.kr/article/2025102710121788412",
-      "press": "언론사"
-    },
-    {
-      "title": "구미시, 주민이 만드는 예산…2026년 시민제안사업 심의 열려",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=519374",
-      "press": "도민일보"
-    },
-    {
-      "title": "구미시, 주민이 만드는 예산...2026년 시민제안사업 심의 열려",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=783723",
       "press": "언론사"
     },
     {
@@ -2397,11 +2212,6 @@ const muniNewsArchive = {
     {
       "title": "구미시, '청소년 꿈·끼 자랑대회' 성료",
       "url": "https://srn.hcn.co.kr/user/news/BD_newsView.do?news_category=02&story_id=NS2025102000010&story_seq=0&soCode=114&socttSn=NS2025102000010&socttSeq=0",
-      "press": "언론사"
-    },
-    {
-      "title": "구미시, 청소년 꿈·끼 자랑대회 ‘성료’",
-      "url": "https://biz.heraldcorp.com/article/10596600?ref=naver",
       "press": "언론사"
     },
     {
@@ -2477,11 +2287,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영주시청년새마을연대, '행복버스' 타고 어르신 찾아간다",
-      "url": "https://www.kbsm.net/news/view.php?idx=513695",
-      "press": "경북신문"
-    },
-    {
       "title": "영주시청년새마을연대, '행복버스 출정식' 갖고 본격적인 현장 봉사활",
       "url": "https://www.gukjenews.com/news/articleView.html?idxno=3542001",
       "press": "언론사"
@@ -2555,11 +2360,6 @@ const muniNewsArchive = {
       "title": "영주시, 경상북도새마을운동종합평가 2년 연속 '최우수' 수상",
       "url": "https://www.ksmnews.co.kr/news/view.php?idx=579696",
       "press": "언론사"
-    },
-    {
-      "title": "영주시, 경북도새마을운동종합평가 2년 연속 '최우수'",
-      "url": "http://www.hidomin.com/news/articleView.html?idxno=601478",
-      "press": "경북도민일보"
     },
     {
       "title": "영주시,새마을운동해외, 확산 문화",
@@ -2737,11 +2537,6 @@ const muniNewsArchive = {
       "press": "도민일보"
     },
     {
-      "title": "영주시새마을회, 제18대 우찬우 회장 선출",
-      "url": "https://www.ksmnews.co.kr/news/view.php?idx=595661",
-      "press": "언론사"
-    },
-    {
       "title": "영주시 새마을회, 우찬우 회장 선출",
       "url": "https://www.gukjenews.com/news/articleView.html?idxno=3532845",
       "press": "언론사"
@@ -2770,16 +2565,6 @@ const muniNewsArchive = {
       "title": "영주시새마을회 우영선 신임 회장 선출",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=435340",
       "press": "도민일보"
-    },
-    {
-      "title": "영주시새마을회, 우영선 신임 회장 선출",
-      "url": "https://www.gukjenews.com/news/articleView.html?idxno=2949163",
-      "press": "언론사"
-    },
-    {
-      "title": "영주시새마을회, 우영선 신임 회장 선출",
-      "url": "http://www.ksmnews.co.kr/news/view.php?idx=473565",
-      "press": "언론사"
     },
     {
       "title": "영주시새마을회, 우찬우 회장 선출…\"청년 참여 확대\"",
@@ -2924,11 +2709,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "'2025영천시 새마을운동종합평가대회 및 지도자 한마음 전진대회' 개최",
-      "url": "https://www.idaegu.co.kr/news/articleView.html?idxno=533009",
-      "press": "대구일보"
-    },
-    {
       "title": "영천시새마을회,새마을운동종합평가대회",
       "url": "https://www.kbmaeil.com/article/20251216500336",
       "press": "경북매일"
@@ -2989,11 +2769,6 @@ const muniNewsArchive = {
       "press": "대구일보"
     },
     {
-      "title": "영천시새마을회,새마을환경살리기운동추진",
-      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202410071707440690944",
-      "press": "언론사"
-    },
-    {
       "title": "영천시새마을회,새마을운동종합평가대회·한마음 전진대회 개최",
       "url": "http://www.kyongbuk.co.kr/news/articleView.html?idxno=2150603",
       "press": "경북일보"
@@ -3036,16 +2811,6 @@ const muniNewsArchive = {
     {
       "title": "2022영천시 새마을운동종합평가대회 개최",
       "url": "https://www.ajunews.com/view/20221229062253525",
-      "press": "언론사"
-    },
-    {
-      "title": "영천시,새마을운동종합평가대회 개최",
-      "url": "http://www.kbsm.net/news/view.php?idx=376232",
-      "press": "경북신문"
-    },
-    {
-      "title": "2022영천시 새마을운동종합평가대회 개최",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1643185",
       "press": "언론사"
     },
     {
@@ -3149,11 +2914,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영천시고경면, 설맞이 국토대청결운동실시",
-      "url": "https://www.kbsm.net/news/view.php?idx=507533",
-      "press": "경북신문"
-    },
-    {
       "title": "이승록영천시청도군 무소속 후보 \"새마을운동정신을 이어받아서 낙후된 영천 청도 지역주민들과 다 같이 함께 발전해 나갈 것을 약속드립니다. 기호 8번 이승록을 꼭 많이 지지해 주십시오.\" 무소속 김장주 후보 \"지금 이대로 좋습니까? 지역 발전 전문가가 바꾸겠습니다\" 영천 부시장과 경상북도 행정부지사를",
       "url": "https://dgmbc.com/article/2Jha-CuM5W3o",
       "press": "언론사"
@@ -3177,11 +2937,6 @@ const muniNewsArchive = {
       "title": "한세현 제18대영천시새마을회장 취임",
       "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=375344&part_idx=7",
       "press": "언론사"
-    },
-    {
-      "title": "한세현 제18대영천시새마을회장 취임",
-      "url": "http://www.kbsm.net/news/view.php?idx=346022",
-      "press": "경북신문"
     },
     {
       "title": "영천시새마을회 제18대 한세영 신임회장 취임",
@@ -3461,11 +3216,6 @@ const muniNewsArchive = {
       "press": "경북신문"
     },
     {
-      "title": "상주시공성면,새마을운동기념비 제막식",
-      "url": "http://www.kbsm.net/news/view.php?idx=465055",
-      "press": "경북신문"
-    },
-    {
       "title": "(이 동네 이 사업)상주시 새마을가꾸기 사업",
       "url": "https://www.idaegu.com/news/articleView.html?idxno=633112",
       "press": "언론사"
@@ -3489,11 +3239,6 @@ const muniNewsArchive = {
       "title": "상주시, 경상북도새마을운동종합평가 '우수' 수상",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=473145",
       "press": "도민일보"
-    },
-    {
-      "title": "상주시, 경상북도새마을운동종합평가 ‘우수’ 수상",
-      "url": "http://www.kbsm.net/news/view.php?idx=456343",
-      "press": "경북신문"
     },
     {
       "title": "상주시, 경상북도새마을운동종합평가서 '우수' 수상",
@@ -3611,18 +3356,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "상주시, 경상북도새마을운동종합평가 '대상' 수상",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=385247",
-      "press": "도민일보"
-    },
-    {
       "title": "“지역 발전 위한 노고에 감사” …상주시 새마을지도자대회 성료",
       "url": "http://www.ksmnews.co.kr/news/view.php?idx=459193",
-      "press": "언론사"
-    },
-    {
-      "title": "상주시, 경상북도새마을운동종합평가 ‘대상’ 수상",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1635934",
       "press": "언론사"
     },
     {
@@ -3633,11 +3368,6 @@ const muniNewsArchive = {
     {
       "title": "아시아투데이",
       "url": "http://www.asiatoday.co.kr",
-      "press": "언론사"
-    },
-    {
-      "title": "상주시, 경상북도새마을운동종합평가 ‘대상’ 수상",
-      "url": "https://www.asiatoday.co.kr/view.php?key=20221209010004625",
       "press": "언론사"
     },
     {
@@ -3679,11 +3409,6 @@ const muniNewsArchive = {
       "title": "상주시새마을회, 생명운동2050 탄소중립 동참",
       "url": "http://www.newsway.co.kr/news/view?tp=1&ud=2022011015311373790",
       "press": "언론사"
-    },
-    {
-      "title": "상주시새마을회, 생명운동2050 탄소중립 실천 결의",
-      "url": "http://www.hidomin.com/news/articleView.html?idxno=473611",
-      "press": "경북도민일보"
     },
     {
       "title": "생명운동함께 합시다! …상주시새마을회, 탄소중립 실천 결의",
@@ -3741,11 +3466,6 @@ const muniNewsArchive = {
       "press": "경북신문"
     },
     {
-      "title": "새마을지도자상주시협의회, 경상북도새마을운동종합평가 '최우수상'",
-      "url": "http://www.dkilbo.com/news/articleView.html?idxno=352352",
-      "press": "도민일보"
-    },
-    {
       "title": "새마을지도자상주시협의회, 道새마을운동종합평가 최우수상",
       "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=361558&part_idx=266",
       "press": "언론사"
@@ -3779,11 +3499,6 @@ const muniNewsArchive = {
       "title": "상주시 새마을회, '흙살리기운동' 발대식 … 영농폐기물 집중 수거",
       "url": "https://view.asiae.co.kr/article/2021060207365077741",
       "press": "언론사"
-    },
-    {
-      "title": "상주시새마을회 흙살리기운동발대식 개최",
-      "url": "http://www.hidomin.com/news/articleView.html?idxno=454663",
-      "press": "경북도민일보"
     },
     {
       "title": "상주시 새마을지도자대회 낙동면 최우수 수상",
@@ -4013,11 +3728,6 @@ const muniNewsArchive = {
       "press": "대구일보"
     },
     {
-      "title": "문경시, 경상북도새마을운동종합평가 최우수상 수상",
-      "url": "https://www.asiatoday.co.kr/view.php?key=20221214010006903",
-      "press": "언론사"
-    },
-    {
       "title": "문경시, 2022년 '새마을운동시·군 종합평가' 최우수",
       "url": "http://moneys.mt.co.kr/news/mwView.php?no=2022121415463156382",
       "press": "언론사"
@@ -4026,11 +3736,6 @@ const muniNewsArchive = {
       "title": "문경시, 경상북도새마을운동종합평가 '최우수'",
       "url": "https://daily.hankooki.com/news/articleView.html?idxno=904135",
       "press": "언론사"
-    },
-    {
-      "title": "직장·공장새마을운동문경시협의회, 사랑의 짜장면 나눔봉사",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=401184",
-      "press": "도민일보"
     },
     {
       "title": "문경시새마을회, 새해새마을지도자 문경사랑 의식교육",
@@ -4118,16 +3823,6 @@ const muniNewsArchive = {
       "press": "경북일보"
     },
     {
-      "title": "문경시새마을회, 헌옷 모으기 경진대회 개최",
-      "url": "https://www.kbmaeil.com/article/20260210500447",
-      "press": "경북매일"
-    },
-    {
-      "title": "문경시새마을회, 2026 헌옷모으기 경진대회 개최",
-      "url": "https://www.kbsm.net/news/view.php?idx=507730",
-      "press": "경북신문"
-    },
-    {
       "title": "문경을 달군 '헌옷의 재탄생', 탄소중립 실천 현장에 200명 모였다",
       "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=815468",
       "press": "언론사"
@@ -4173,11 +3868,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "문경시, 경북도새마을운동종합평가 최우수상 수상",
-      "url": "http://www.asiatoday.co.kr/view.php?key=20191205010003531",
-      "press": "언론사"
-    },
-    {
       "title": "문경시,새마을운동종합평가 최우수상 수상",
       "url": "https://www.nocutnews.co.kr/news/5254540",
       "press": "언론사"
@@ -4218,16 +3908,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "문경시,새마을운동종합평가 2년 연속‘대상’수상",
-      "url": "http://www.breaknews.com/621654",
-      "press": "언론사"
-    },
-    {
-      "title": "문경시,새마을운동종합평가 2년 연속 '대상' 수상",
-      "url": "http://www.kbmaeil.com/news/articleView.html?idxno=462255",
-      "press": "경북매일"
-    },
-    {
       "title": "문경시, 경북도새마을운동평가 2년 연속 ‘대상’ 수상",
       "url": "http://www.asiatoday.co.kr/view.php?key=20181217010009995",
       "press": "언론사"
@@ -4251,11 +3931,6 @@ const muniNewsArchive = {
       "title": "문경시, 경상북도새마을운동종합평가 ‘대상’ 수상",
       "url": "http://www.kyongbuk.co.kr/?mod=news&act=articleView&idxno=1013221",
       "press": "경북일보"
-    },
-    {
-      "title": "문경시2017새마을운동종합평가 ‘대상’ 수상",
-      "url": "http://www.asiatoday.co.kr/view.php?key=20171227010013412",
-      "press": "언론사"
     },
     {
       "title": "문경시, 道새마을운동시·군 종합평가 `대상`",
@@ -4315,18 +3990,8 @@ const muniNewsArchive = {
       "press": "도민일보"
     },
     {
-      "title": "아진산업(주),경산시새마을회에 업무용 차량 기증",
-      "url": "https://www.kbmaeil.com/article/20260705500556",
-      "press": "경북매일"
-    },
-    {
       "title": "경산시새마을지도자용성면부녀회, 다슬기국 200인분 나눔…취약계층 건",
       "url": "https://www.kbsm.net/news/view.php?idx=526116",
-      "press": "경북신문"
-    },
-    {
-      "title": "아진산업㈜,경산시새마을회에 업무용 차량 기증",
-      "url": "https://www.kbsm.net/news/view.php?idx=525494",
       "press": "경북신문"
     },
     {
@@ -4368,11 +4033,6 @@ const muniNewsArchive = {
       "title": "경산시, '경북새마을운동평가' 우수상 수상",
       "url": "https://daily.hankooki.com/news/articleView.html?idxno=1308504",
       "press": "언론사"
-    },
-    {
-      "title": "경산시, 2025 경상북도새마을운동평가 '우수상' 수상",
-      "url": "https://www.kbsm.net/news/view.php?idx=500829",
-      "press": "경북신문"
     },
     {
       "title": "경상매일신문",
@@ -4475,19 +4135,9 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "경산시새마을회,새마을운동기록물 120여점 기증",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=495639",
-      "press": "도민일보"
-    },
-    {
       "title": "경산시새마을회, 경산박물관에 '새마을운동기록물' 기증..총 120여 점",
       "url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=624950",
       "press": "언론사"
-    },
-    {
-      "title": "경산시새마을회,새마을운동기록물 120여 점 기증",
-      "url": "https://www.kbmaeil.com/article/20250508500243",
-      "press": "경북매일"
     },
     {
       "title": "경산새마을금고, 사랑의 좀도리운동이웃돕기 성금 기탁",
@@ -4620,11 +4270,6 @@ const muniNewsArchive = {
       "press": "경북일보"
     },
     {
-      "title": "경산시와촌면새마을회새마을운동50주년 기념비 제막식",
-      "url": "http://www.idaegu.com/newsView/idg202011240024",
-      "press": "언론사"
-    },
-    {
       "title": "경산시새마을회,새마을운동50주년 역대 회장 초청 간담회",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=426289",
       "press": "경북도민일보"
@@ -4673,11 +4318,6 @@ const muniNewsArchive = {
       "title": "경북새마을지도자대회 성료",
       "url": "http://www.ksmnews.co.kr/news/view.php?idx=457719",
       "press": "언론사"
-    },
-    {
-      "title": "2023 경상북도새마을지도자대회 경주서 열려",
-      "url": "http://www.kbsm.net/news/view.php?idx=414737",
-      "press": "경북신문"
     },
     {
       "title": "“받던 나라가 주는 나라된 것은새마을지도자들 덕분”",
@@ -4757,19 +4397,9 @@ const muniNewsArchive = {
       "press": "도민일보"
     },
     {
-      "title": "의성군, 경북새마을운동종합평가 '우수' 수상",
-      "url": "http://www.m-i.kr/news/articleView.html?idxno=1314056",
-      "press": "언론사"
-    },
-    {
       "title": "의성군, 경북도새마을운동종합평가 '우수상'",
       "url": "https://www.kbsm.net/news/view.php?idx=500879",
       "press": "경북신문"
-    },
-    {
-      "title": "의성군, 경북새마을운동종합평가 ‘우수’ 수상",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=792109",
-      "press": "언론사"
     },
     {
       "title": "의성군, 경북새마을운동종합평가 ‘우수상’ 수상",
@@ -4812,11 +4442,6 @@ const muniNewsArchive = {
       "press": "경북매일"
     },
     {
-      "title": "직장공장새마을운동남양주시협의회, 의성 산불피해 농가에 농업용 삽 5",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=491887",
-      "press": "도민일보"
-    },
-    {
       "title": "직장공장새마을운동남양주협, 경북의성군산불 피해 복구에 ‘삽 500자",
       "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2036304",
       "press": "언론사"
@@ -4842,33 +4467,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "의성군, 경북도새마을운동시군 종합평가 우수상 수상",
-      "url": "https://www.viva100.com/article/20241205500622",
-      "press": "브릿지경제"
-    },
-    {
-      "title": "의성군, 경북도새마을운동시군 종합평가 ‘우수상’ 수상",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=730392",
-      "press": "언론사"
-    },
-    {
-      "title": "의성군, 경북도새마을운동시·군 종합평가 우수상 수상",
-      "url": "http://www.kbsm.net/news/view.php?idx=456393",
-      "press": "경북신문"
-    },
-    {
-      "title": "의성군, ‘경북도새마을운동시군 종합평가’ 우수상 수상",
-      "url": "https://tk.newdaily.co.kr/site/data/html/2024/12/06/2024120600335.html",
-      "press": "언론사"
-    },
-    {
       "title": "의성군,새마을운동시군종합 평가 우수상",
       "url": "http://www.ksmnews.co.kr/news/view.php?idx=514509",
-      "press": "언론사"
-    },
-    {
-      "title": "의성군, 경북도새마을운동시군 종합평가 우수상 수상",
-      "url": "https://www.cnbnews.com/news/article.html?no=633996",
       "press": "언론사"
     },
     {
@@ -4877,18 +4477,8 @@ const muniNewsArchive = {
       "press": "브릿지경제"
     },
     {
-      "title": "의성군, 경북도새마을운동시군 종합평가 우수상 수상",
-      "url": "http://www.kukinews.com/newsView/kuk202312140083",
-      "press": "언론사"
-    },
-    {
       "title": "의성군, 경북새마을운동종합평가 '우수상'",
       "url": "https://daily.hankooki.com/news/articleView.html?idxno=1031102",
-      "press": "언론사"
-    },
-    {
-      "title": "의성군, 경북도새마을운동시군 종합평가 우수상 수상",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=673199",
       "press": "언론사"
     },
     {
@@ -4914,11 +4504,6 @@ const muniNewsArchive = {
     {
       "title": "의성군, 산불피해 복구 사회단체장 회의 개최",
       "url": "https://www.gukjenews.com/news/articleView.html?idxno=3256696",
-      "press": "언론사"
-    },
-    {
-      "title": "의성군, 산불피해 복구 위한 사회단체장 회의 개최",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=751751",
       "press": "언론사"
     },
     {
@@ -4962,11 +4547,6 @@ const muniNewsArchive = {
       "press": "대구일보"
     },
     {
-      "title": "의성군, 경북도새마을운동시군 종합평가 대상 수상",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=609406",
-      "press": "언론사"
-    },
-    {
       "title": "브레이크뉴스",
       "url": "http://www.breaknews.com",
       "press": "언론사"
@@ -4995,21 +4575,6 @@ const muniNewsArchive = {
       "title": "의성군새마을회, 2026년도 단체별 정기총회 개최",
       "url": "https://www.m-i.kr/news/articleView.html?idxno=1336393",
       "press": "언론사"
-    },
-    {
-      "title": "의성군 새마을회, 2026년도 단체별 정기총회 개최",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=533675",
-      "press": "도민일보"
-    },
-    {
-      "title": "의성군새마을회, 2026년도 단체별 정기총회 개최",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=802516",
-      "press": "언론사"
-    },
-    {
-      "title": "의성군새마을회, 2026년도 단체별 정기총회 개최",
-      "url": "https://www.kbsm.net/news/view.php?idx=508331",
-      "press": "경북신문"
     },
     {
       "title": "의성군새마을회, 2026년 활동 본격 시동",
@@ -5057,11 +4622,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "의성군, 경북도새마을운동시군 종합평가 ‘우수상’ 수상",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=544001",
-      "press": "언론사"
-    },
-    {
       "title": "의성군새마을회, 생명운동지도자 현장교육 실시",
       "url": "http://www.nspna.com/news/?mode=view&newsid=541020",
       "press": "언론사"
@@ -5102,19 +4662,9 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "의성군,새마을운동시군 종합 평가 우수상",
-      "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=361368&part_idx=266",
-      "press": "언론사"
-    },
-    {
       "title": "의성군 새마을회,새마을지도자 한마음 수련대회 개최",
       "url": "http://www.kyongbuk.co.kr/news/articleView.html?idxno=2112749",
       "press": "경북일보"
-    },
-    {
-      "title": "의성군새마을회,새마을지도자 한마음 수련대회 개최",
-      "url": "https://www.gukjenews.com/news/articleView.html?idxno=2557164",
-      "press": "언론사"
     },
     {
       "title": "의성새마을운동활성화 유공자 표창",
@@ -5197,11 +4747,6 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "의성군새마을회, 비료포대모으기 경진대회 개최",
-      "url": "http://www.idaegu.com/newsView/idg202207110008",
-      "press": "언론사"
-    },
-    {
       "title": "의성군, 전국새마을운동종합평가 `우수상`",
       "url": "http://www.kbmaeil.com/news/articleView.html?idxno=313073",
       "press": "경북매일"
@@ -5234,11 +4779,6 @@ const muniNewsArchive = {
     {
       "title": "의성군, 도새마을운동종합평가 3년 연속 수상",
       "url": "http://www.breaknews.com/sub_read.html?uid=342074&section=sc2",
-      "press": "언론사"
-    },
-    {
-      "title": "의성군, 도새마을운동종합평가 3년 연속 수상",
-      "url": "http://www.newdaily.co.kr/news/article.html?no=227904",
       "press": "언론사"
     },
     {
@@ -5324,11 +4864,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "청송군새마을회, 경상북도새마을지도자대회에서 대통령표창 외 다수 수",
-      "url": "https://www.polinews.co.kr/news/articleView.html?idxno=673112",
-      "press": "언론사"
-    },
-    {
       "title": "민주평통청송군협의회",
       "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4018970",
       "press": "경북일보"
@@ -5364,11 +4899,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "청송군새마을회, '사랑의 김장 담그기' 행사 개최",
-      "url": "https://www.pressian.com/pages/articles/2024112311220629015?utm_source=naver&utm_medium=search",
-      "press": "언론사"
-    },
-    {
       "title": "청송군, ‘사랑의 김장담그기’ 행사 실시",
       "url": "http://www.metroseoul.co.kr/article/20241122500349",
       "press": "메트로신문"
@@ -5382,11 +4912,6 @@ const muniNewsArchive = {
       "title": "청송군새마을회, '사랑의 김장담그기'로 따뜻한 온정 나눠",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=471096",
       "press": "도민일보"
-    },
-    {
-      "title": "청송군새마을회, ‘사랑의 김장 담그기’ 행사 개최",
-      "url": "http://www.inews24.com/view/1786121",
-      "press": "언론사"
     },
     {
       "title": "경북청송군새마을회,‘사랑의 김장담그기’로 따뜻한 온정 나눠",
@@ -5449,11 +4974,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "청송군, 산불 피해 복구에 '온정의 손길' 이어져",
-      "url": "http://www.kbsm.net/news/view.php?idx=474050",
-      "press": "경북신문"
-    },
-    {
       "title": "청송군, 안팎의 따뜻한 마음과 연대...큰 위로",
       "url": "https://www.gukjenews.com/news/articleView.html?idxno=3268397",
       "press": "언론사"
@@ -5472,11 +4992,6 @@ const muniNewsArchive = {
       "title": "청송군인재육성장학회, 미래 인재육성 위한 장학금 기탁",
       "url": "http://www.metroseoul.co.kr/article/20250109500386",
       "press": "메트로신문"
-    },
-    {
-      "title": "청송군인재육성장학회, 연초부터 연이은 기탁",
-      "url": "http://www.inews24.com/view/1802392",
-      "press": "언론사"
     },
     {
       "title": "청송군인재육성장학회, 연초부터 연이은 기탁식",
@@ -5504,11 +5019,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "청송군새마을회, 사랑의 김장 담그기 ‘훈훈’",
-      "url": "http://www.ksmnews.co.kr/news/view.php?idx=454920",
-      "press": "언론사"
-    },
-    {
       "title": "청송군 새마을회, '사랑의 김장담그기' 행사 펼쳐",
       "url": "https://www.getnews.co.kr/news/articleView.html?idxno=649728",
       "press": "언론사"
@@ -5517,21 +5027,6 @@ const muniNewsArchive = {
       "title": "직장·공장새마을운동청송군협의회 창립총회 개최",
       "url": "http://www.dkilbo.com/news/articleView.html?idxno=364391",
       "press": "도민일보"
-    },
-    {
-      "title": "직장·공장새마을운동청송군협의회 창립총회 개최",
-      "url": "http://www.kbsm.net/news/view.php?idx=348748",
-      "press": "경북신문"
-    },
-    {
-      "title": "직장·공장새마을운동청송군협의회, 창립총회 개최",
-      "url": "https://tk.newdaily.co.kr/site/data/html/2022/05/07/2022050700009.html",
-      "press": "언론사"
-    },
-    {
-      "title": "직장·공장새마을운동청송군협의회, 창립총회 개최",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=569689",
-      "press": "언론사"
     },
     {
       "title": "경상매일신문",
@@ -5599,11 +5094,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "청송군 새마을운동제창 51주년, 제11회 새마을의 날 기념식 개최",
-      "url": "http://www.gukjenews.com/news/articleView.html?idxno=2208465",
-      "press": "언론사"
-    },
-    {
       "title": "청송군새마을회, 생명운동지도자 현장교육",
       "url": "http://www.idaegu.com/newsView/idg202209180003",
       "press": "언론사"
@@ -5627,11 +5117,6 @@ const muniNewsArchive = {
       "title": "청송군새마을회 및 회원단체, 취약계층 위한 이웃돕기 성금 900만원 전달",
       "url": "https://www.yeongnam.com/web/view.php?key=20221225010003104",
       "press": "영남일보"
-    },
-    {
-      "title": "청송군새마을회 및 회원단체, 취약계층 위한 이웃돕기 성금 900만원 전달",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=386856",
-      "press": "도민일보"
     },
     {
       "title": "\"연말연시 맞아 취약계층에 힘 보태요\" 청송새마을회 등 성금 900만원",
@@ -5709,24 +5194,9 @@ const muniNewsArchive = {
       "press": "도민일보"
     },
     {
-      "title": "청송군새마을회,새마을지도자 현장교육 실시",
-      "url": "https://www.kbsm.net/news/view.php?idx=499145",
-      "press": "경북신문"
-    },
-    {
-      "title": "청송군새마을회,새마을지도자 현장교육 실시",
-      "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207211",
-      "press": "언론사"
-    },
-    {
       "title": "'잘살아보세'에서 '생명 살림'으로…청송새마을운동의 변화",
       "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4058067",
       "press": "경북일보"
-    },
-    {
-      "title": "청송군 새마을회,새마을지도자 현장 교육 실시",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=789862",
-      "press": "언론사"
     },
     {
       "title": "청송군새마을회, 명품녹색지도자 워크숍 개최",
@@ -5841,16 +5311,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영양군 새마을회, 군민 화합 위한 윷놀이 대회 개최",
-      "url": "http://www.metroseoul.co.kr/article/20260306500235",
-      "press": "메트로신문"
-    },
-    {
-      "title": "영양군새마을회, 군민 화합 위한 윷놀이 대회 개최",
-      "url": "https://www.kbsm.net/news/view.php?idx=510771",
-      "press": "경북신문"
-    },
-    {
       "title": "영양군,새마을지도자 윷놀이대회 '논란'",
       "url": "https://daily.hankooki.com/news/articleView.html?idxno=1343854",
       "press": "언론사"
@@ -5869,11 +5329,6 @@ const muniNewsArchive = {
       "title": "직장·공장새마을운동영양군협의회, ‘사랑의 반찬 나누기’ 행사 실시",
       "url": "http://www.metroseoul.co.kr/article/20251125500404",
       "press": "메트로신문"
-    },
-    {
-      "title": "직장·공장새마을운동영양군협의회, '사랑의 반찬 나누기' 행사 실시",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=523663",
-      "press": "도민일보"
     },
     {
       "title": "직장‧공장새마을운동영양군협의회, 산불 이재민 위한 봉사활동 진행",
@@ -5901,11 +5356,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "새마을문고영양군지부, \"새마을놀이터 피서지문고\" 성황리 운영",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=508710",
-      "press": "도민일보"
-    },
-    {
       "title": "■영양군새마을회, '다시 봄은 온다' 희망 릴레이 진행 산불 피해 이재민들에게 삼겹데이 봉사 추진 직장·공장새마을운동영양군협의회(회장 김종삼)는 지난 25일 석보면 답곡2리 산불 피해 이재민 임시조립주택단지(16동)에서 '다시 봄은 온다' 희망 릴레이의 일환으로 삼겹데이를 진행했다. 이번 행사는",
       "url": "http://www.newsprime.co.kr/news/article.html?no=697818",
       "press": "언론사"
@@ -5931,34 +5381,14 @@ const muniNewsArchive = {
       "press": "메트로신문"
     },
     {
-      "title": "새마을운동중앙회영양군산불 피해 이재민에 성금 ․ 의류 기탁",
-      "url": "http://www.ikld.kr/news/articleView.html?idxno=310975",
-      "press": "언론사"
-    },
-    {
       "title": "새마을운동중앙회, 산불 피해 지원",
       "url": "https://www.getnews.co.kr/news/articleView.html?idxno=814907",
-      "press": "언론사"
-    },
-    {
-      "title": "새마을운동중앙회,영양군산불 피해 이재민에 성금ㆍ의류 기탁",
-      "url": "http://www.ksmnews.co.kr/news/view.php?idx=533278",
-      "press": "언론사"
-    },
-    {
-      "title": "새마을운동중앙회,영양군산불 피해 이재민에 성금·의류 기탁",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2032573",
       "press": "언론사"
     },
     {
       "title": "\"영양군산불 피해 주민들에 희망 씨앗되길\"",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=577118",
       "press": "경북도민일보"
-    },
-    {
-      "title": "새마을운동중앙회영양군산불 피해 이재민에 성금 ․ 의류 기탁",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=490534",
-      "press": "도민일보"
     },
     {
       "title": "새마을가족 윷놀이대회/영양군제공 직장·공장새마을운동영양군협의회는 6일영양군민회관에서새마을가족 윷놀이대회를 개최했다. 이번 행사는 회원 상호 간 화합과 친목을 도모하고 민족 전통문화 계승을 위해 추진되었으며,영양군 새마을회 회원 등 관계자 200여 명이 참석하였다.새마을회 회장단 및",
@@ -6006,28 +5436,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영양군, ‘대한민국 새단장’ 캠페인 추진",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=778505",
-      "press": "언론사"
-    },
-    {
-      "title": "영양군, '대한민국 새단장' 캠페인 추진",
-      "url": "https://view.asiae.co.kr/article/2025092214223913269",
-      "press": "언론사"
-    },
-    {
-      "title": "영양군, '대한민국 새단장' 캠페인 추진",
-      "url": "http://www.metroseoul.co.kr/article/20250922500134",
-      "press": "메트로신문"
-    },
-    {
       "title": "경북영양군, 대한민국 새단장 캠페인 추진",
       "url": "https://www.gukjenews.com/news/articleView.html?idxno=3383596",
-      "press": "언론사"
-    },
-    {
-      "title": "영양군,새마을가족 윷놀이대회 개최",
-      "url": "https://biz.heraldcorp.com/article/10414172?ref=naver",
       "press": "언론사"
     },
     {
@@ -6046,16 +5456,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영양군 새마을회, 생활 속 탄소중립 실천을 위한 “새마을환경살리기”",
-      "url": "http://www.metroseoul.co.kr/article/20240325500170",
-      "press": "메트로신문"
-    },
-    {
-      "title": "■영양군새마을가족 윷놀이대회 개최",
-      "url": "http://www.seoulwire.com/news/articleView.html?idxno=637393",
-      "press": "언론사"
-    },
-    {
       "title": "경북도민일보",
       "url": "http://www.hidomin.com",
       "press": "경북도민일보"
@@ -6071,11 +5471,6 @@ const muniNewsArchive = {
       "press": "대구일보"
     },
     {
-      "title": "직장공장새마을운동영양군협의회, 이웃돕기 성금 기탁",
-      "url": "http://www.kbsm.net/news/view.php?idx=373996",
-      "press": "경북신문"
-    },
-    {
       "title": "직장공장새마을운동영양군협의회, 이웃돕기 성금 200만원 기탁",
       "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1635502",
       "press": "언론사"
@@ -6089,11 +5484,6 @@ const muniNewsArchive = {
       "title": "영양군새마을회 '생명운동지도자 1만명 현장교육'실시",
       "url": "http://www.metroseoul.co.kr/article/20211024500009",
       "press": "메트로신문"
-    },
-    {
-      "title": "영양군새마을회, ‘생명운동지도자 1만명 현장교육’ 실시",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=533276",
-      "press": "언론사"
     },
     {
       "title": "영양군민회관서 '재활용품경진대회 시상식·하계수련대회' 개최",
@@ -6141,11 +5531,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "김종삼 직장공장새마을영양군협의회장, ‘자랑스러운 도민상’ 수상",
-      "url": "https://www.kbsm.net/news/view.php?idx=492352",
-      "press": "경북신문"
-    },
-    {
       "title": "이철우 \"새마을운동, 대한민국의 정신적 뿌리\"",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=601342",
       "press": "경북도민일보"
@@ -6171,23 +5556,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영양군사회적 거리두기 개편 시범적용 3주간 연장",
-      "url": "http://www.metroseoul.co.kr/article/20210502500010",
-      "press": "메트로신문"
-    },
-    {
       "title": "영양군, 사회적 거리두기 개편 시범적용 3주 연장",
       "url": "http://tk.newdaily.co.kr/site/data/html/2021/04/30/2021043000234.html",
-      "press": "언론사"
-    },
-    {
-      "title": "영양군, 사회적 거리두기 개편 시범적용 ‘3주간 연장’",
-      "url": "https://www.ekn.kr/web/view.php?key=20210501010000052",
-      "press": "언론사"
-    },
-    {
-      "title": "영양군, 사회적 거리두기 개편 시범적용 3주간 연장",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=499388",
       "press": "언론사"
     },
     {
@@ -6251,11 +5621,6 @@ const muniNewsArchive = {
       "press": "메트로신문"
     },
     {
-      "title": "영양군의회,새마을정신 국외 홍보",
-      "url": "https://www.cnbnews.com/news/article.html?no=703958",
-      "press": "언론사"
-    },
-    {
       "title": "《영양》새봄맞이새마을대청소 실시",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=292805",
       "press": "경북도민일보"
@@ -6274,11 +5639,6 @@ const muniNewsArchive = {
       "title": "김종삼 직장공장새마을영양회장 ‘도민상’",
       "url": "https://www.ksmnews.co.kr/news/view.php?idx=567661",
       "press": "언론사"
-    },
-    {
-      "title": "영양군의회, 베트남서새마을정신 전파",
-      "url": "https://www.imaeil.com/page/view/2025012613372116725",
-      "press": "매일신문"
     },
     {
       "title": "당진새마을가족 1000여 명 한자리에",
@@ -6326,11 +5686,6 @@ const muniNewsArchive = {
       "title": "영덕군새마을회, 2023년새마을운동종합평가대회 개최",
       "url": "http://www.kbsm.net/news/view.php?idx=416779",
       "press": "경북신문"
-    },
-    {
-      "title": "영덕군새마을회, 2023년새마을운동종합평가대회 개최",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=674748",
-      "press": "언론사"
     },
     {
       "title": "경북도민일보",
@@ -6433,11 +5788,6 @@ const muniNewsArchive = {
       "press": "경북신문"
     },
     {
-      "title": "영덕군새마을회·직장공장새마을운동영덕군협의회, 경북도 최우수 새마",
-      "url": "http://www.pressian.com/news/article.html?no=268711&utm_source=naver&utm_medium=search",
-      "press": "언론사"
-    },
-    {
       "title": "영덕군 새마을회, '최우수새마을단체' 로 선정",
       "url": "http://www.nspna.com/news/?mode=view&newsid=398139",
       "press": "언론사"
@@ -6468,24 +5818,9 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "영덕군새마을운동종합평가 및 지도자한마음대회 개최",
-      "url": "http://tk.newdaily.co.kr/site/data/html/2018/12/24/2018122400119.html",
-      "press": "언론사"
-    },
-    {
       "title": "영덕새마을운동종합평가 성료",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=376098",
       "press": "경북도민일보"
-    },
-    {
-      "title": "영덕군새마을운동종합평가 및 지도자한마음대회 개최",
-      "url": "http://www.dkilbo.com/news/articleView.html?idxno=166871",
-      "press": "도민일보"
-    },
-    {
-      "title": "영덕군새마을운동종합평가 및 지도자한마음대회 개최",
-      "url": "http://www.viva100.com/main/view.php?key=20181224010008215",
-      "press": "브릿지경제"
     },
     {
       "title": "경상매일신문",
@@ -6521,11 +5856,6 @@ const muniNewsArchive = {
       "title": "영덕군 새마을운동종합평가 실시",
       "url": "http://www.kyongbuk.co.kr/?mod=news&act=articleView&idxno=943875",
       "press": "경북일보"
-    },
-    {
-      "title": "영덕군새마을운동종합평가 및 지도자 한마음대회 개최",
-      "url": "http://www.gukjenews.com/news/articleView.html?idxno=383101",
-      "press": "언론사"
     },
     {
       "title": "영주시새마을회,영덕군에서 공동체 실천형 역량강화 워크숍 성료",
@@ -6581,11 +5911,6 @@ const muniNewsArchive = {
       "title": "영덕군 새마을회, 단체장 합동 퇴임식",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=453701",
       "press": "경북도민일보"
-    },
-    {
-      "title": "영덕군 새마을회, '합동 퇴임식' 개최",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=503242",
-      "press": "언론사"
     },
     {
       "title": "영덕군새마을회, 제2새마을운동워크숍 개최",
@@ -6690,18 +6015,8 @@ const muniNewsArchive = {
       "press": "뉴스1"
     },
     {
-      "title": "청도군, 대한민국환경대상 자원순환 부문 7년 연속 대상",
-      "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5039597",
-      "press": "언론사"
-    },
-    {
       "title": "청도군, 대한민국환경대상 자원순환 부문 대상…7년 연속 수상",
       "url": "http://www.sisafocus.co.kr/news/articleView.html?idxno=362384",
-      "press": "언론사"
-    },
-    {
-      "title": "청도군, 대한민국환경대상 자원순환 부문 7년 연속 대상",
-      "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=01731846645513864",
       "press": "언론사"
     },
     {
@@ -6718,11 +6033,6 @@ const muniNewsArchive = {
       "title": "청도군, 대한민국 환경대상 7년 연속 '대상'",
       "url": "http://news.lghellovision.net/news/articleView.html?idxno=548060",
       "press": "언론사"
-    },
-    {
-      "title": "청도군, '대한민국환경대상' 자원순환 부문 7년 연속 대상",
-      "url": "https://www.imaeil.com/page/view/2026070914411719776",
-      "press": "매일신문"
     },
     {
       "title": "청도군, 대한민국환경대상 '자원순환 부문 대상' 수상",
@@ -6850,29 +6160,9 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "청도군새마을회, 이 대통령 주재 간담회서 '새마을운동우수사례' 발표",
-      "url": "https://www.newsis.com/view/NISX20260515_0003631064",
-      "press": "뉴시스"
-    },
-    {
-      "title": "청도군새마을회, 대통령 주재 간담회서 ‘전국 유일’ 우수사례 발표",
-      "url": "https://www.nongmin.com/article/20260515500248",
-      "press": "언론사"
-    },
-    {
       "title": "\"청도에 소는 잘 있습니까?\"…이재명 대통령,새마을발상지 청도 '함박",
       "url": "https://view.asiae.co.kr/article/2026051515384905860",
       "press": "언론사"
-    },
-    {
-      "title": "청도군새마을회, 대통령 주재 간담회서 '전국 유일 우수사례' 발표",
-      "url": "https://daily.hankooki.com/news/articleView.html?idxno=1367878",
-      "press": "언론사"
-    },
-    {
-      "title": "청도군새마을회, 대통령 주재 간담회서 ‘전국 유일’ 우수 사례 발표",
-      "url": "https://www.kbmaeil.com/article/20260516500046",
-      "press": "경북매일"
     },
     {
       "title": "브레이크뉴스",
@@ -7105,11 +6395,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "청도군, 대한민국 최고의 아름다운 도시 만들기 구현",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2085143",
-      "press": "언론사"
-    },
-    {
       "title": "청도군, 아름다운 도시 조성에 총력",
       "url": "https://www.joongdo.co.kr/web/view.php?key=20250717010006254",
       "press": "언론사"
@@ -7160,11 +6445,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "청도군, ‘2025년 제3기 청도새마을대학’ 개강식 개최",
-      "url": "https://tk.newdaily.co.kr/site/data/html/2025/07/08/2025070800438.html",
-      "press": "언론사"
-    },
-    {
       "title": "청도군, 제3기새마을대학 개강식 개최",
       "url": "https://www.ksmnews.co.kr/news/view.php?idx=550341",
       "press": "언론사"
@@ -7188,11 +6468,6 @@ const muniNewsArchive = {
       "title": "스리랑카 웰리마다면 주민,청도군 새마을사업에 감동",
       "url": "http://www.kbsm.net/news/view.php?idx=465057",
       "press": "경북신문"
-    },
-    {
-      "title": "청도군, 스리랑카에 '새마을운동' 전파",
-      "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4032492",
-      "press": "경북일보"
     },
     {
       "title": "청도군, 스리랑카새마을시범마을 조성사업 현장방문",
@@ -7262,11 +6537,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "고령군새마을회,새마을운동활성화를 위한 읍·면 순회 간담회 개최",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=536059",
-      "press": "도민일보"
-    },
-    {
       "title": "고령군새마을회, 8개 읍·면 순회 간담회로 현장 소통 강화",
       "url": "https://www.idaegu.co.kr/news/articleView.html?idxno=541021",
       "press": "대구일보"
@@ -7284,11 +6554,6 @@ const muniNewsArchive = {
     {
       "title": "고령군새마을회, 지도자대회 상 15개 휩쓸어",
       "url": "https://www.ksmnews.co.kr/news/view.php?idx=580155",
-      "press": "언론사"
-    },
-    {
-      "title": "고령군새마을회, 2025년 경상북도새마을지도자대회 수상 쾌거",
-      "url": "http://www.aflnews.co.kr/news/articleView.html?idxno=310619",
       "press": "언론사"
     },
     {
@@ -7355,11 +6620,6 @@ const muniNewsArchive = {
       "title": "고령군, 경북도새마을시책사업 ‘장려상’ 수상",
       "url": "http://www.kbsm.net/news/view.php?idx=456697",
       "press": "경북신문"
-    },
-    {
-      "title": "고령군, 경북도새마을시책사업 장려상 수상",
-      "url": "http://www.hidomin.com/news/articleView.html?idxno=566762",
-      "press": "경북도민일보"
     },
     {
       "title": "제1대 직장·공장새마을운동고령군협의회 심재섭 회장 만장일치 추대",
@@ -7497,11 +6757,6 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "고령군,새마을 운동해외 보급 협력사업지 방문",
-      "url": "http://www.pressian.com/news/article.html?no=255664&utm_source=naver&utm_medium=search",
-      "press": "언론사"
-    },
-    {
       "title": "고령군, `해외새마을 운동시범마을` 라오스 막히아오 방문",
       "url": "http://www.kbsm.net/default/index_view_page.php?idx=253759&part_idx=325",
       "press": "경북신문"
@@ -7617,11 +6872,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "새마을운동남해군지회, 역량강화 활동",
-      "url": "https://www.newsgn.com/news/articleView.html?idxno=499954",
-      "press": "언론사"
-    },
-    {
       "title": "신미영 씨,새마을문고중앙회 국민독서경진대회 가족부 개인 부문 최우",
       "url": "http://www.imaeil.com/sub_news/sub_news_view.php?news_id=56984&yy=2017",
       "press": "매일신문"
@@ -7697,11 +6947,6 @@ const muniNewsArchive = {
       "title": "성주군 새마을회, 경상북도새마을운동종합평가 '대상' 수상",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=526093",
       "press": "도민일보"
-    },
-    {
-      "title": "성주군, 2025 경북도새마을운동종합평가 '대상'",
-      "url": "https://www.newsis.com/view/NISX20251211_0003436500",
-      "press": "뉴시스"
     },
     {
       "title": "상복 터진성주군, 경북도새마을운동종합평가 '대상'까지…",
@@ -7794,11 +7039,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "성주군, 2024 경상북도새마을운동종합평가 '최우수상' 수상",
-      "url": "http://www.inews24.com/view/1791117",
-      "press": "언론사"
-    },
-    {
       "title": "성주군2024 경상북도새마을운동종합평가 최우수상",
       "url": "https://www.imaeil.com/page/view/2024120610405138330",
       "press": "매일신문"
@@ -7864,11 +7104,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "성주군, 경북도새마을운동종합평가 대상 수상",
-      "url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=533119",
-      "press": "언론사"
-    },
-    {
       "title": "성주군은 대상, 선남면은 우수상",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=422559",
       "press": "도민일보"
@@ -7899,11 +7134,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "성주군, 추석맞이 ‘사랑의 온기나눔’ 캠페인 펼쳐",
-      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202409111720285530618",
-      "press": "언론사"
-    },
-    {
       "title": "성주군나눔기탁(2월 4일字)",
       "url": "http://www.seongjuro.co.kr/news/view.php?idx=56407",
       "press": "성주신문"
@@ -7912,11 +7142,6 @@ const muniNewsArchive = {
       "title": "성주군새마을회 대의원 총회 열고 추진사업 논의",
       "url": "http://www.seongjuro.co.kr/news/view.php?idx=59350",
       "press": "성주신문"
-    },
-    {
-      "title": "성주군, 사랑의 온기 나눔 캠페인 펼쳐",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=460968",
-      "press": "도민일보"
     },
     {
       "title": "성주군,새마을 운동4년 연속 '최우수'",
@@ -7984,11 +7209,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "성주군,새마을운동시군 평가 최우수상",
-      "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=317693&part_idx=7",
-      "press": "언론사"
-    },
-    {
       "title": "성주군새마을회, 10개 읍·면에 꽃밭 가꿔",
       "url": "http://www.seongjuro.co.kr/news/view.php?idx=51655",
       "press": "성주신문"
@@ -8006,11 +7226,6 @@ const muniNewsArchive = {
     {
       "title": "성주군새마을회,새마을운동50주년 기념비 제막식 가져",
       "url": "http://www.nspna.com/news/?mode=view&newsid=460268",
-      "press": "언론사"
-    },
-    {
-      "title": "성주군새마을회,새마을운동50주년 기념비 제막식",
-      "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=310653&part_idx=170",
       "press": "언론사"
     },
     {
@@ -8032,11 +7247,6 @@ const muniNewsArchive = {
       "title": "성주군, 경북도 '새마을운동시군 종합평가' 최우수상 수상",
       "url": "http://www.kyongbuk.co.kr/news/articleView.html?idxno=2062342",
       "press": "경북일보"
-    },
-    {
-      "title": "성주군,새마을운동시군 종합평가 최우수상 수상",
-      "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=317849&part_idx=7",
-      "press": "언론사"
     },
     {
       "title": "성주군 새마을운동올해 성과 빛났다",
@@ -8079,19 +7289,9 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "성주군, 道새마을운동시군종합평가 ‘최우수상’ 수상",
-      "url": "http://www.breaknews.com/622189",
-      "press": "언론사"
-    },
-    {
       "title": "성주군, 경상북도새마을운동시군종합평가 최우수상",
       "url": "http://www.dkilbo.com/news/articleView.html?idxno=166476",
       "press": "도민일보"
-    },
-    {
-      "title": "성주군,새마을운동시군평가 최우수상",
-      "url": "http://www.kbmaeil.com/news/articleView.html?idxno=801123",
-      "press": "경북매일"
     },
     {
       "title": "성주군가천면새마을회 환경정화",
@@ -8112,11 +7312,6 @@ const muniNewsArchive = {
       "title": "경북새마을지도자대회 성료",
       "url": "http://www.ksmnews.co.kr/news/view.php?idx=457719",
       "press": "언론사"
-    },
-    {
-      "title": "2023 경상북도새마을지도자대회 경주서 열려",
-      "url": "http://www.kbsm.net/news/view.php?idx=414737",
-      "press": "경북신문"
     },
     {
       "title": "경북도새마을회 ‘2023새마을지도자대회’ 개최",
@@ -8141,11 +7336,6 @@ const muniNewsArchive = {
     {
       "title": "성주군제2새마을운동출범식",
       "url": "https://www.sedaily.com/NewsView/1VLR654KZE",
-      "press": "언론사"
-    },
-    {
-      "title": "성주군, ‘먹·자·쓰·놀운동’ TF팀 출범",
-      "url": "http://www.breaknews.com/668904",
       "press": "언론사"
     },
     {
@@ -8206,24 +7396,9 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "칠곡군, 3R 자원순환 결의대회 개최",
-      "url": "http://www.m-i.kr/news/articleView.html?idxno=1300978",
-      "press": "언론사"
-    },
-    {
-      "title": "칠곡군, 3R 자원순환 결의대회 개최",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=521549",
-      "press": "도민일보"
-    },
-    {
       "title": "경북칠곡군…'2025 ECO칠곡 3R 자원순환 결의대회'",
       "url": "https://www.imaeil.com/page/view/2025111008393007961",
       "press": "매일신문"
-    },
-    {
-      "title": "칠곡군, 3R 자원순환 결의대회 개최",
-      "url": "https://biz.heraldcorp.com/article/10612135?ref=naver",
-      "press": "언론사"
     },
     {
       "title": "스님·미군·외국인 근로자까지...칠곡군'3GO운동' 동참",
@@ -8278,16 +7453,6 @@ const muniNewsArchive = {
     {
       "title": "칠곡군, 해외새마을시범마을 성과 확인 위해 라오스 방문",
       "url": "http://www.m-i.kr/news/articleView.html?idxno=1153767",
-      "press": "언론사"
-    },
-    {
-      "title": "칠곡군, 해외새마을시범마을 성과 확인 위해 라오스 방문",
-      "url": "https://www.nspna.com/news/?mode=view&newsid=715022",
-      "press": "언론사"
-    },
-    {
-      "title": "칠곡군,새마을에 친환경 접목한 ‘3GO’ 열풍 불어",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1983079",
       "press": "언론사"
     },
     {
@@ -8381,11 +7546,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "새마을세계화재단, 현지 직원 초청 연수칠곡군방문",
-      "url": "http://www.idaegu.com/newsView/idg202402200086",
-      "press": "언론사"
-    },
-    {
       "title": "칠곡군, 2022년새마을운동종합평가 우수상 수상",
       "url": "http://www.kbsm.net/news/view.php?idx=374067",
       "press": "경북신문"
@@ -8393,11 +7553,6 @@ const muniNewsArchive = {
     {
       "title": "칠곡군, 경북도새마을운동종합평가 우수상",
       "url": "http://www.idaegu.com/newsView/idg202212130010",
-      "press": "언론사"
-    },
-    {
-      "title": "칠곡군, ‘2022년새마을운동종합평가’ 우수상 수상",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1635668",
       "press": "언론사"
     },
     {
@@ -8418,11 +7573,6 @@ const muniNewsArchive = {
     {
       "title": "칠곡군,새마을운동표지석 제막식",
       "url": "https://www.cnbnews.com/news/article.html?no=572714",
-      "press": "언론사"
-    },
-    {
-      "title": "칠곡군,새마을운동표지석 제막식",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1620523",
       "press": "언론사"
     },
     {
@@ -8476,11 +7626,6 @@ const muniNewsArchive = {
       "press": "도민일보"
     },
     {
-      "title": "칠곡군, 경북도새마을운동종합평가 '우수상'",
-      "url": "https://daily.hankooki.com/lpage/society/202112/dh20211230155753148520.htm?s_ref=nv",
-      "press": "언론사"
-    },
-    {
       "title": "칠곡군, 라오스 농촌마을에 장난감 기부 행렬",
       "url": "https://www.khan.co.kr/article/202409292113015",
       "press": "언론사"
@@ -8523,16 +7668,6 @@ const muniNewsArchive = {
     {
       "title": "칠곡군의회 최인희 의원,새마을운동활성화 유공 '새마을대상' 수상",
       "url": "http://www.ilyoseoul.co.kr/news/articleView.html?idxno=435129",
-      "press": "언론사"
-    },
-    {
-      "title": "최인희칠곡군의원,새마을운동활성화 유공 ‘새마을대상’ 수상",
-      "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=318005&part_idx=270",
-      "press": "언론사"
-    },
-    {
-      "title": "칠곡군의회 최인희 의원,새마을운동활성화 유공 ‘새마을대상’ 수상",
-      "url": "http://tk.newdaily.co.kr/site/data/html/2020/12/17/2020121700143.html",
       "press": "언론사"
     },
     {
@@ -8601,11 +7736,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "2023 경상북도새마을지도자대회 경주서 열려",
-      "url": "http://www.kbsm.net/news/view.php?idx=414737",
-      "press": "경북신문"
-    },
-    {
       "title": "“받던 나라가 주는 나라된 것은새마을지도자들 덕분”",
       "url": "https://news.kmib.co.kr/article/view.asp?arcid=0018944369&code=61122022&cp=nv",
       "press": "언론사"
@@ -8658,11 +7788,6 @@ const muniNewsArchive = {
     {
       "title": "칠곡군, 에디오피아에새마을시범마을 조성…기초자치단체 최초",
       "url": "http://ilyo.co.kr/?ac=article_view&entry_id=171492",
-      "press": "언론사"
-    },
-    {
-      "title": "칠곡군, 아프리카새마을시범마을 조성",
-      "url": "http://www.hankookilbo.com/v/b3fbe97c44e84a449f5280f48536143f",
       "press": "언론사"
     },
     {
@@ -8743,18 +7868,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "예천군민의 날 기념, 국민운동단체 플로깅 진행",
-      "url": "https://www.kbmaeil.com/news/articleView.html?idxno=1014284",
-      "press": "경북매일"
-    },
-    {
       "title": "예천군통합자원봉사지원단, 산불재해 대비 도상훈련",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=484092",
-      "press": "도민일보"
-    },
-    {
-      "title": "예천군통합자원봉사지원단, 산불재해 대비 도상훈련",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=483931",
       "press": "도민일보"
     },
     {
@@ -8793,18 +7908,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "예천군,새마을운동시군 종합평가 21년 연속 우수기관 선정",
-      "url": "https://www.asiatoday.co.kr/view.php?key=20221209010004599",
-      "press": "언론사"
-    },
-    {
       "title": "예천군,새마을운동평가 21년 연속 우수기관 선정",
       "url": "http://www.inews24.com/view/1547295",
-      "press": "언론사"
-    },
-    {
-      "title": "예천군, '새마을운동시군 종합평가' 21년 연속 우수기관 선정",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=609018",
       "press": "언론사"
     },
     {
@@ -8823,11 +7928,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "예천군,새마을지도자 역량강화 한마음대회 개최",
-      "url": "https://www.asiatoday.co.kr/view.php?key=20231214010008391",
-      "press": "언론사"
-    },
-    {
       "title": "예천새마을회,새마을지도자 한마음대회",
       "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1801285",
       "press": "언론사"
@@ -8841,16 +7941,6 @@ const muniNewsArchive = {
       "title": "예천군, 경상북도새마을운동종합평가 최우수상 수상",
       "url": "http://www.cfnews.kr/news.aspx/55103",
       "press": "울진신문"
-    },
-    {
-      "title": "예천군, 경상북도새마을운동종합평가 '최우수상' 수상",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=544583",
-      "press": "언론사"
-    },
-    {
-      "title": "예천군, 경상북도새마을운동종합평가 최우수상 수상",
-      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202112162140005360772",
-      "press": "언론사"
     },
     {
       "title": "예천군새마을회,새마을운동50주년 기념비 제막식 및 연말총회 개최",
@@ -8933,16 +8023,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "예천군,새마을운동시군 종합평가 우수기관 선정",
-      "url": "http://www.ekn.kr/news/article.html?no=404000",
-      "press": "언론사"
-    },
-    {
-      "title": "예천군,새마을운동시군 종합평가 우수기관 선정",
-      "url": "http://www.dkilbo.com/news/articleView.html?idxno=166067",
-      "press": "도민일보"
-    },
-    {
       "title": "예천군, 경북도새마을운동시군 종합평가 우수기관 선정",
       "url": "http://www.asiatoday.co.kr/view.php?key=20181217010009915",
       "press": "언론사"
@@ -8955,11 +8035,6 @@ const muniNewsArchive = {
     {
       "title": "예천군,새마을운동종합평가 최우수기관 선정",
       "url": "http://www.breaknews.com/sub_read.html?uid=549901&section=sc2",
-      "press": "언론사"
-    },
-    {
-      "title": "예천군 새마을운동평가 최우수상",
-      "url": "http://andongmbc.co.kr/adboard/NewsView30352",
       "press": "언론사"
     },
     {
@@ -9051,11 +8126,6 @@ const muniNewsArchive = {
       "title": "예천새마을운동'경북 최우수'",
       "url": "http://www.kyongbuk.co.kr/main/news/news_content.php?id=674030&news_area=110&news_divide=&news_local=33&effect=4",
       "press": "경북일보"
-    },
-    {
-      "title": "예천군, 경북도새마을운동종합평가 '최우수'",
-      "url": "http://www.newsis.com/ar_detail/view.html?ar_id=NISX20141209_0013346394&cID=10810&pID=10800",
-      "press": "뉴시스"
     },
     {
       "title": "예천군,새마을운동도 평가 최우수상",
@@ -9235,19 +8305,9 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "봉화군새마을회, 제20대 회장단 취임식으로 새출발 다짐",
-      "url": "https://www.idaegu.co.kr/news/articleView.html?idxno=520097",
-      "press": "대구일보"
-    },
-    {
       "title": "봉화군새마을회, 2024년새마을운동종합평가대회 개최",
       "url": "https://www.gukjenews.com/news/articleView.html?idxno=3163656",
       "press": "언론사"
-    },
-    {
-      "title": "봉화군새마을회, 2024년새마을운동종합평가대회 개최",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=475372",
-      "press": "도민일보"
     },
     {
       "title": "봉화군새마을회,새마을운동종합평가대회 개최",
@@ -9295,34 +8355,14 @@ const muniNewsArchive = {
       "press": "매일신문"
     },
     {
-      "title": "봉화군새마을회,새마을운동종합평가대회 열어",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=424251",
-      "press": "도민일보"
-    },
-    {
       "title": "경북봉화군새마을회,새마을운동종합평가대회 열어",
       "url": "https://www.viva100.com/main/view.php?key=20231220010006341",
       "press": "브릿지경제"
     },
     {
-      "title": "봉화군새마을회,새마을운동종합평가대회 개최",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=1803907",
-      "press": "언론사"
-    },
-    {
-      "title": "봉화군새마을회,새마을운동종합평가대회 열어",
-      "url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=536454",
-      "press": "언론사"
-    },
-    {
       "title": "봉화군,새마을운동활성화 유공자 표창",
       "url": "http://www.ksmnews.co.kr/news/view.php?idx=460406",
       "press": "언론사"
-    },
-    {
-      "title": "직장·공장새마을운동봉화군협의회 재능기부 행사 개최",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=403671",
-      "press": "도민일보"
     },
     {
       "title": "직장·공장새마을운동봉화군協 재능기부 봉사",
@@ -9395,16 +8435,6 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "봉화군새마을회,새마을운동종합평가대회 개최",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=612477",
-      "press": "언론사"
-    },
-    {
-      "title": "봉화군새마을회,새마을운동종합평가대회 개최",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=387217",
-      "press": "도민일보"
-    },
-    {
       "title": "봉화군새마을회 종합평가대회 개최, 재산면새마을회 최우수상 수상",
       "url": "https://www.imaeil.com/page/view/2022122813301990907",
       "press": "매일신문"
@@ -9413,11 +8443,6 @@ const muniNewsArchive = {
       "title": "봉화군새마을회,새마을운동환경살리기 '숨은자원모으기' 행사 개최",
       "url": "http://www.kyongbuk.co.kr/news/articleView.html?idxno=2120135",
       "press": "경북일보"
-    },
-    {
-      "title": "봉화군새마을회,새마을운동환경살리기 행사 열어",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=386758",
-      "press": "도민일보"
     },
     {
       "title": "봉화군박현국 군수, 시정연설 통해 내년도 군정운영 방향 제시하다",
@@ -9570,11 +8595,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "2018봉화군새마을운동종합평가대회 개최",
-      "url": "http://www.dkilbo.com/news/articleView.html?idxno=166580",
-      "press": "도민일보"
-    },
-    {
       "title": "경북매일신문",
       "url": "https://www.kbmaeil.com/",
       "press": "경북매일"
@@ -9588,11 +8608,6 @@ const muniNewsArchive = {
       "title": "봉화군, 경북새마을지도자대회서새마을운동활성화 우수기관 선정",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=316155",
       "press": "경북도민일보"
-    },
-    {
-      "title": "봉화군 새마을운동종합 평가대회",
-      "url": "http://www.kbmaeil.com/news/articleView.html?idxno=402703",
-      "press": "경북매일"
     },
     {
       "title": "봉화군새마을운동종합평가대회성료",
@@ -9627,21 +8642,6 @@ const muniNewsArchive = {
       "press": "울진신문"
     },
     {
-      "title": "울진군,새마을지도자와'화합으로 새로운 희망'다짐",
-      "url": "https://www.dkilbo.com/news/articleView.html?idxno=526995",
-      "press": "도민일보"
-    },
-    {
-      "title": "울진군,새마을지도자와 ‘화합으로 새로운 희망’ 다짐",
-      "url": "https://www.ksmnews.co.kr/news/view.php?idx=581289",
-      "press": "언론사"
-    },
-    {
-      "title": "울진군,새마을지도자와 '화합으로 새로운 희망' 다짐",
-      "url": "https://www.kbsm.net/news/view.php?idx=501630",
-      "press": "경북신문"
-    },
-    {
       "title": "울진군새마을회, '2025울진군 새마을지도자대회' 개최...화합과 실천의",
       "url": "http://www.metroseoul.co.kr/article/20251217500362",
       "press": "메트로신문"
@@ -9672,11 +8672,6 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "울진군자원봉사자, 산불 피해 농가 복구작업 지원",
-      "url": "http://www.hidomin.com/news/articleView.html?idxno=578248",
-      "press": "경북도민일보"
-    },
-    {
       "title": "울진군, 2024새마을환경살리기 발대식",
       "url": "http://www.kbsm.net/news/view.php?idx=431382",
       "press": "경북신문"
@@ -9685,11 +8680,6 @@ const muniNewsArchive = {
       "title": "울진군, 2024새마을환경살리기 발대식 개최",
       "url": "http://www.hidomin.com/news/articleView.html?idxno=546763",
       "press": "경북도민일보"
-    },
-    {
-      "title": "울진군‘2024새마을환경살리기 발대식",
-      "url": "http://www.ksmnews.co.kr/news/view.php?idx=479655",
-      "press": "언론사"
     },
     {
       "title": "울진군새마을회 2024새마을환경살리기 발대식 개최",
@@ -9705,11 +8695,6 @@ const muniNewsArchive = {
       "title": "울릉도새마을회, 경북새마을지도자대회참가…새마을운동평가 및 시상",
       "url": "https://www.kbmaeil.com/news/articleView.html?idxno=1021538",
       "press": "경북매일"
-    },
-    {
-      "title": "울진군‘2024새마을환경살리기 발대식’ 개최",
-      "url": "http://www.cfnews.kr/news.aspx/86273",
-      "press": "울진신문"
     },
     {
       "title": "울진군, '새마을환경살리기 발대식' 개최",
@@ -9732,18 +8717,8 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "울진군, ‘새마을운동제창 50주년 기념 2020 자원재활용품 수집 경진대",
-      "url": "http://www.idaegu.com/newsView/idg202006220101",
-      "press": "언론사"
-    },
-    {
       "title": "울진군,새마을운동50주년 자원재활용품 수집 경진대회 개최",
       "url": "http://www.gukjenews.com/news/articleView.html?idxno=2023367",
-      "press": "언론사"
-    },
-    {
-      "title": "울진군, '새마을운동제창 50주년 기념 2020 자원재활용품 수집 경진대회",
-      "url": "https://www.pressian.com/pages/articles/2020062212042139733?utm_source=naver&utm_medium=search",
       "press": "언론사"
     },
     {
@@ -9787,11 +8762,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "울진군,새마을운동시·군 종합평가 '최우수기관' 선정",
-      "url": "http://www.kukinews.com/newsView/kuk202012110390",
-      "press": "언론사"
-    },
-    {
       "title": "브레이크뉴스",
       "url": "http://www.breaknews.com",
       "press": "언론사"
@@ -9827,16 +8797,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "울진군, 2014년새마을운동종합평가 최우수인정기관 수상",
-      "url": "http://www.asiatoday.co.kr/view.php?key=20141216010009089",
-      "press": "언론사"
-    },
-    {
-      "title": "울진군,새마을운동평가 '최우수'",
-      "url": "http://www.shinailbo.co.kr/news/articleView.html?idxno=420243",
-      "press": "언론사"
-    },
-    {
       "title": "울진군, 글로벌새마을운동확산 ‘발 벗어’",
       "url": "http://www.ksmnews.co.kr/article_disp/read.php?code=gisa_main&number=92221&category_uid=2",
       "press": "언론사"
@@ -9852,38 +8812,13 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "울진군, 제2의새마을운동“아름다운 마을가꾸기 사업” 추진",
-      "url": "http://www.ksmnews.co.kr/default/index_view_page.php?idx=322279&part_idx=289",
-      "press": "언론사"
-    },
-    {
       "title": "‘2018울진군새마을지도자 한마음다짐대회’ 개최",
       "url": "http://www.dkilbo.com/news/articleView.html?idxno=161717",
       "press": "도민일보"
     },
     {
-      "title": "‘2018울진군새마을지도자 한마음다짐대회’개최",
-      "url": "http://www.nspna.com/news/?mode=view&newsid=315994",
-      "press": "언론사"
-    },
-    {
       "title": "울진군,새마을지도자 한마음 다짐대회 성료",
       "url": "http://www.ilyoseoul.co.kr/news/articleView.html?idxno=203129",
-      "press": "언론사"
-    },
-    {
-      "title": "울진군,새마을지도자 한마음 다짐대회 성료",
-      "url": "http://www.breaknews.com/sub_read.html?uid=531701&section=sc2",
-      "press": "언론사"
-    },
-    {
-      "title": "울진군,새마을지도자 한마음 다짐대회 성료",
-      "url": "http://www.joongdo.co.kr/main/view.php?key=20170919010005035",
-      "press": "언론사"
-    },
-    {
-      "title": "울진군,새마을지도자 한마음 다짐대회 성료",
-      "url": "http://www.gukjenews.com/news/articleView.html?idxno=546745",
       "press": "언론사"
     },
     {
@@ -9907,11 +8842,6 @@ const muniNewsArchive = {
       "press": "경북도민일보"
     },
     {
-      "title": "울진군 새마을지도자 워크숍",
-      "url": "http://www.kbmaeil.com/news/articleView.html?idxno=335943",
-      "press": "경북매일"
-    },
-    {
       "title": "울진군, '경북새마을지도자 대회' 참석",
       "url": "http://www.gukjenews.com/news/articleView.html?idxno=178466",
       "press": "언론사"
@@ -9919,11 +8849,6 @@ const muniNewsArchive = {
     {
       "title": "울진군 새마을회관 준공",
       "url": "https://n.news.naver.com/mnews/article/003/0005064503?sid=102",
-      "press": "언론사"
-    },
-    {
-      "title": "울진군 새마을지도자 한마음 다짐대회",
-      "url": "https://n.news.naver.com/mnews/article/003/0004712605?sid=102",
       "press": "언론사"
     },
     {
@@ -10000,26 +8925,6 @@ const muniNewsArchive = {
       "title": "2024울진군 새마을지도자 대회'개최",
       "url": "https://www.dkilbo.com/news/articleView.html?idxno=475051",
       "press": "도민일보"
-    },
-    {
-      "title": "‘2024울진군 새마을지도자 대회’ 개최",
-      "url": "http://www.cfnews.kr/news.aspx/92947",
-      "press": "울진신문"
-    },
-    {
-      "title": "'2024울진군 새마을지도자 대회' 개최",
-      "url": "http://www.hidomin.com/news/articleView.html?idxno=567367",
-      "press": "경북도민일보"
-    },
-    {
-      "title": "‘2024울진군 새마을지도자 대회’ 개최",
-      "url": "http://www.ksmnews.co.kr/news/view.php?idx=515967",
-      "press": "언론사"
-    },
-    {
-      "title": "‘2024울진군 새마을지도자 대회’ 개최",
-      "url": "http://www.kbsm.net/news/view.php?idx=457724",
-      "press": "경북신문"
     },
     {
       "title": "실제 청도군은새마을운동발상지로서 재활용품 경진대회, 도로변 풀베기, 무단 폐기물 수거 등 지속적인 환경 활동을 이어온 결과, 환경부 주관... ◇울진군, 여름철 상수도 시설 일제 점검 나서 피서객 급증 대비… 맑고 안정적인 수돗물 공급 '총력' 울진=에너지경제신문 손중모기자울진군이 여름 피서철을",
@@ -10229,11 +9134,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "울릉군 새마을운동종합평가 우수",
-      "url": "http://www.polinews.co.kr/news/article.html?no=438925",
-      "press": "언론사"
-    },
-    {
       "title": "울릉군,새마을운동종합평가 지자체 부분 '우수상' 쾌거",
       "url": "http://www.pressian.com/news/article.html?no=268647&utm_source=naver&utm_medium=search",
       "press": "언론사"
@@ -10304,11 +9204,6 @@ const muniNewsArchive = {
       "press": "경북매일"
     },
     {
-      "title": "강영호새마을운동울릉군지회장",
-      "url": "http://www.kbmaeil.com/news/articleView.html?idxno=345666",
-      "press": "경북매일"
-    },
-    {
       "title": "울릉도 방범활동새마을이 함께…울릉 署, 직·공장새마을운동協 합동",
       "url": "http://www.kbmaeil.com/news/articleView.html?idxno=969918",
       "press": "경북매일"
@@ -10339,11 +9234,6 @@ const muniNewsArchive = {
       "press": "언론사"
     },
     {
-      "title": "2023 경상북도새마을지도자대회 경주서 열려",
-      "url": "http://www.kbsm.net/news/view.php?idx=414737",
-      "press": "경북신문"
-    },
-    {
       "title": "“받던 나라가 주는 나라된 것은새마을지도자들 덕분”",
       "url": "https://news.kmib.co.kr/article/view.asp?arcid=0018944369&code=61122022&cp=nv",
       "press": "언론사"
@@ -10367,11 +9257,6 @@ const muniNewsArchive = {
       "title": "새마을운동중앙회울릉군지회, 떡국나눔행사 가져",
       "url": "http://www.nspna.com/news/?mode=view&newsid=202206",
       "press": "언론사"
-    },
-    {
-      "title": "새마을운동중앙회울릉군지회, 떡국나눔행사 가져",
-      "url": "http://www.newsis.com/pict_detail/view.html?pict_id=NISI20170104_0012551786",
-      "press": "뉴시스"
     },
     {
       "title": "울릉군새마을회 “미세먼지 먹는 하마’ 케나프 심는다",
