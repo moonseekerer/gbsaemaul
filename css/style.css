@@ -603,6 +603,7 @@ body {
   border-radius: 12px;
   font-size: 14px;
   line-height: 1.6;
+  white-space: pre-wrap;
 }
 
 .message.bot {
