@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Gyeongsangbuk-do Vector Map & Hover Tooltip CSS
+   Clean Institutional White & Forest Emerald Theme
+   15% Dramatic Zoom Expansion (Scale 1.15) & Non-Hovered Background Blur System
+   ========================================================================== */
+
+.map-section-wrapper {
+  margin-bottom: 60px;
+}
+
+.map-layout-grid {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .map-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-container-box {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  width: 560px;
+  height: 520px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .map-container-box {
+    width: 100%;
+    height: 420px;
+  }
+}
+
+.gb-map-svg {
+  width: 100%;
+  height: 100%;
+  max-width: 540px;
+  max-height: 490px;
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Region Item Group Container (SVG <g>) */
+.region-item-group {
+  cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center center;
+  transition: transform 0.35s cubic-bezier(0.25, 1.6, 0.5, 1), 
+              opacity 0.35s ease, 
+              filter 0.35s ease;
+}
+
+/* Non-Hovered Regions Blur & Dimming Effect when hovering over map */
+#gb-regions-group.has-hover .region-item-group:not(.is-hovered) {
+  opacity: 0.45;
+  filter: blur(2.2px) grayscale(30%);
+}
+
+/* Hovered Region Group: 15% Dramatic Zoom Expansion & 12px Rise */
+.region-item-group:hover,
+.region-item-group.is-hovered {
+  transform: scale(1.15) translateY(-12px) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Hovered Path Styling */
+.region-item-group:hover .gb-region-path,
+.region-item-group.is-hovered .gb-region-path {
+  fill: #e6f4ed !important;
+  stroke: var(--primary) !important;
+  stroke-width: 3.5px !important;
+  filter: drop-shadow(0 14px 28px rgba(0, 104, 55, 0.45)) !important;
+}
+
+/* Hovered Label Styling */
+.region-item-group:hover .gb-region-label,
+.region-item-group.is-hovered .gb-region-label {
+  fill: var(--primary) !important;
+  font-size: 13.5px !important;
+  font-weight: 900 !important;
+  text-shadow: 0 0 8px #ffffff, 0 0 14px #ffffff !important;
+}
+
+/* Base Vector Path Styling */
+.gb-region-path {
+  fill: #f8fafc;
+  stroke: var(--primary);
+  stroke-width: 2.2px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transition: fill 0.25s ease, stroke 0.25s ease, stroke-width 0.25s ease, filter 0.35s ease;
+}
+
+.gb-region-path.active {
+  fill: var(--primary-light);
+  stroke: var(--primary);
+  stroke-width: 3.2px;
+}
+
+/* Base Region Label Styling */
+.gb-region-label {
+  fill: #0f172a;
+  font-size: 11.5px;
+  font-weight: 800;
+  pointer-events: none !important;
+  text-anchor: middle;
+  dominant-baseline: central;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 3px #ffffff;
+  transition: fill 0.25s ease, font-size 0.25s ease;
+}
+
+/* Detail Side Card */
+.region-detail-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  min-height: 520px;
+  box-sizing: border-box;
+}
+
+.detail-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+
+.detail-city-title {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+/* Floating Tooltip Fix: pointer-events NONE */
+.gb-map-tooltip {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none !important;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.gb-map-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tooltip-city-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #34d399;
+}
+
+.tooltip-tag {
+  font-size: 11px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tooltip-stat-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 11.5px;
+  color: #cbd5e1;
+  margin-bottom: 2px;
+}
+
+.tooltip-stat-val {
+  color: #fff;
+  font-weight: 700;
+}

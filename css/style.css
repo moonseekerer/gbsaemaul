@@ -1,0 +1,1061 @@
+/* ==========================================================================
+   Presentation Web Font Definitions
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* ==========================================================================
+   Official Korean Institutional ODA Portal Design System
+   Modeled strictly after www.koreaucostarica.com (KOICA Official PMC Center)
+   ========================================================================== */
+
+:root {
+  --primary: #006837;            /* KOICA Official Forest Emerald Green */
+  --primary-hover: #004d28;
+  --primary-light: #f0fdf4;
+  --primary-border: #bbf7d0;
+  
+  --secondary: #0f172a;          /* Deep Slate Blue */
+  --accent-blue: #0284c7;
+  --accent-gold: #c59b27;
+  
+  --bg-main: #ffffff;
+  --bg-sub: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  
+  --text-main: #1e293b;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  
+  --font-sans: 'Presentation', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --------------------------------------------------------------------------
+   Header & GNB (Strict koreaucostarica.com Style)
+   -------------------------------------------------------------------------- */
+.top-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
+  gap: 16px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-main);
+  flex-shrink: 0;
+}
+.logo-badge {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 5px 9px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.logo-title {
+  font-weight: 900;
+  font-size: 17px;
+  color: var(--primary);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.logo-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* GNB Links */
+.main-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  flex-shrink: 0;
+}
+.main-nav-menu > li > a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 26px 0;
+  display: inline-block;
+  position: relative;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.main-nav-menu > li:hover > a,
+.main-nav-menu > li.active > a {
+  color: var(--primary);
+}
+.main-nav-menu > li.active > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+}
+
+/* Hamburger Button & Mobile Drawer */
+.hamburger-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-main);
+}
+
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.mobile-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 290px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 999;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+}
+.mobile-nav-drawer.active {
+  right: 0;
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-sub);
+}
+.drawer-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.drawer-menu-list {
+  list-style: none;
+  padding: 12px 0;
+  overflow-y: auto;
+  flex: 1;
+}
+.drawer-menu-list li a {
+  display: block;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+.drawer-menu-list li.active a {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+@media (max-width: 1080px) {
+  .main-nav-menu { display: none; }
+  .hamburger-btn { display: flex; }
+}
+
+/* --------------------------------------------------------------------------
+   Page Views Switcher Container
+   -------------------------------------------------------------------------- */
+.page-view {
+  display: none;
+}
+.page-view.active {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Banner Section (Strict koreaucostarica #banner style)
+   -------------------------------------------------------------------------- */
+.korea-banner {
+  background: linear-gradient(135deg, #004d28 0%, #006837 50%, #0f172a 100%);
+  color: #ffffff;
+  padding: 70px 0 60px 0;
+  text-align: center;
+  position: relative;
+}
+.korea-banner-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #ffffff;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.korea-banner h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+.korea-banner h1 span {
+  color: #86efac;
+}
+.korea-banner p {
+  font-size: 16px;
+  color: #e2e8f0;
+  max-width: 840px;
+  margin: 0 auto 32px auto;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   3-Generations Interactive Story Line (Horizontal 3-Column Grid)
+   -------------------------------------------------------------------------- */
+.timeline-story-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 24px;
+  position: relative;
+  margin: 32px 0;
+}
+.timeline-story-card {
+  background: var(--bg-sub);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  height: 100%;
+}
+.timeline-story-card.active-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gen-step-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 900;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.gen-1-bg { background: #fef3c7; color: #d97706; border: 1px solid #fde68a; }
+.gen-2-bg { background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; }
+.gen-3-bg { background: #dcfce7; color: #006837; border: 2px solid #86efac; }
+
+.gen-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gen-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.gen-title {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--text-main);
+}
+.gen-tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+.gen-1-tag { background: #fef3c7; color: #b45309; }
+.gen-2-tag { background: #e0f2fe; color: #0369a1; }
+.gen-3-tag { background: #dcfce7; color: #006837; }
+
+.gen-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .timeline-story-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Flip Card System (Inviting Hover Elevate & Glow Animation)
+   -------------------------------------------------------------------------- */
+.flip-card-container {
+  perspective: 1200px;
+  height: 290px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Subtle floating bounce on hover */
+.flip-card-container:hover {
+  transform: translateY(-6px);
+}
+
+.flip-card-container:active {
+  transform: translateY(-2px) scale(0.985);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-container.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Front Side: 과거 1973년 박정희 연설문 */
+.flip-card-front {
+  background: #ffffff;
+  border: 2px solid var(--border-color);
+}
+
+.flip-card-container:hover .flip-card-front {
+  border-color: var(--primary);
+  box-shadow: 0 12px 28px rgba(0, 104, 55, 0.14);
+}
+
+/* Back Side: 현대 2026년 이철우 메시지 */
+.flip-card-back {
+  background: var(--primary-light);
+  border: 2px solid var(--primary-border);
+  transform: rotateY(180deg);
+}
+
+.flip-card-container:hover .flip-card-back {
+  border-color: var(--primary);
+  box-shadow: 0 12px 28px rgba(0, 104, 55, 0.2);
+}
+
+/* Inviting Badge Pulse Animation */
+@keyframes flipBadgePulse {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+.flip-hint-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  animation: flipBadgePulse 3s infinite ease-in-out;
+  transition: all 0.2s ease;
+}
+
+.flip-card-container:hover .flip-hint-badge {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   AI Saemaul Consultant Simulation & Chatbot CSS Styling
+   -------------------------------------------------------------------------- */
+.sim-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .sim-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chat-container {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.chat-header {
+  background: var(--bg-sub);
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bot-avatar {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.status-online {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #ffffff;
+}
+
+.message {
+  max-width: 85%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.message.bot {
+  background: var(--bg-sub);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  align-self: flex-start;
+  border-top-left-radius: 2px;
+}
+
+.message.user {
+  background: var(--primary);
+  color: #ffffff;
+  align-self: flex-end;
+  border-top-right-radius: 2px;
+}
+
+.chat-quick-prompts {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-sub);
+  border-top: 1px solid var(--border-color);
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+.quick-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: var(--font-sans);
+}
+
+.quick-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary-border);
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border-top: 1px solid var(--border-color);
+}
+
+.chat-input {
+  flex: 1;
+  background: var(--bg-sub);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+.chat-input:focus {
+  border-color: var(--primary);
+  background: #ffffff;
+}
+
+.send-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  width: 44px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.send-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Modal Dialog System (Terms & Privacy Policy Modals)
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+  overflow: hidden;
+}
+
+.modal-backdrop.active .modal-card {
+  transform: translateY(0);
+}
+
+.modal-header {
+  background: var(--bg-sub);
+  border-bottom: 1px solid var(--border-color);
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.modal-body h4 {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 16px 0 6px 0;
+}
+
+.modal-body h4:first-child {
+  margin-top: 0;
+}
+
+.modal-body p {
+  margin-bottom: 10px;
+}
+
+.modal-footer {
+  background: var(--bg-sub);
+  border-top: 1px solid var(--border-color);
+  padding: 14px 24px;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Section Titles & Headers (Strict koreaucostarica tt-box style)
+   -------------------------------------------------------------------------- */
+.tt-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.tt-line {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: var(--primary);
+  margin: 0 auto 16px auto;
+}
+.tt-box h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.tt-box h2 span {
+  color: var(--primary);
+}
+.tt-box p {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Section 1: 사업구성 (Strict koreaucostarica #compos style)
+   -------------------------------------------------------------------------- */
+.section-compos {
+  padding: 60px 0;
+  background: #ffffff;
+}
+.compos-card-wrap {
+  background: var(--bg-sub);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+.compos-grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.compos-item {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 20px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14.5px;
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.compos-bullet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+}
+.compos-bullet-item {
+  font-size: 14px;
+  color: var(--text-main);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.compos-bullet-item::before {
+  content: '•';
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* --------------------------------------------------------------------------
+   Section 2: 추진체계 (Strict koreaucostarica #part style)
+   -------------------------------------------------------------------------- */
+.section-part {
+  padding: 60px 0;
+  background: var(--bg-sub);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.part-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.org-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.org-badge-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0 auto 16px auto;
+}
+.org-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+.org-role {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Section 3: 우리의 목표는 (Strict koreaucostarica #about style)
+   -------------------------------------------------------------------------- */
+.section-about {
+  background: linear-gradient(135deg, #006837, #004d28);
+  color: #ffffff;
+  padding: 56px 0;
+  text-align: center;
+}
+.section-about h3 {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.section-about h3 span {
+  color: #86efac;
+}
+.section-about p {
+  font-size: 16px;
+  color: #e2e8f0;
+  max-width: 760px;
+  margin: 0 auto 24px auto;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Official Cards & Layout Components
+   -------------------------------------------------------------------------- */
+.official-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+  font-family: var(--font-sans);
+}
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+.btn-secondary {
+  background: var(--secondary);
+  color: #ffffff;
+}
+.btn-white {
+  background: #ffffff;
+  color: var(--primary);
+  border: 1px solid var(--border-color);
+}
+.btn-white:hover {
+  background: var(--bg-sub);
+}
+
+/* Official Footer (Strict koreaucostarica #footer style) */
+.official-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 50px 0 30px 0;
+  font-size: 13.5px;
+  border-top: 1px solid #1e293b;
+  margin-top: 60px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+.footer-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.footer-links {
+  list-style: none;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+.footer-links a:hover {
+  color: #10b981;
+}
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Custom Scrollbar */
+.gaok-custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.gaok-custom-scroll::-webkit-scrollbar-track {
+  background: var(--bg-sub);
+  border-radius: 4px;
+}
+.gaok-custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}

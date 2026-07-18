@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경상북도 디지털새마을 플랫폼</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="코스타리카 사업 연계 모델 기반 - 경상북도 본청 및 22개 시·군 GAOK 공식 국제교류 176건 통계 연계 3세대 경상북도 디지털새마을 플랫폼">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+  <!-- Welcome Announcement Modal Popup (공모전 출품용 데모 안내 팝업) -->
+  <div class="modal-backdrop active" id="welcome-modal-backdrop">
+    <div class="modal-card" style="max-width:540px;">
+      <div class="modal-header" style="background:var(--primary); color:#ffffff; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:18px;">🏛️</span>
+          <h3 style="font-size:16px; font-weight:800; color:#ffffff; margin:0;">2026 3세대 새마을운동 실천 모델 공모 안내</h3>
+        </div>
+        <button class="modal-close" onclick="closeWelcomeModal()" style="color:#ffffff; opacity:0.9;" aria-label="팝업 닫기">✕</button>
+      </div>
+      <div class="modal-body" style="padding:22px; font-size:14px; line-height:1.65; color:var(--text-main);">
+        <div style="display:inline-block; background:var(--primary-light); color:var(--primary); border:1px solid var(--primary-border); font-size:12px; font-weight:700; padding:4px 10px; border-radius:4px; margin-bottom:12px;">
+          📌 공모전 출품용 데모 플랫폼 (Demo Web)
+        </div>
+        <h4 style="font-size:18px; font-weight:900; color:var(--primary); margin:0 0 10px 0;">
+          경상북도 디지털새마을 플랫폼 데모에 오신 것을 환영합니다!
+        </h4>
+        <p style="color:var(--text-muted); margin-bottom:14px; font-size:13.5px;">
+          본 웹 사이트는 <strong>'2026 3세대 새마을운동 실천 모델 공모' 출품을 위하여 제작된 시범 데모 플랫폼</strong>입니다.
+        </p>
+
+        <div style="background:var(--bg-sub); border:1px solid var(--border-color); padding:14px; border-radius:8px; margin-bottom:16px;">
+          <div style="font-weight:800; font-size:13px; color:var(--text-main); margin-bottom:8px;">💡 주요 구현 데모 기능 안내</div>
+          <ul style="padding-left:18px; margin:0; font-size:12.5px; color:var(--text-muted); line-height:1.7;">
+            <li><strong>경북 22개 시·군 지도:</strong> 실제 GAOK 해외 교류 176건 시각화</li>
+            <li><strong>새마을정신 카드:</strong> 1973년 박정희 연설문 ↔ 2026년 이철우 지사 대조</li>
+            <li><strong>AI 새마을 컨설턴트:</strong> 시·군 특화 3세대 적정기술 실시간 시뮬레이션</li>
+          </ul>
+        </div>
+
+        <p style="font-size:12px; color:var(--text-dim); margin:0;">
+          ※ 본 사이트의 데이터 및 시뮬레이션은 공모전 심사 및 이해를 돕기 위한 예시 데이터가 포함되어 있습니다.
+        </p>
+      </div>
+      <div class="modal-footer" style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-sub); padding:12px 20px;">
+        <label style="font-size:12.5px; color:var(--text-muted); cursor:pointer; display:flex; align-items:center; gap:6px;">
+          <input type="checkbox" id="welcome-dont-show-today" onchange="toggleWelcomeDontShow(this)"> 오늘 하루 보지 않기
+        </label>
+        <button class="btn btn-primary" onclick="closeWelcomeModal()" style="font-size:13px; padding:8px 18px;">
+          플랫폼 체험하기 ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Official Navigation Header (koreaucostarica.com style GNB) -->
+  <header class="top-header">
+    <div class="container nav-wrapper">
+      <a href="javascript:void(0)" onclick="switchView('intro')" class="brand-logo" style="display:flex; align-items:center; gap:12px;">
+        <img src="data/gb_mark/gb_logo_ai_p1.png" alt="경상북도 공식 로고" style="height:40px; width:auto; object-fit:contain;">
+        <div style="border-left:2px solid var(--border-color); padding-left:12px;">
+          <div class="logo-title" style="font-size:16.5px;">디지털새마을 플랫폼</div>
+          <div class="logo-subtitle">2026 3세대 새마을운동 실천 플랫폼</div>
+        </div>
+      </a>
+
+      <!-- Main GNB Menu Links (Clean Horizontal Navigation - No Wrap) -->
+      <ul class="main-nav-menu" id="desktop-gnb-menu">
+        <li class="nav-item active" data-target="intro"><a onclick="switchView('intro')">사업개요</a></li>
+        <li class="nav-item" data-target="compos"><a onclick="switchView('compos')">사업구성</a></li>
+        
+        <li class="nav-item" data-target="map"><a onclick="switchView('map')">경북 새마을 지도</a></li>
+        <li class="nav-item" data-target="ai"><a onclick="switchView('ai')">AI 컨설팅</a></li>
+        <li class="nav-item" data-target="profile"><a onclick="switchView('profile')">기획단 프로필</a></li>
+      </ul>
+
+      <!-- Hamburger Button (Mobile / Narrow Screens) -->
+      <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Backdrop & Slide-out Drawer -->
+  <div class="mobile-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="data/gb_mark/gb_logo_ai_p1.png" alt="경상북도 공식 로고" style="height:28px; width:auto;">
+        <div class="logo-title" style="font-size:13.5px;">디지털새마을 플랫폼</div>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="메뉴 닫기">✕</button>
+    </div>
+
+    <ul class="drawer-menu-list">
+      <li class="drawer-item active" data-target="intro"><a onclick="switchView('intro')">사업개요</a></li>
+      <li class="drawer-item" data-target="compos"><a onclick="switchView('compos')">사업구성</a></li>
+      
+      <li class="drawer-item" data-target="map"><a onclick="switchView('map')">경북 새마을 지도</a></li>
+      <li class="drawer-item" data-target="ai"><a onclick="switchView('ai')">AI 컨설팅</a></li>
+      <li class="drawer-item" data-target="profile"><a onclick="switchView('profile')">기획단 프로필</a></li>
+    </ul>
+  </aside>
+
+  <!-- ==========================================================================
+       VIEW 1: 사업개요 (Home Overview Page)
+       ========================================================================== -->
+  <main id="view-intro" class="page-view active">
+    <!-- Hero Banner with Governor Lee Cheol-woo's 4.22 Saemaul Day Declaration -->
+    <section class="korea-banner">
+      <div class="container">
+        <div class="korea-banner-badge">
+          📌 2026 3세대 새마을운동 실천 모델 공모 출품용 데모 페이지 | 이철우 경상북도지사 비전
+        </div>
+        <h1 style="font-size:33px; line-height:1.45; font-weight:900; margin-bottom:20px; letter-spacing:-0.5px;">
+          “제3세대 새마을운동은 <span style="color:#fde047;">‘삽과 시멘트’에서 ‘AI와 데이터, 플랫폼’</span>으로 진화하고,<br>
+          청년의 창의와 디지털 기술로 <span>지방소멸과 저출생의 새로운 문제</span>를 풀어갈 것입니다.”
+        </h1>
+        <p style="font-size:15.5px; color:#e2e8f0; max-width:880px; margin:0 auto 32px auto; line-height:1.7; font-weight:600;">
+          - 이철우 경상북도지사 (4월 22일 새마을의 날 메시지 중) -
+        </p>
+        <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <button class="btn btn-white" onclick="switchView('compos')">
+            3세대 사업구성 보기
+          </button>
+          <button class="btn btn-primary" onclick="switchView('map')">
+            경북 22개 시·군 새마을 지도 보기
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll-Driven 3-Generations Interactive Story Section (Horizontal Layout) -->
+    <section class="container" style="padding:60px 20px 40px 20px;">
+      <div class="tt-box">
+        <span class="tt-line"></span>
+        <h2>새마을운동 <span>시대별 발전사 및 3세대 비전</span></h2>
+        <p>1세대부터 3세대 디지털 새마을운동까지의 진화 과정을 한눈에 확인해보세요.</p>
+      </div>
+
+      <!-- Horizontal 3-Column Story Grid -->
+      <div class="timeline-story-wrapper">
+        <!-- 1세대 -->
+        <div class="timeline-story-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+              <div class="gen-step-badge gen-1-bg">1</div>
+              <div>
+                <h3 class="gen-title">1세대 새마을</h3>
+                <span class="gen-tag gen-1-tag">생활혁신의 시대</span>
+              </div>
+            </div>
+            <p class="gen-desc">
+              가난을 이겨내고 <strong>삽과 시멘트</strong>로 마을을 일으킨 근면·자조 생활혁신의 시대입니다.
+            </p>
+          </div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:14px;">
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--border-color); padding:3px 8px; border-radius:4px; color:var(--text-muted);">🛠️ 마을 지붕·길 개량</span>
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--border-color); padding:3px 8px; border-radius:4px; color:var(--text-muted);">🌾 농촌 소득증대 기반</span>
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--border-color); padding:3px 8px; border-radius:4px; color:var(--text-muted);">💪 절대가난 극복 정신</span>
+          </div>
+        </div>
+
+        <!-- 2세대 -->
+        <div class="timeline-story-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+              <div class="gen-step-badge gen-2-bg">2</div>
+              <div>
+                <h3 class="gen-title">2세대 새마을</h3>
+                <span class="gen-tag gen-2-tag">새마을세계화 (ODA)</span>
+              </div>
+            </div>
+            <p class="gen-desc">
+              대한민국의 성공적 발전 경험을 해외 국제사회 및 개발도상국과 나누는 <strong>글로벌 나눔의 시대</strong>입니다.
+            </p>
+          </div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:14px;">
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--border-color); padding:3px 8px; border-radius:4px; color:var(--text-muted);">🌐 해외 시범마을 조성</span>
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--border-color); padding:3px 8px; border-radius:4px; color:var(--text-muted);">👨‍🏫 지도자 초청 연수</span>
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--border-color); padding:3px 8px; border-radius:4px; color:var(--text-muted);">🤝 글로벌 우호교류</span>
+          </div>
+        </div>
+
+        <!-- 3세대 (본 사업) -->
+        <div class="timeline-story-card" style="border:2px solid var(--primary-border); background:var(--primary-light);">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+              <div class="gen-step-badge gen-3-bg">3</div>
+              <div>
+                <h3 class="gen-title" style="color:var(--primary);">3세대 새마을 (본 사업)</h3>
+                <span class="gen-tag gen-3-tag">청년 · 디지털 · 미래세대</span>
+              </div>
+            </div>
+            <p class="gen-desc" style="color:var(--text-main);">
+              <strong>청년의 창의와 AI·데이터 기술</strong>로 지방소멸과 저출생을 극복하고 지속가능한 자립 생태계를 구축합니다.
+            </p>
+          </div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:14px;">
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--primary-border); padding:3px 8px; border-radius:4px; color:var(--primary); font-weight:700;">🤖 AI 챗봇 & 데이터 플랫폼</span>
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--primary-border); padding:3px 8px; border-radius:4px; color:var(--primary); font-weight:700;">🌱 청년 자조형 마을기업</span>
+            <span style="font-size:11.5px; background:#fff; border:1px solid var(--primary-border); padding:3px 8px; border-radius:4px; color:var(--primary); font-weight:700;">🏡 지방소멸 극복 정주 생태계</span>
+          </div>
+        </div>
+      </div>
+
+                  
+    
+
+
+      <!-- 과거와 현대의 새마을정신 (카드 교차 대조 & 전체 전환 버튼 모듈) -->
+      <div class="official-card" style="margin-top:40px; border-left:5px solid var(--primary);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px;">
+          <div>
+            <h4 style="font-size:20px; font-weight:900; color:var(--primary); margin:0;">
+              과거와 현대의 새마을정신
+            </h4>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-top:4px;">
+              각 카드를 선택하시면 <strong>1973년 연설문</strong>과 <strong>현대 3세대 메시지</strong>가 교차 대조됩니다.
+            </p>
+          </div>
+          <div>
+            <button type="button" class="btn btn-white" onclick="toggleAllFlipCards()" style="font-size:13px; padding:7px 16px; border-radius:20px; font-weight:700; color:var(--primary); border:1px solid var(--primary-border); background:#fff; box-shadow:var(--shadow-sm);">
+              🔄 전체 카드 시대 전환 (1973 ↔ 2026)
+            </button>
+          </div>
+        </div>
+
+        <!-- 3대 Flip Card Grid -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px;">
+          
+          <!-- 1. 근면 (Diligence) Flip Card -->
+          <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <!-- Front: 1973 박정희 연설문 -->
+              <div class="flip-card-front">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <strong style="font-size:18px; font-weight:900; color:var(--primary);">근면 (Diligence)</strong>
+                    <span class="flip-hint-badge" style="background:var(--bg-sub); color:var(--text-muted); border:1px solid var(--border-color);">📜 1973년 원문</span>
+                  </div>
+                  <p style="font-size:13.5px; color:var(--text-main); line-height:1.65; margin:0;">
+                    “옛말에 <strong>'일근은 선지장이요 일태는 악지장(一勤 善之長 一怠 惡之長)'</strong>이라 하였으니, 부지런함은 선의 으뜸이요 게으름은 가장 나쁜 것입니다. 내가 잘 살고 우리 고장과 나라가 잘 사는 사회를 만들기 위해 첫째 부지런해야 합니다.”
+                  </p>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:flex-end; margin-top:10px; width:100%;">
+                  <span style="font-size:11.5px; color:var(--text-muted); font-weight:600;">- 1973.11.22 박정희 대통령 연설문 -</span>
+                  
+                </div>
+              </div>
+
+              <!-- Back: 이철우 경북도지사 메시지 -->
+              <div class="flip-card-back">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <strong style="font-size:18px; font-weight:900; color:var(--primary);">근면 = 디지털 실력</strong>
+                    <span class="flip-hint-badge" style="background:var(--primary); color:#fff;">🌱 2026년 계승</span>
+                  </div>
+                  <p style="font-size:13.5px; color:var(--text-main); line-height:1.65; margin:0;">
+                    “이제 근면은 무조건 오래 일하는 것이 아닙니다. <strong>AI와 데이터를 익혀 더 똑똑하게 일하고 문제를 해결하는 힘</strong>이자, 디지털 기술을 익히고 활용하는 실력이 미래세대의 새로운 경쟁력입니다.”
+                  </p>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:flex-end; margin-top:10px; width:100%;">
+                  <span style="font-size:11.5px; color:var(--primary); font-weight:700;">- 이철우 경북도지사 (4월 22일 새마을의 날 메시지) -</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. 자조 (Self-reliance) Flip Card -->
+          <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <!-- Front: 1973 박정희 연설문 -->
+              <div class="flip-card-front">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <strong style="font-size:18px; font-weight:900; color:var(--primary);">자조 (Self-reliance)</strong>
+                    <span class="flip-hint-badge" style="background:var(--bg-sub); color:var(--text-muted); border:1px solid var(--border-color);">📜 1973년 원문</span>
+                  </div>
+                  <p style="font-size:13.5px; color:var(--text-main); line-height:1.65; margin:0;">
+                    “무거운 짐을 실은 손수레를 자기 힘으로 끌고 올라가려 애쓰는 마을을 뒤에서 밀어주듯, <strong>스스로 잘 살아보겠다는 의욕과 노력이 왕성한 부락을 우선 지원</strong>할 것입니다.”
+                  </p>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:flex-end; margin-top:10px; width:100%;">
+                  <span style="font-size:11.5px; color:var(--text-muted); font-weight:600;">- 1973.11.22 박정희 대통령 연설문 -</span>
+                  
+                </div>
+              </div>
+
+              <!-- Back: 이철우 경북도지사 메시지 -->
+              <div class="flip-card-back">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <strong style="font-size:18px; font-weight:900; color:var(--primary);">자조 = 자립</strong>
+                    <span class="flip-hint-badge" style="background:var(--primary); color:#fff;">🌱 2026년 계승</span>
+                  </div>
+                  <p style="font-size:13.5px; color:var(--text-main); line-height:1.65; margin:0;">
+                    “자조는 스스로 설 힘을 기르고 다시 일어설 수 있는 기반을 만드는 것입니다. <strong>청년이 지역에서 스스로 기회를 만들고 다시 도전할 수 있는 자립의 토대</strong>를 만드는 데 초점을 맞춰야 합니다.”
+                  </p>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:flex-end; margin-top:10px; width:100%;">
+                  <span style="font-size:11.5px; color:var(--primary); font-weight:700;">- 이철우 경북도지사 (4월 22일 새마을의 날 메시지) -</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 협동 (Cooperation) Flip Card -->
+          <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <!-- Front: 1973 박정희 연설문 -->
+              <div class="flip-card-front">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <strong style="font-size:18px; font-weight:900; color:var(--primary);">협동 (Cooperation)</strong>
+                    <span class="flip-hint-badge" style="background:var(--bg-sub); color:var(--text-muted); border:1px solid var(--border-color);">📜 1973년 원문</span>
+                  </div>
+                  <p style="font-size:13.5px; color:var(--text-main); line-height:1.65; margin:0;">
+                    “온 부락민이 한 자리에 모여 좋은 의견을 모으고 남녀노소가 참여해 땀 흘려 일하며 <strong>그 성과와 소득을 공평히 나누는 과정이야말로 가장 참다운 민주주의이자 협동</strong>입니다.”
+                  </p>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:flex-end; margin-top:10px; width:100%;">
+                  <span style="font-size:11.5px; color:var(--text-muted); font-weight:600;">- 1973.11.22 박정희 대통령 연설문 -</span>
+                  
+                </div>
+              </div>
+
+              <!-- Back: 이철우 경북도지사 메시지 -->
+              <div class="flip-card-back">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <strong style="font-size:18px; font-weight:900; color:var(--primary);">협동 = 연결</strong>
+                    <span class="flip-hint-badge" style="background:var(--primary); color:#fff;">🌱 2026년 계승</span>
+                  </div>
+                  <p style="font-size:13.5px; color:var(--text-main); line-height:1.65; margin:0;">
+                    “예전에는 함께 삽을 들고 길을 넓혔다면, 지금은 <strong>주민과 청년, 오프라인과 디지털망이 함께 연결돼 답을 찾는 것</strong>입니다. 디지털 기술로 지역 문제를 더 빠르고 정확하게 해결하겠습니다.”
+                  </p>
+                </div>
+                <div style="display:flex; justify-content:flex-end; align-items:flex-end; margin-top:10px; width:100%;">
+                  <span style="font-size:11.5px; color:var(--primary); font-weight:700;">- 이철우 경북도지사 (4월 22일 새마을의 날 메시지) -</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 이철우 경북도지사 5대 핵심 추진 과제 카드 -->
+        <div style="margin-top:24px; background:var(--bg-sub); padding:20px; border-radius:8px; border:1px solid var(--border-color);">
+          <h5 style="font-size:15px; font-weight:900; color:var(--primary); margin-bottom:12px;">
+            🚀 제3세대 새마을운동 성공을 위한 이철우 경북도지사 5대 핵심 실천 과제
+          </h5>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:10px; font-size:13px; font-weight:700; color:var(--text-main);">
+            <div style="background:#fff; padding:10px 14px; border-radius:6px; border:1px solid var(--border-color);">① 청년 참여 지역혁신 프로젝트 확대</div>
+            <div style="background:#fff; padding:10px 14px; border-radius:6px; border:1px solid var(--border-color);">② 주민 참여 디지털 소통 기반 마련</div>
+            <div style="background:#fff; padding:10px 14px; border-radius:6px; border:1px solid var(--border-color);">③ AI·데이터 기반 지역문제 해결 체계 구축</div>
+            <div style="background:#fff; padding:10px 14px; border-radius:6px; border:1px solid var(--border-color);">④ 지역 정주 자립형 경제모델 확산</div>
+            <div style="background:#fff; padding:10px 14px; border-radius:6px; border:1px solid var(--border-color);">⑤ 돌봄·교육·문화가 살아있는 생활공동체 회복</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: 우리의 목표는 (Strict koreaucostarica #about style) -->
+    <section class="section-about">
+      <div class="container">
+        <h3>우리의, <span>목표는</span></h3>
+        <p>
+          경상북도 22개 시·군과 개발도상국을 디지털 새마을 혁신 허브로 육성하여<br>
+          주민과 청년이 스스로 자립하는 지속가능한 기술 혁신 기반 이니셔티브를 견인할 것입니다.
+        </p>
+        <button class="btn btn-white" onclick="switchView('compos')">사업구성 보기</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 2: 사업구성 (Strict koreaucostarica #compos style)
+       ========================================================================== -->
+  <main id="view-compos" class="page-view">
+    <section class="section-compos">
+      <div class="container">
+        <div class="tt-box">
+          <span class="tt-line"></span>
+          <h2><span>경상북도 3세대 디지털 새마을 사업구성</span></h2>
+          <p>
+            본 사업은 경상북도 22개 시·군과 개발도상국 현지 커뮤니티를 <strong>디지털 센터·AI 아카이브·자조형 마을기업</strong>으로 연결하여<br>
+            지속가능한 자립 생태계를 구축하는 것을 목표로 하는 실천형 협력 사업입니다.
+          </p>
+        </div>
+
+        
+
+          <div class="compos-bullet-grid">
+            <div class="compos-bullet-item">개도국 거점 청년 디지털 새마을 지도자 300명 양성</div>
+            <div class="compos-bullet-item">50년 영농 노하우 기반 다국어 AI 모바일 챗봇 구축</div>
+            <div class="compos-bullet-item">주민 소유 자조형 에코 마을기업 25개소 육성</div>
+            <div class="compos-bullet-item">경상북도 본청 및 22개 시·군 GAOK 176건 공식 교류 연동</div>
+            <div class="compos-bullet-item">경북 22개 시·군 적정기술 매핑 및 현지 워크숍 연수</div>
+            <div class="compos-bullet-item">글로벌 디지털 새마을 이니셔티브 표준화 및 성과확산</div>
+          </div>
+
+        <!-- 3-Axis Matching Engine Section inside View 2: 사업구성 -->
+        <div style="margin-top:40px; background:var(--bg-sub); padding:36px 24px; border:1px solid var(--border-color); border-radius:12px;">
+          <div style="text-align:center; margin-bottom:28px;">
+            <span style="background:var(--primary-light); color:var(--primary); font-size:12px; font-weight:700; padding:4px 12px; border-radius:20px; border:1px solid var(--primary-border);">
+              💡 3세대 핵심 사업모델: 지방소멸 대응 3축 융합 매칭
+            </span>
+            <h3 style="font-size:24px; font-weight:900; color:var(--text-main); margin-top:10px;">
+              지방소멸 대응 <span>「시니어 - 청년유입 - 글로벌」 3축 융합 매칭 플랫폼</span>
+            </h3>
+            <p style="font-size:14px; color:var(--text-muted); max-width:820px; margin:8px auto 0 auto; line-height:1.6;">
+              경북 22개 시·군 고유 특산품 및 자원을 기반으로 <strong>[시니어 노하우] + [외지/지역 청년 창업가] + [지역 거주 외국인 인재]</strong>를 1:1:1로 성냥처럼 연결하여 선순환 인구 유입 생태계를 만듭니다.
+            </p>
+          </div>
+
+          <!-- 3-Axis Matching Grid Cards -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; margin-bottom:24px;">
+            
+            <!-- 1. Senior Card -->
+            <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #d97706; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                  <span style="font-size:26px;">👴</span>
+                  <div>
+                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">1. 시니어 (Senior)</h4>
+                    <span style="font-size:12px; color:#d97706; font-weight:700;">지역 토착 생산자 & 멘토</span>
+                  </div>
+                </div>
+                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                  평생 축적된 <strong>특산품 생산 노하우, 원물 자원 및 토지</strong>를 청년에게 전수하고, 청년과 외국인 인재 유입을 통해 농가 손실 절감과 마을 온기를 회복합니다.
+                </p>
+              </div>
+              <div style="background:#fffbeb; border:1px solid #fde68a; padding:8px 12px; border-radius:6px; font-size:12px; color:#b45309; font-weight:700;">
+                ✨ 역할: 숙련 노하우 전수 & 토지 자원 멘토링
+              </div>
+            </div>
+
+            <!-- 2. Youth Inflow Card -->
+            <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #10b981; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                  <span style="font-size:26px;">🌱</span>
+                  <div>
+                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">2. 청년 유입 (Youth)</h4>
+                    <span style="font-size:12px; color:#10b981; font-weight:700;">외지 유입 & 지역 출신 창업가</span>
+                  </div>
+                </div>
+                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                  영양 고추·상주 곶감 등 <strong>지역 특산품 비즈니스를 위해 타지에서 유입되는 청년 창업가</strong>와 지역 청년이 AI·스마트 기술 기반 3세대 마을기업을 설립합니다.
+                </p>
+              </div>
+              <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:8px 12px; border-radius:6px; font-size:12px; color:#047857; font-weight:700;">
+                ✨ 역할: AI·디지털 기술 융합 & 인구 유입 창업
+              </div>
+            </div>
+
+            <!-- 3. Global Card -->
+            <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #0284c7; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                  <span style="font-size:26px;">🌐</span>
+                  <div>
+                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">3. 글로벌 (Global)</h4>
+                    <span style="font-size:12px; color:#0284c7; font-weight:700;">외국인 유학생·다문화·연수생</span>
+                  </div>
+                </div>
+                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                  경북 관내 거주 <strong>외국인 유학생, 다문화 청년 및 개도국 초청 연수생(영남대 PSPS 등)</strong>을 모국과 경북을 연결하는 <strong>'글로벌 브릿지 코디네이터'</strong>로 매칭합니다.
+                </p>
+              </div>
+              <div style="background:#f0f9ff; border:1px solid #bae6fd; padding:8px 12px; border-radius:6px; font-size:12px; color:#0369a1; font-weight:700;">
+                ✨ 역할: 모국 현지화 판로 개척 & ODA 기술 이식
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Virtuous Loop Banner -->
+          <div style="background:linear-gradient(135deg, #006837 0%, #004d28 100%); color:#ffffff; padding:18px 24px; border-radius:8px; text-align:center; box-shadow:var(--shadow-sm);">
+            <div style="font-size:14.5px; font-weight:800; color:#86efac; margin-bottom:4px;">
+              🔄 3축 융합 무한 선순환 루프 (Virtuous Cycle)
+            </div>
+            <div style="font-size:13px; color:#f1f5f9; font-weight:600; line-height:1.5;">
+              시니어의 원물·자원 ➔ 청년의 AI·디지털 창업 ➔ 글로벌 인재의 개도국 수출 ➔ 지역 고령가 소득증대 및 청년 정주 재투자!
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 4: 경북 새마을 지도 & GAOK 176건 현황
+       ========================================================================== -->
+  <main id="view-map" class="page-view">
+    <!-- Interactive Map Section -->
+    <section id="gb-map-section" class="container map-section-wrapper" style="padding-top:40px;">
+      <div class="tt-box">
+        <span class="tt-line"></span>
+        <h2>경상북도 22개 시·군 <span>새마을 지도</span></h2>
+        <p>시·군 행정구역을 클릭하면 실제 보도자료 팩트, 새마을 역사 및 3세대 디지털 새마을 프로젝트가 출력됩니다.</p>
+      </div>
+
+      <div class="map-layout-grid">
+        <div class="map-container-box">
+          <div id="gb-map-container" style="width:100%;"></div>
+        </div>
+        <div class="region-detail-card" id="region-detail-card"></div>
+      </div>
+    </section>
+
+    <!-- Floating Tooltip -->
+    <div id="gb-map-tooltip" class="gb-map-tooltip"></div>
+
+    <!-- GAOK 176 Record Search Table Section -->
+    <section id="gaok-all-exchange-section" class="container" style="margin-bottom:60px; padding-top:40px;">
+      <div class="official-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px;">
+          <div>
+            <span style="background:var(--primary-light); color:var(--primary); font-size:12px; font-weight:700; padding:3px 10px; border-radius:3px;">
+              출처: 대한민국시도지사협의회(GAOK) 지방외교 국제교류 현황 통계 연동
+            </span>
+            <h3 style="font-size:22px; font-weight:800; margin-top:6px; color:var(--text-main);">
+              경상북도 본청 & 22개 시·군 국제교류 현황 (전수 176건)
+            </h3>
+          </div>
+          <span style="font-size:13.5px; color:var(--text-muted);" id="gaok-record-count-badge">
+            전체 검색 결과: <strong style="color:var(--primary);" id="gaok-count-num">176건</strong>
+          </span>
+        </div>
+
+        <div style="display:flex; gap:12px; margin-bottom:18px; flex-wrap:wrap;">
+          <select id="gaok-muni-select" style="background:var(--bg-sub); border:1px solid var(--border-color); padding:10px 14px; border-radius:4px; font-size:14px; font-weight:600; color:var(--text-main); outline:none;">
+            <option value="ALL">전체 지자체 보기 (176건)</option>
+            <option value="경상북도 본청">경상북도 본청 (32건)</option>
+            <option value="포항시">포항시 (36건)</option>
+            <option value="경주시">경주시 (23건)</option>
+            <option value="구미시">구미시 (15건)</option>
+            <option value="안동시">안동시 (14건)</option>
+            <option value="영주시">영주시 (7건)</option>
+            <option value="경산시">경산시 (7건)</option>
+            <option value="영천시">영천시 (5건)</option>
+            <option value="김천시">김천시 (4건)</option>
+            <option value="상주시">상주시 (4건)</option>
+            <option value="고령군">고령군 (4건)</option>
+            <option value="봉화군">봉화군 (4건)</option>
+            <option value="문경시">문경시 (3건)</option>
+            <option value="의성군">의성군 (3건)</option>
+            <option value="청송군">청송군 (3건)</option>
+            <option value="칠곡군">칠곡군 (2건)</option>
+            <option value="영양군">영양군 (2건)</option>
+            <option value="영덕군">영덕군 (2건)</option>
+            <option value="청도군">청도군 (2건)</option>
+            <option value="예천군">예천군 (2건)</option>
+            <option value="울진군">울진군 (1건)</option>
+            <option value="울릉군">울릉군 (1건)</option>
+          </select>
+
+          <input type="text" id="gaok-search-input" placeholder="국가명 또는 외국 도시명 실시간 검색... (예: 베트남, 일본, 훈춘)" style="flex:1; min-width:260px; background:var(--bg-sub); border:1px solid var(--border-color); padding:10px 14px; border-radius:4px; font-size:14px; color:var(--text-main); outline:none;">
+        </div>
+
+        <div style="max-height:460px; overflow-y:auto; border:1px solid var(--border-color); border-radius:4px;" class="gaok-custom-scroll">
+          <table style="width:100%; border-collapse:collapse; font-size:13.5px; text-align:left;">
+            <thead style="position:sticky; top:0; background:var(--bg-sub); z-index:10; box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+              <tr style="border-bottom:2px solid var(--border-color); color:var(--text-main);">
+                <th style="padding:12px 14px;">지자체명</th>
+                <th style="padding:12px 14px;">국가명</th>
+                <th style="padding:12px 14px;">외국 도시/주명</th>
+                <th style="padding:12px 14px;">결연일자</th>
+                <th style="padding:12px 14px;">교류구분</th>
+              </tr>
+            </thead>
+            <tbody id="gaok-full-table-body"></tbody>
+          </table>
+        </div>
+        <div style="text-align:right; font-size:12px; color:var(--text-muted); margin-top:8px;">
+          출처: 대한민국시도지사협의회(GAOK) 지방외교 통계 (https://www.gaok.or.kr)
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 5: AI 새마을 컨설턴트 실시간 시뮬레이션 (독립 전용 페이지)
+       ========================================================================== -->
+  <main id="view-ai" class="page-view">
+    <section id="ai-sim-section" class="container" style="padding-top:40px; margin-bottom:60px;">
+      <div class="tt-box">
+        <span class="tt-line"></span>
+        <h2>AI 새마을 컨설턴트 <span>실시간 시뮬레이션</span></h2>
+        <p>현지 주민 및 관계자가 이용할 AI 지식 컨설팅 챗봇 모듈입니다.</p>
+      </div>
+
+      <div class="sim-grid">
+        <div class="chat-container">
+          <div class="chat-header">
+            <div class="bot-info">
+              <div class="bot-avatar">AI</div>
+              <div>
+                <div style="font-weight:700; font-size:15px;">경상북도 디지털새마을 AI 어드바이저</div>
+                <div style="font-size:12px; color:var(--text-muted);"><span class="status-online"></span> 실시간 응답 모드</div>
+              </div>
+            </div>
+            <span style="font-size:12px; color:var(--primary); font-weight:700;">LLM Based</span>
+          </div>
+
+          <div class="chat-messages" id="chat-messages-box">
+            <div class="message bot">
+              안녕하세요! <strong>3세대 디지털 새마을 AI 컨설턴트</strong>입니다.<br>
+              이철우 경북도지사의 '제3세대 새마을운동' 비전 및 전문성에 기반한 개도국 적정기술 및 경북 시·군 지자체 연계 방안을 안내해드립니다!
+            </div>
+          </div>
+
+          <div class="chat-quick-prompts">
+            <button class="quick-btn" onclick="sendQuickPrompt('🌶️ 영양 고추 3축 매칭')">🌶️ 영양 고추 3축 매칭</button>
+            <button class="quick-btn" onclick="sendQuickPrompt('🌾 상주 스마트팜 3축 매칭')">🌾 상주 스마트팜 3축 매칭</button>
+            <button class="quick-btn" onclick="sendQuickPrompt('📱 구미 IT 3축 매칭')">📱 구미 IT 3축 매칭</button>
+            <button class="quick-btn" onclick="sendQuickPrompt('키리바시 해양 모델 추천')">🏝️ 키리바시 해양 모델</button>
+          </div>
+
+          <div class="chat-input-area">
+            <input type="text" id="chat-user-input" class="chat-input" placeholder="질문을 입력하세요... (예: 키리바시 도서 지역 모델)">
+            <button class="send-btn" id="chat-send-btn" title="전송">➔</button>
+          </div>
+        </div>
+
+        <div class="official-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <h3 style="font-size:19px; font-weight:800; margin-bottom:12px; color:var(--primary);">
+              3세대 디지털 새마을 핵심 추진 솔루션
+            </h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:20px;">
+              일회성 지원을 넘어 개도국 주민의 장기적 자립 운영성을 확보합니다.
+            </p>
+
+            <div style="display:grid; grid-template-columns:1fr; gap:10px;">
+              <div style="background:var(--bg-sub); padding:14px; border-radius:6px; border:1px solid var(--border-color);">
+                <strong style="color:var(--primary); font-size:14px;">1. 청년 디지털 지도자 양성</strong>
+                <p style="font-size:12.5px; color:var(--text-muted); margin-top:2px;">개도국 현지 청년 대상 스마트 IT 교육 및 지도자 커리큘럼 운영</p>
+              </div>
+              <div style="background:var(--bg-sub); padding:14px; border-radius:6px; border:1px solid var(--border-color);">
+                <strong style="color:var(--accent-blue); font-size:14px;">2. AI 지식 아카이브 & 챗봇</strong>
+                <p style="font-size:12.5px; color:var(--text-muted); margin-top:2px;">50년 영농 노하우 및 적정기술 지식을 LLM 챗봇으로 다국어 제공</p>
+              </div>
+              <div style="background:var(--bg-sub); padding:14px; border-radius:6px; border:1px solid var(--border-color);">
+                <strong style="color:var(--accent-gold); font-size:14px;">3. 자조형 친환경 마을기업 링킹</strong>
+                <p style="font-size:12.5px; color:var(--text-muted); margin-top:2px;">경북 22개 시·군 적정기술과 현지 마을기업을 연결하여 자립 펀드 조성</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 6: 기획단 프로필 & 사업 기획서 (기획서 상단 배치)
+       ========================================================================== -->
+  <main id="view-profile" class="page-view">
+    <div class="container" style="padding-top:40px;">
+      <div class="tt-box">
+        <span class="tt-line"></span>
+        <h2>글로벌 디지털 새마을 <span>사업 기획서 & 프로필</span></h2>
+        <p>3세대 디지털 새마을 실천 프레임워크 및 글로벌 기획단 프로필</p>
+      </div>
+
+      <!-- 1. 사업 기획서 및 프레임워크 (상단 우선 배치) -->
+      <section style="margin-bottom:40px;">
+        <div style="margin-bottom:16px;">
+          <h3 style="font-size:22px; font-weight:900; color:var(--primary);">3세대 디지털 새마을 사업 기획서 및 프레임워크</h3>
+        </div>
+
+        <div id="proposal-paper-content"></div>
+      </section>
+
+      <!-- 2. 기획단 멤버 프로필 -->
+      <section style="margin-bottom:60px;">
+        <h3 style="font-size:20px; font-weight:800; color:var(--text-main); margin-bottom:18px;">경상북도 디지털새마을 기획단 멤버</h3>
+        <div id="team-profile-container"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Official Footer (Strict koreaucostarica #footer style) -->
+  <footer class="official-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div style="font-size:17px; font-weight:800; color:#fff; margin-bottom:6px;">
+            경상북도 새마을 플랫폼
+          </div>
+          <div style="display:inline-block; background:rgba(16, 185, 129, 0.18); border:1px solid rgba(16, 185, 129, 0.4); color:#6ee7b7; font-size:12px; font-weight:700; padding:3px 10px; border-radius:4px; margin-bottom:10px;">
+            📌 2026 3세대 새마을운동 실천 모델 공모 출품용 데모 페이지
+          </div>
+          <p style="color:#94a3b8; line-height:1.6; font-size:13px;">
+            본 사업은 <strong>'2026 3세대 새마을운동 실천 모델 공모'</strong> 출품을 위해 제안된 데모 플랫폼으로서, 경상북도 22개 시·군과 개발도상국 간 자조형 지속가능 새마을 생태계를 구축하기 위한 3세대 디지털 새마을 실천 모델입니다.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">주요 메뉴</div>
+          <ul class="footer-links">
+            <li><a onclick="switchView('intro')">사업개요</a></li>
+            <li><a onclick="switchView('compos')">사업구성</a></li>
+            
+            <li><a onclick="switchView('map')">경북 새마을 지도</a></li>
+            <li><a onclick="switchView('ai')">AI 컨설팅</a></li>
+            <li><a onclick="switchView('profile')">기획단 프로필</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">기획단 안내</div>
+          <p style="color:#94a3b8; margin-bottom:6px;">📍 경상북도 디지털새마을 기획단</p>
+          <p style="color:#94a3b8; margin-bottom:6px;">👤 팀장 최윤진 / 박문식</p>
+          <p style="color:#94a3b8;">✉️ contact@digitalsaemaul.org</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Copyright © 2026 경상북도 디지털새마을 기획단. All rights reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="javascript:void(0)" onclick="openTermsModal()" style="color:#cbd5e1; text-decoration:none; font-weight:600;">이용약관</a>
+          <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:#cbd5e1; text-decoration:none; font-weight:600;">개인정보처리방침</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Modals: 이용약관 & 개인정보처리방침
+       ========================================================================== -->
+  <!-- 1. 이용약관 모달 -->
+  <div class="modal-backdrop" id="terms-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>📜 글로벌 경상북도 디지털새마을 플랫폼 이용약관</h3>
+        <button class="modal-close" onclick="closeTermsModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <h4>제1조 (목적)</h4>
+        <p>본 약관은 경상북도 디지털새마을 기획단(이하 "기획단")이 제공하는 「경상북도 새마을 플랫폼」(이하 "서비스")의 이용조건, 절차 및 이용자와 기획단의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.</p>
+        
+        <h4>제2조 (용어의 정의)</h4>
+        <p>1. "서비스"란 기획단이 구축한 경상북도 22개 시·군 새마을 지도, GAOK 176건 교류 데이터베이스, AI 새마을 컨설턴트 챗봇, 3세대 실천 프레임워크 등 일체의 디지털 콘텐츠 및 시스템을 의미합니다.</p>
+        <p>2. "이용자"란 본 플랫폼에 접속하여 기획단이 제공하는 서비스를 이용하는 일반 방문자, 지자체 관계자 및 해외 협력 주체를 말합니다.</p>
+
+        <h4>제3조 (약관의 효력 및 변경)</h4>
+        <p>1. 본 약관은 서비스 웹사이트 하단 게시판에 공개함으로써 효력이 발생합니다.</p>
+        <p>2. 기획단은 필요한 경우 관련 법령을 위배하지 않는 범위 내에서 본 약관을 개정할 수 있습니다.</p>
+
+        <h4>제4조 (서비스의 제공)</h4>
+        <p>기획단은 다음 각 호의 서비스를 365일 24시간 연중무휴로 제공함을 원칙으로 합니다.</p>
+        <p>• 경상북도 22개 시·군 고유 새마을 역사 및 실제 보도자료 정보 제공</p>
+        <p>• 대한민국시도지사협의회(GAOK) 공식 176건 국제교류 검색 서비스</p>
+        <p>• 3세대 디지털 새마을 AI 컨설팅 챗봇 서비스</p>
+
+        <h4>제5조 (저작권의 귀속)</h4>
+        <p>기획단이 작성한 모든 콘텐츠(디자인, 지형 벡터 지점, AI 데이터셋)에 대한 저작권은 기획단 및 경상북도 지자체에 귀속됩니다.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="closeTermsModal()">확인 및 닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. 개인정보처리방침 모달 -->
+  <div class="modal-backdrop" id="privacy-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>🔒 글로벌 경상북도 디지털새마을 플랫폼 개인정보처리방침</h3>
+        <button class="modal-close" onclick="closePrivacyModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="background:var(--primary-light); color:var(--primary); padding:10px; border-radius:4px; font-weight:700; margin-bottom:14px;">
+          경상북도 디지털새마을 기획단은 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 관련 고충을 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+        </p>
+
+        <h4>1. 개인정보의 처리 목적</h4>
+        <p>기획단은 다음 목적을 위하여 최소한의 개인정보 및 접속 데이터를 처리합니다.</p>
+        <p>• AI 새마을 컨설턴트 시뮬레이터 질의응답 및 프롬프트 품질 개선</p>
+        <p>• 경북 22개 시·군 지도 및 GAOK 검색 기능 통계 분석</p>
+
+        <h4>2. 처리하는 개인정보 항목</h4>
+        <p>• 자동 수집 항목: IP 주소, 쿠키(Cookie), 서비스 이용 기록, 접속 웹 브라우저 종류</p>
+        <p>• AI 챗봇 이용 시: 사용자가 직접 입력한 대화 프롬프트 텍스트</p>
+
+        <h4>3. 개인정보의 보유 및 이용 기간</h4>
+        <p>수집된 개인정보 및 이용 기록은 수집·이용 목적이 달성되거나 법령에 따른 일정 기간 보관 후 지체 없이 파기합니다.</p>
+
+        <h4>4. 개인정보의 제3자 제공</h4>
+        <p>기획단은 원칙적으로 이용자의 개인정보를 외부에 제공하지 않으며, 법령의 규정에 근거한 경우에만 엄격히 제공합니다.</p>
+
+        <h4>5. 개인정보 보호책임자</h4>
+        <p>• 기획단 개인정보 보호 책임: 경상북도 디지털새마을 기획단</p>
+        <p>• 이메일 문의: contact@digitalsaemaul.org</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="closePrivacyModal()">확인 및 닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/news_data.js"></script>
+  <script src="js/gyeongbuk-map.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/workspace.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Script to Render & Filter GAOK 176 Records -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const muniSelect = document.getElementById('gaok-muni-select');
+      const searchInput = document.getElementById('gaok-search-input');
+      const tableBody = document.getElementById('gaok-full-table-body');
+      const countNum = document.getElementById('gaok-count-num');
+
+      let allRecords = [];
+      if (SAEMAUL_DATA.gaokFullData) {
+        for (const [muniName, records] of Object.entries(SAEMAUL_DATA.gaokFullData)) {
+          records.forEach(r => allRecords.push(r));
+        }
+      }
+
+      const renderTable = () => {
+        const selectedMuni = muniSelect ? muniSelect.value : 'ALL';
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+        let filtered = allRecords.filter(r => {
+          const matchMuni = (selectedMuni === 'ALL') || (r.muni === selectedMuni);
+          const matchQuery = !query || 
+            r.country.toLowerCase().includes(query) || 
+            r.city.toLowerCase().includes(query) || 
+            r.muni.toLowerCase().includes(query) ||
+            r.type.toLowerCase().includes(query);
+          return matchMuni && matchQuery;
+        });
+
+        if (countNum) countNum.innerText = `${filtered.length}건`;
+        if (!tableBody) return;
+
+        if (filtered.length === 0) {
+          tableBody.innerHTML = `<tr><td colspan="5" style="padding:24px; text-align:center; color:var(--text-muted);">검색 조건에 해당되는 교류 기록이 없습니다.</td></tr>`;
+          return;
+        }
+
+        let html = '';
+        filtered.forEach(item => {
+          const badgeStyle = item.type === '자매교류' 
+            ? 'background:rgba(5,150,105,0.12); color:var(--primary); font-weight:700;' 
+            : 'background:rgba(2,132,199,0.12); color:var(--accent-blue); font-weight:700;';
+          
+          html += `
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--primary);">${item.muni}</td>
+              <td style="padding:10px 14px;">${item.country}</td>
+              <td style="padding:10px 14px; font-weight:600; color:var(--text-main);">${item.city}</td>
+              <td style="padding:10px 14px; font-family:var(--font-mono); color:var(--text-muted);">${item.date}</td>
+              <td style="padding:10px 14px;"><span style="padding:2px 8px; border-radius:4px; font-size:12px; ${badgeStyle}">${item.type}</span></td>
+            </tr>
+          `;
+        });
+        tableBody.innerHTML = html;
+      };
+
+      if (muniSelect && searchInput) {
+        muniSelect.addEventListener('change', renderTable);
+        searchInput.addEventListener('input', renderTable);
+      }
+
+      renderTable();
+
+      window.filterGaokTableByMuni = (muniName) => {
+        if (muniSelect) {
+          muniSelect.value = muniName;
+          renderTable();
+          switchView('map', 'gaok-all-exchange-section');
+        }
+      };
+    });
+  </script>
+</body>
+</html>
