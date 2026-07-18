@@ -50,6 +50,7 @@ const SAEMAUL_DATA = {
     "청도군": {
         "officialSiteUrl": "https://www.cheongdo.go.kr",
         "news": "[보도] 청도군, 대한민국환경대상 자원순환 부문 7년 연속 대상",
+
         "newsUrl": "https://sports.donga.com/region/article/all/20260710/134273370/1",
         "history": "1969년 수해 복구 당시 박정희 대통령이 신도리 마을의 협동 정신을 치하하며 새마을운동의 모태로 삼은 공식 발상지입니다.",
         "project": "🌱 새마을 발상지 정신 계승 & 글로벌 자조형 에코 마을 프로젝트",
@@ -62,7 +63,8 @@ const SAEMAUL_DATA = {
     },
     "포항시": {
         "officialSiteUrl": "https://www.pohang.go.kr",
-        "news": "[보도] "일회용품 대신 다회용기"…포항새마을부녀회, 탄소중립 실천 캠페인",
+        "news": "[보도] \"일회용품 대신 다회용기\"…포항새마을부녀회, 탄소중립 실천 캠페인",
+
         "newsUrl": "https://www.kbsm.net/news/view.php?idx=526925",
         "history": "1971년 박정희 대통령이 전국 시장·군수 회의에서 '문성리와 같이 새마을운동을 하라'고 지시한 새마을 표준 모델 마을입니다.",
         "project": "🌊 해양 적정기술 & 2차전지 에코 마을기업 프로젝트",
@@ -75,7 +77,8 @@ const SAEMAUL_DATA = {
     },
     "구미시": {
         "officialSiteUrl": "https://www.gumi.go.kr",
-        "news": "[보도] 박윤경구미시의원 "잠긴새마을테마촌, 열린 관광공간으로"",
+        "news": "[보도] 박윤경구미시의원 \"잠긴새마을테마촌, 열린 관광공간으로\"",
+
         "newsUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4078401",
         "history": "(사)새마을재단 본부가 위치한 대한민국 새마을운동의 핵심 거점이자, 박정희 대통령 생가 소재지로서 베트남 짱방시 및 가나 등 개도국에 디지털 새마을 기술을 전수하고 있습니다.",
         "project": "📱 스마트 IT 센서 & 개도국 청년 디지털 센터 프로젝트",
@@ -89,6 +92,7 @@ const SAEMAUL_DATA = {
     "경산시": {
         "officialSiteUrl": "https://www.gbgs.go.kr",
         "news": "[보도] 아진산업,경산시새마을회에 승합차 기증…봉사활동 활용",
+
         "newsUrl": "https://www.newsis.com/view/NISX20260703_0003694486",
         "history": "전 세계 70여 개국 800여 명의 개도국 고위 공무원 및 청년 리더에게 새마을학 및 지역개발 석사 커리큘럼을 전수해 온 대한민국 글로벌 새마을 교육의 중심지입니다.",
         "project": "🎓 글로벌 3세대 새마을 석사·디지털 리더 양성 파이프라인",
@@ -102,6 +106,7 @@ const SAEMAUL_DATA = {
     "칠곡군": {
         "officialSiteUrl": "https://www.chilgok.go.kr",
         "news": "[보도] 새마을재단,칠곡군외국인 계절근로자 대상새마을교육 실시",
+
         "newsUrl": "https://www.hidomin.com/news/articleView.html?idxno=712761",
         "history": "칠곡군은 6.25 전쟁 참전국인 에티오피아의 디키체 마을에 새마을 회관을 건립하고 식수관을 설치하는 등 보은 사업을 지속해 왔습니다.",
         "project": "🕊️ 참전 보은 평화 새마을 & 자립형 농촌 마을기업 프로젝트",
@@ -115,6 +120,7 @@ const SAEMAUL_DATA = {
     "안동시": {
         "officialSiteUrl": "https://www.andong.go.kr/main.do",
         "news": "[보도] 안동시새마을회, '안동시청년새마을연대 발대식' 개최",
+
         "newsUrl": "https://www.imaeil.com/page/view/2026062409543265271",
         "history": "경상북도 본청(도청)이 위치한 광역 행정 중심지로, 경북 22개 시·군의 행정력과 해외 32개국 교류망을 총괄 지휘하고 있습니다.",
         "project": "🏛️ 3세대 디지털 새마을 광역 거점 & AI 거버넌스",
@@ -128,6 +134,7 @@ const SAEMAUL_DATA = {
     "경주시": {
         "officialSiteUrl": "https://www.gyeongju.go.kr",
         "news": "[보도] 경주시새마을, 위기 속 '연대의 경제'로 방향 잡다...새마을의 날 기념",
+
         "newsUrl": "https://www.hidomin.com/news/articleView.html?idxno=702304",
         "history": "베트남 찌에우퐁현과 자매결연을 맺고 새마을 버섯 재배사 및 마을도로 정비 프로젝트를 추진해 왔으며, 신라 천년 문화유산 관리 노하우를 전수합니다.",
         "project": "🏛️ 역사문화유산 스마트 보존 & 농가소득 증대 프로젝트",
@@ -141,6 +148,7 @@ const SAEMAUL_DATA = {
     "상주시": {
         "officialSiteUrl": "https://www.sangju.go.kr",
         "news": "[보도] 상주시새마을부녀회, 선진가정문화 실천다짐대회 개최",
+
         "newsUrl": "https://www.hidomin.com/news/articleView.html?idxno=713011",
         "history": "대한민국 농업 혁신의 중심지로서 곶감·쌀 농업 노하우 및 첨단 스마트팜 온실 제어 기술을 우즈베키스탄 등 중앙아시아 국가에 전수하고 있습니다.",
         "project": "🌾 스마트팜 온실 제어 & 중앙아시아 수확후 콜드체인 프로젝트",
@@ -154,6 +162,7 @@ const SAEMAUL_DATA = {
     "영주시": {
         "officialSiteUrl": "https://www.yeongju.go.kr",
         "news": "[보도] 영주시새마을회, 56주년 기념으로 지역사회 결속 다지다",
+
         "newsUrl": "https://www.viva100.com/article/20260423500920",
         "history": "풍기인삼 등 고부가가치 한방 약용작물 재배 기술을 기반으로 동남아 농촌 자립 및 바이오 소재 농업 기술 교류를 지속하고 있습니다.",
         "project": "🌿 고부가가치 약용작물 & 친환경 스마트 영농 프로젝트",
@@ -167,6 +176,7 @@ const SAEMAUL_DATA = {
     "영천시": {
         "officialSiteUrl": "https://www.yc.go.kr",
         "news": "[보도] 영천시,새마을운동종합평가대회 개최",
+
         "newsUrl": "http://www.metroseoul.co.kr/article/20251217500404",
         "history": "샤인머스캣, 과수 및 한방 산업의 거점으로서 중국, 베트남 지자체와의 자매결연을 통해 스마트 농업 인프라를 교류해 왔습니다.",
         "project": "🍇 과수 스마트 하우스 & 친환경 에코 농업 링킹 프로젝트",
@@ -180,6 +190,7 @@ const SAEMAUL_DATA = {
     "김천시": {
         "officialSiteUrl": "https://www.gc.go.kr",
         "news": "[보도] 김천시,새마을클린UP! 그린UP! 챌린지",
+
         "newsUrl": "https://view.asiae.co.kr/article/2026061912172449070",
         "history": "한국도로공사 등 혁신도시 공공기관과 협력하여 캄보디아, 베트남 등 개도국에 교육 시설 지원 및 자립 마을 봉사단을 파견했습니다.",
         "project": "🚀 스마트 물류 융합 & 개도국 청년 교육 센터 프로젝트",
@@ -193,6 +204,7 @@ const SAEMAUL_DATA = {
     "문경시": {
         "officialSiteUrl": "https://www.gbmg.go.kr",
         "news": "[보도] 문경시직장공장새마을회, 어르신 250명에 짜장면 대접…공경문화 실천",
+
         "newsUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4076365",
         "history": "문경 도자기 및 오미자 등 지역 특산품 가공 기술을 바탕으로 아시아 지역 커뮤니티 자립 프로그램을 운영해 왔습니다.",
         "project": "☕ 웰니스 특산물 가공 & 개도국 마을기업 브랜딩 프로젝트",
@@ -206,6 +218,7 @@ const SAEMAUL_DATA = {
     "의성군": {
         "officialSiteUrl": "https://www.usc.go.kr",
         "news": "[보도] 의성군새마을회, 탄소중립 실천 3R 재활용품 경진대회 개최",
+
         "newsUrl": "https://www.sidae.com/article/2026071010240327731",
         "history": "이웃사촌 시범마을 등 청년 복합 농업 자립 시스템을 성공시켜 인도네시아, 라오스 등 동남아 농촌 유스(Youth) 자립 벤치마킹 대상이 되고 있습니다.",
         "project": "🌱 청년 귀농 청년창농 모델 & 스마트 자립 마을기업 프로젝트",
@@ -219,6 +232,7 @@ const SAEMAUL_DATA = {
     "성주군": {
         "officialSiteUrl": "https://www.sj.go.kr",
         "news": "[보도] 직장공장새마을운동성주군협의회, 에너지 절약 거리 캠페인 전개",
+
         "newsUrl": "https://www.seongjuro.co.kr/news/view.php?idx=59896",
         "history": "세계 최고의 참외 시설 재배 기술력을 갖춘 성주군은 몽골 및 중앙아시아의 추운 기후에 맞는 시설하우스 및 스마트 보온 기술을 교류하고 있습니다.",
         "project": "🍈 기후변화 대응 시설하우스 & 스마트 보온 영농 프로젝트",
@@ -232,6 +246,7 @@ const SAEMAUL_DATA = {
     "고령군": {
         "officialSiteUrl": "https://www.goryeong.go.kr",
         "news": "[보도] 고령군새마을회, 제16회새마을의 날 기념식과 한마음대회 개최",
+
         "newsUrl": "https://www.aflnews.co.kr/news/articleView.html?idxno=319851",
         "history": "대가야 역사 고도 고령군은 농업 용수 및 토양 개량 노하우를 바탕으로 스리랑카 등 아시아 자매도시 농가 자조 지원 사업을 펼쳐왔습니다.",
         "project": "🏺 토양 개량 적정기술 & 역사문화관광 연계 프로젝트",
@@ -245,6 +260,7 @@ const SAEMAUL_DATA = {
     "예천군": {
         "officialSiteUrl": "https://www.yecheon.go.kr",
         "news": "[보도] 예천군새마을회, '2024새마을지도자 대회 및 총회' 열어",
+
         "newsUrl": "https://daily.hankooki.com/news/articleView.html?idxno=1162002",
         "history": "친환경 곤충 산업 및 양궁의 본고장으로서 동남아시아 농촌 지역에 친환경 병해충 방제 및 스마트 영농 기술을 전수하고 있습니다.",
         "project": "🐝 친환경 생물학적 방제 & 스마트 유기농 프로젝트",
@@ -258,6 +274,7 @@ const SAEMAUL_DATA = {
     "봉화군": {
         "officialSiteUrl": "https://www.bonghwa.go.kr",
         "news": "[보도] 재능기부로 공동체 문화 확산하는봉화군 새마을운동",
+
         "newsUrl": "https://www.viva100.com/article/20260325500323",
         "history": "베트남 리왕조 후손인 봉화 화씨 역사 유적을 품은 한-베 교류의 거점이자, 청정 산림 약초 자원을 바탕으로 동남아 산림 프로젝트를 추진합니다.",
         "project": "🌲 산림 자원 양묘 & 한-베 역사문화 네트워크 프로젝트",
@@ -271,6 +288,7 @@ const SAEMAUL_DATA = {
     "울진군": {
         "officialSiteUrl": "https://www.uljin.go.kr",
         "news": "[보도] 울진군,새마을지도자와‘화합으로 새로운 희망’ 다짐",
+
         "newsUrl": "http://www.cfnews.kr/news.aspx/103675",
         "history": "2023년 원자력 수소 국가산업단지로 지정된 울진군은 무탄소 청정 에너지 및 대규모 해수담수화 기술을 보유한 동해안 해양 에너지 거점 도시입니다.",
         "project": "⚛️ 무탄소 청정 에너지 & 해수담수화 적정기술 매핑 프로젝트",
@@ -284,6 +302,7 @@ const SAEMAUL_DATA = {
     "울릉군": {
         "officialSiteUrl": "https://www.ulleung.go.kr",
         "news": "[보도] 울릉군새마을회, 푸른울릉가꾸기 자연 정화 봉사 전개",
+
         "newsUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4057126",
         "history": "대한민국 동쪽 끝 독도를 수호하는 울릉군은 도서 지역 고유의 해양 수산 자원 관리 및 청정 어촌 자립 노하우를 태평양 도서국과 공유합니다.",
         "project": "🏝️ 독도 해양 생태 보존 & 도서 어촌 수산 자립 새마을 프로젝트",
@@ -297,6 +316,7 @@ const SAEMAUL_DATA = {
     "영양군": {
         "officialSiteUrl": "https://www.yyg.go.kr",
         "news": "[보도] 영양군새마을회, 재활용품경진대회 시상·하계수련대회 개최…지역 공동",
+
         "newsUrl": "http://www.metroseoul.co.kr/article/20260702500199",
         "history": "대한민국 대표 청정 지역으로서 고품질 고추 및 산산나물 유기 농법을 아시아 농촌 지역 환경 개선 및 소득증대 사업과 매핑해 왔습니다.",
         "project": "🌶️ 청정 유기 농업 & 토양 보존형 스마트 영농 프로젝트",
@@ -310,6 +330,7 @@ const SAEMAUL_DATA = {
     "영덕군": {
         "officialSiteUrl": "https://www.yd.go.kr",
         "news": "[보도] 영덕군새마을회, 희망2025 나눔 캠페인 성금 기탁",
+
         "newsUrl": "http://www.metroseoul.co.kr/article/20241223500237",
         "history": "동해안 최대 풍력발전 단지와 해양 생태계를 갖춘 영덕군은 해양 탄소 흡수원(블루카본) 보존 및 신재생 에너지 기술 프로젝트를 연계합니다.",
         "project": "💨 신재생 에코 에너지 & 블루카본 해양 생태 프로젝트",
@@ -323,6 +344,7 @@ const SAEMAUL_DATA = {
     "청송군": {
         "officialSiteUrl": "https://www.cs.go.kr",
         "news": "[보도] 청송군새마을회, 2026년 숨은자원모으기 경진대회 실시",
+
         "newsUrl": "https://www.dkilbo.com/news/articleView.html?idxno=548853",
         "history": "유네스코 세계지질공원이자 명품 사과 생산지로서 다기능 스마트 과수원 및 기후변화 적응 농법을 아시아 지자체와 교류하고 있습니다.",
         "project": "🍎 스마트 과수원 관리 & 기후변화 적응 농업 프로젝트",
