@@ -40,11 +40,39 @@ class SaemaulChatbot {
     // Show Typing Indicator
     this.showTypingIndicator();
 
-    try {
-      const systemPrompt = `당신은 경상북도 디지털 새마을 ODA 컨설턴트입니다. 
+      // Build GAOK exchange data context dynamically from SAEMAUL_DATA
+      let gaokContext = '';
+      let newsContext = '';
+
+      try {
+        if (typeof SAEMAUL_DATA !== 'undefined' && SAEMAUL_DATA.gaokFullData) {
+          const lines = Object.entries(SAEMAUL_DATA.gaokFullData)
+            .map(([muni, list]) => {
+              const items = list.map(e => `${e.country} ${e.city}(${e.type})`).join(' / ');
+              return `${muni}: ${items}`;
+            });
+          gaokContext = '\n\n[경상북도 본청 및 22개 시군 GAOK 공식 해외 교류 전수 데이터]\n' + lines.join('\n');
+        }
+      } catch(e) {}
+
+      try {
+        if (typeof SAEMAUL_NEWS !== 'undefined') {
+          const munis = Object.keys(SAEMAUL_NEWS).join(', ');
+          newsContext = `\n\n[경상북도 22개 시군 새마을 뉴스 아카이브 보유 지자체]\n${munis}\n(각 지자체별 실시간 새마을 뉴스 수백 건이 수집되어 있습니다.)`;
+        }
+      } catch(e) {}
+
+      const systemPrompt = `당신은 경상북도 디지털 새마을 ODA 컨설턴트입니다.
 근면·자조·협동의 새마을 정신에 AI, IoT, 친환경 에너지 등 3세대 디지털 적정기술을 융합하여 개도국 농촌의 자립과 주민 소득 증대를 돕는 혁신적인 컨설팅을 제안해야 합니다.
-사용자의 질문에 대해 경상북도 22개 시·군의 고유한 산업적 강점(예: 포항의 해양, 구미의 IT, 경주의 역사보존, 의성의 유기농, 칠곡의 평화 ODA 등)과 글로벌 ODA 프로젝트를 매핑하여 명쾌하고 전문적이며 실현 가능한 솔루션을 제공하세요.
-대화 창 크기가 한정되어 있으므로 답변은 3~4문장 내외로 간결하고 핵심만 담아 정중한 한국어로 답변해 주세요.`;
+
+[경상북도 22개 시군 핵심 산업 강점]
+포항(해양·철강), 경주(역사문화·유네스코), 구미(IT·전자·새마을재단 본부), 안동(유교·정신문화·경북도청), 영주(산악·유기농), 영천(포도·한의약), 상주(자전거·스마트팜), 문경(석탄·도자기), 경산(대학교육·박정희새마을대학원 PSPS·70개국 유학생 네트워크), 의성(마늘·유기농), 청송(사과·수자원), 영양(고추·유기농), 영덕(대게·해양), 청도(감·와인), 고령(대가야·도예), 성주(참외·스마트팜), 칠곡(에티오피아 한국전쟁 참전보은·평화 ODA), 예천(농업·생태), 봉화(산림·약초), 울진(원자력·해양), 울릉(도서·해양), 군위(화산·관광)${gaokContext}${newsContext}
+
+[답변 필수 규칙]
+1. 절대로 한자(예: 들, 們, 漢字 등 중국어 한자)를 사용하지 마십시오. 모든 단어는 반드시 한글 또는 영문으로만 표기하세요.
+2. 위의 GAOK 공식 교류 데이터를 참조하여, 질문한 지자체가 실제로 자매결연·우호교류 맺은 국가명·도시명을 구체적으로 언급하여 답변의 신뢰성을 높이세요.
+3. 경산시의 강점은 농업·관광이 아니라 영남대학교 박정희새마을대학원(PSPS)의 전 세계 70개국 이상 글로벌 유학생 파이프라인입니다.
+4. 답변은 4~5문장 이내로 간결하고 핵심만 담아 정중한 한국어로 작성하세요.`;
 
       // Call the local python proxy server /api/chat instead of Groq directly to avoid CORS blocks
       const response = await fetch('/api/chat', {
@@ -59,7 +87,7 @@ class SaemaulChatbot {
             { role: 'user', content: text }
           ],
           temperature: 0.7,
-          max_tokens: 400
+          max_tokens: 600
         })
       });
 
