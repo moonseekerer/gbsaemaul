@@ -417,11 +417,11 @@ class GyeongbukMapEngine {
             return muniNewsArchive[regionName].map((art, idx) => {
               return `
                 <a href="${art.url}" target="_blank" rel="noopener noreferrer" 
-                   style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:5px 8px; background:var(--bg-sub); border:1px solid var(--border-color); border-radius:4px; text-decoration:none; transition:all 0.2s;"
+                   style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:5px 8px; background:var(--bg-sub); border:1px solid var(--border-color); border-radius:4px; text-decoration:none; transition:all 0.2s; min-width: 0; width: 100%; box-sizing: border-box;"
                    onmouseover="this.style.borderColor='var(--primary-border)'; this.style.background='#fff';" 
                    onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-sub)';"
                    title="${art.title}">
-                  <span style="font-size:11.5px; color:var(--text-main); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1;">
+                  <span style="font-size:11.5px; color:var(--text-main); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1; min-width: 0;">
                     ${art.title}
                   </span>
                   <span style="font-size:10px; background:#e2e8f0; color:#475569; padding:1px 5px; border-radius:3px; font-weight:600; white-space:nowrap;">
