@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initScrollTimeline();
   initModalBackdropEvents();
+  
+  // Initialize AI Saemaul Advisor Chatbot
+  if (typeof SaemaulChatbot !== 'undefined') {
+    window.saemaulChatbot = new SaemaulChatbot(
+      'chat-messages-box',
+      'chat-user-input',
+      'chat-send-btn'
+    );
+  }
 });
 
 /* --------------------------------------------------------------------------
