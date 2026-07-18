@@ -436,11 +436,7 @@ class GyeongbukMapEngine {
 
       ${matchingHtml}
 
-      <!-- GAOK International Exchange List Box -->
-      <div style="background:var(--bg-sub); border:1px solid var(--border-color); padding:10px 12px; border-radius:6px; margin-bottom:10px; height:120px; overflow-y:auto;" class="gaok-custom-scroll">
-        <h4 style="color:var(--primary); font-size:12px; margin-bottom:6px;">🌐 해외 자매결연 및 우호교류 도시 리스트</h4>
-        ${gaokListHtml}
-      </div>
+
 
 
 
