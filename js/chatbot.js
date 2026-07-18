@@ -44,6 +44,11 @@ class SaemaulChatbot {
     this.input.value = '';
     this.showTypingIndicator();
 
+    // 1차 필터링 (JS 수준): 디지털 새마을 ODA와 전혀 무관한 일반 요리, 레시피, 단순 맛집, 일반 연예/상식 등의 키워드가 들어오는 경우 바로 차단 또는 정중한 안내 제공
+    const lowerText = text.toLowerCase();
+    const offTopicKeywords = ['레시피', '만드는 법', '만드는법', '파스타', '라면', '피자', '찌개', '볶음밥', '요리법', '맛집', '연예인', '날씨'];
+    const hasOffTopic = offTopicKeywords.some(keyword => lowerText.includes(keyword));
+
     try {
       let gaokContext = '';
       let newsContext = '';
@@ -69,14 +74,18 @@ class SaemaulChatbot {
       const systemPrompt = `[CRITICAL LANGUAGE RULE - MUST FOLLOW ABOVE ALL ELSE]
 You MUST write ONLY in Korean (한국어) and standard English alphabet (A-Z, a-z).
 STRICTLY FORBIDDEN characters - do NOT use any of these under any circumstances:
-- Chinese/CJK characters: 管理 市場 先進 进行 活跃 などの漢字 etc.
-- Cyrillic (Russian): а б в г д е any Cyrillic letter
-- Japanese kana: あ い う え hiragana/katakana
+- Chinese/CJK characters: 관리, 시장, 선진, 진행, 활발 등의 한자 표기 절대 금지
+- Cyrillic (Russian): any Cyrillic letter
+- Japanese kana: any hiragana/katakana
 - Arabic, Thai, or any other non-Latin/non-Korean script
 - Transliterated foreign words (e.g. "byk", "aktivno") — use Korean instead
 
 당신은 경상북도 디지털 새마을 AI 어드바이저입니다.
 근면·자조·협동의 새마을 정신에 AI, IoT, 친환경 에너지 등 3세대 디지털 적정기술을 융합하여 개도국 농촌의 자립과 주민 소득 증대를 돕는 어드바이징을 제공합니다.
+
+[오프토픽 질문 처리 규칙 - 매우 중요]
+- 사용자가 질문한 내용이 디지털 새마을 ODA, 지자체 국제교류 사업, 지역별 산업 강점/적정기술과 무관한 일반 질문(예: 음식 레시피, 단순 요리 정보, 단순 관광지 맛집 정보 등)인 경우, 절대로 억지로 지자체 정보(예: 영양군, 경주시)나 자매결연 도시를 엮어서 허위 정보를 만들거나 황당하게 답변하지 마십시오.
+- 무관한 질문에 대해서는 다음과 같이 답변하십시오: "안녕하세요! 저는 경상북도 디지털새마을 AI 어드바이저로서 경북 시·군의 ODA 사업, 적정기술 매핑, 국제교류 현황에 특화된 안내를 제공하고 있습니다. 질문하신 분야는 제 어드바이징 영역 외의 주제입니다. 디지털 새마을 ODA 프로젝트나 지자체 교류 현황에 대해 질문해 주시면 친절히 안내해 드릴게요!"
 
 [경상북도 22개 시군 핵심 산업 강점]
 포항(해양·철강), 경주(역사문화·유네스코), 구미(IT·전자·새마을재단 본부), 안동(유교·정신문화·경북도청), 영주(산악·유기농), 영천(포도·한의약), 상주(자전거·스마트팜), 문경(석탄·도자기), 경산(대학교육·박정희새마을대학원 PSPS·70개국 유학생 네트워크), 의성(마늘·유기농), 청송(사과·수자원), 영양(고추·유기농), 영덕(대게·해양), 청도(감·와인), 고령(대가야·도예), 성주(참외·스마트팜), 칠곡(에티오피아 한국전쟁 참전보은·평화 ODA), 예천(농업·생태), 봉화(산림·약초), 울진(원자력·해양), 울릉(도서·해양), 군위(화산·관광)${gaokContext}${newsContext}
@@ -85,6 +94,13 @@ STRICTLY FORBIDDEN characters - do NOT use any of these under any circumstances:
 1. 경산시의 강점은 영남대학교 박정희새마을대학원(PSPS)의 전 세계 70개국 이상 글로벌 유학생 파이프라인입니다.
 2. 자매결연·우호교류 도시는 자연스럽게 맞을 때만 언급하고, 억지로 나열하지 마세요.
 3. 답변은 4~5문장 이내로 간결하게 작성하세요.`;
+
+      // 1차 JS 필터링에 걸린 경우, API 요청을 보내지 않고 바로 정중히 안내
+      if (hasOffTopic) {
+        this.removeTypingIndicator();
+        this.appendMessageTyping("안녕하세요! 저는 경상북도 디지털새마을 AI 어드바이저로서 경북 시·군의 ODA 사업, 적정기술 매핑, 국제교류 현황에 특화된 안내를 제공하고 있습니다. 질문하신 일반 요리/맛집 등은 제 어드바이징 영역 외의 주제입니다. 디지털 새마을 ODA 프로젝트나 지자체 교류 현황에 대해 질문해 주시면 친절히 안내해 드릴게요! 😊", 'bot');
+        return;
+      }
 
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -95,7 +111,7 @@ STRICTLY FORBIDDEN characters - do NOT use any of these under any circumstances:
             { role: 'system', content: systemPrompt },
             { role: 'user', content: text }
           ],
-          temperature: 0.6,
+          temperature: 0.5,
           max_tokens: 600
         })
       });
