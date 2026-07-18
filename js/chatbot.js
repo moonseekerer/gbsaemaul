@@ -60,17 +60,23 @@ class SaemaulChatbot {
         }
       } catch(err) {}
 
-      const systemPrompt = `당신은 경상북도 디지털 새마을 AI 어드바이저입니다.
-근면·자조·협동의 새마을 정신에 AI, IoT, 친환경 에너지 등 3세대 디지털 적정기술을 융합하여 개도국 농촌의 자립과 주민 소득 증대를 돕는 혁신적인 어드바이징을 제공해야 합니다.
+      const systemPrompt = `[언어 규칙 - 최우선 적용]
+한국어와 영문(알파벳)만 사용하세요.
+아래 문자는 절대 사용 금지입니다:
+- 한자/중국어 간체·번체 (예: 管理, 市场, 先進, 进行, 活跃 등)
+- 러시아어, 일본어, 아랍어 등 기타 외국어 문자
+- 영어 단어도 한국어 대체어가 있으면 한국어 우선 사용
+
+당신은 경상북도 디지털 새마을 AI 어드바이저입니다.
+근면·자조·협동의 새마을 정신에 AI, IoT, 친환경 에너지 등 3세대 디지털 적정기술을 융합하여 개도국 농촌의 자립과 주민 소득 증대를 돕는 어드바이징을 제공합니다.
 
 [경상북도 22개 시군 핵심 산업 강점]
 포항(해양·철강), 경주(역사문화·유네스코), 구미(IT·전자·새마을재단 본부), 안동(유교·정신문화·경북도청), 영주(산악·유기농), 영천(포도·한의약), 상주(자전거·스마트팜), 문경(석탄·도자기), 경산(대학교육·박정희새마을대학원 PSPS·70개국 유학생 네트워크), 의성(마늘·유기농), 청송(사과·수자원), 영양(고추·유기농), 영덕(대게·해양), 청도(감·와인), 고령(대가야·도예), 성주(참외·스마트팜), 칠곡(에티오피아 한국전쟁 참전보은·평화 ODA), 예천(농업·생태), 봉화(산림·약초), 울진(원자력·해양), 울릉(도서·해양), 군위(화산·관광)${gaokContext}${newsContext}
 
-[답변 필수 규칙]
-1. 절대로 한자(예: 们, 漢字 등 중국어 한자)를 사용하지 마십시오. 모든 단어는 반드시 한글 또는 영문으로만 표기하세요.
-2. 위의 GAOK 공식 교류 데이터를 참조하여, 질문한 지자체가 실제로 자매결연·우호교류 맺은 국가명·도시명을 구체적으로 언급하여 신뢰성을 높이세요.
-3. 경산시의 강점은 농업·관광이 아니라 영남대학교 박정희새마을대학원(PSPS)의 전 세계 70개국 이상 글로벌 유학생 파이프라인입니다.
-4. 답변은 4~5문장 이내로 간결하고 핵심만 담아 친근하고 정중한 한국어로 작성하세요.`;
+[답변 규칙]
+1. 경산시의 강점은 영남대학교 박정희새마을대학원(PSPS)의 전 세계 70개국 이상 글로벌 유학생 파이프라인입니다. 농업·관광으로 답변하지 마세요.
+2. 자매결연·우호교류 도시는 내용에 자연스럽게 맞을 때만 언급하고, 억지로 나열하지 마세요.
+3. 답변은 4~5문장 이내로 간결하고 핵심만 담아 친근하고 정중하게 작성하세요.`;
 
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -91,7 +97,9 @@ class SaemaulChatbot {
       if (!response.ok) throw new Error(`API Error: ${response.status}`);
 
       const data = await response.json();
-      const botResponse = data.choices[0].message.content.trim();
+      const rawResponse = data.choices[0].message.content.trim();
+      // Safety: strip any non-Korean/non-ASCII characters that slipped through
+      const botResponse = this.sanitizeResponse(rawResponse);
       this.appendMessage(botResponse, 'bot');
 
     } catch (error) {
@@ -115,6 +123,12 @@ class SaemaulChatbot {
     } else {
       return `[AI 어드바이저]: "${query}"에 대한 문의 감사합니다! 경상북도 22개 시·군의 고유 자원(예: 칠곡의 에티오피아 참전보은, 영양의 고추 유기농법 등)을 기반으로, 3세대 디지털 새마을 정신을 접목한 최적의 글로벌 ODA 연계 방안을 안내해 드립니다.`;
     }
+  }
+
+  // Safety net: remove any non-Korean / non-ASCII characters the LLM may have slipped in
+  // Keeps: Hangul (가-힣), ASCII (0x00-0x7F), common symbols, and emoji (0x1F000-0x1FFFF range)
+  sanitizeResponse(text) {
+    return text.replace(/[^\u0000-\u007F\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F\uFFA0-\uFFDC\u2600-\u27FF\uD800-\uDFFF]/g, '');
   }
 
   appendMessage(text, sender) {
