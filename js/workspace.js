@@ -107,13 +107,13 @@ function renderProposalDocument() {
       </ul>
 
       <h3 style="font-size:17px; font-weight:800; color:var(--primary); margin-top:28px;">3. 3세대 새마을운동 핵심 공모 및 실천 분야</h3>
-      <div style="display:flex; flex-direction:column; gap:12px; margin-top:12px;">
+      <div style="display:flex; flex-direction:column; gap:16px; margin-top:16px;">
 
         <!-- 1번 최우선 강조 파트 -->
-        <div style="background:var(--primary-light); border:2px solid var(--primary-border); padding:18px 20px; border-radius:8px;">
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap;">
-            <span style="background:var(--primary); color:#ffffff; font-size:11.5px; font-weight:800; padding:3px 10px; border-radius:4px;">★ 최우선 중점 공모 분야</span>
-            <strong style="color:var(--primary); font-size:15.5px; font-weight:900;">1) 지역소멸 대응 및 지역공동체 재생, 고령친화·세대통합, 청년 정주 프로그램</strong>
+        <div style="border-left:4px solid var(--primary); padding-left:16px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px; flex-wrap:wrap;">
+            <span style="color:var(--primary); font-size:12px; font-weight:800;">[최우선 중점 공모 분야]</span>
+            <strong style="color:var(--primary); font-size:15px; font-weight:900;">1) 지역소멸 대응 및 지역공동체 재생, 고령친화·세대통합, 청년 정주 프로그램</strong>
           </div>
           <p style="font-size:13.5px; color:var(--text-main); line-height:1.65; margin-top:4px;">
             경상북도 22개 시·군의 가장 절박하고 시급한 과제인 <strong>지방소멸 위기 극복</strong>을 목표로, 청년이 돌아와 정주하고 어르신과 청년세대가 AI·디지털 기술로 함께 협동하여 마을 활력을 되찾는 선도적 공동체 재생 모델을 최우선으로 지원하고 강조합니다.
@@ -121,16 +121,16 @@ function renderProposalDocument() {
         </div>
 
         <!-- 2번 ~ 5번 일반 공모 분야 -->
-        <div style="background:var(--bg-sub); border:1px solid var(--border-color); padding:14px 18px; border-radius:6px; font-size:13.5px;">
+        <div style="padding-left:16px; border-bottom:1px solid var(--border-color); padding-bottom:8px; font-size:13.5px;">
           <strong style="color:var(--text-main); font-weight:800;">2) 환경·탄소중립·도시농업 기반 공동체 사업:</strong> 기후변화 대응 친환경 스마트 유기농 및 탄소중립 마을 모델
         </div>
-        <div style="background:var(--bg-sub); border:1px solid var(--border-color); padding:14px 18px; border-radius:6px; font-size:13.5px;">
+        <div style="padding-left:16px; border-bottom:1px solid var(--border-color); padding-bottom:8px; font-size:13.5px;">
           <strong style="color:var(--text-main); font-weight:800;">3) 마을기업·협동조합 등 사회적경제 모델:</strong> 주민 소유 자조형 에코 마을기업 및 소득 증대 펀딩
         </div>
-        <div style="background:var(--bg-sub); border:1px solid var(--border-color); padding:14px 18px; border-radius:6px; font-size:13.5px;">
+        <div style="padding-left:16px; border-bottom:1px solid var(--border-color); padding-bottom:8px; font-size:13.5px;">
           <strong style="color:var(--text-main); font-weight:800;">4) 해외 새마을사업 연계 국제협력 분야:</strong> 개도국 거점 청년 지도자 양성 및 적정기술 보급
         </div>
-        <div style="background:var(--bg-sub); border:1px solid var(--border-color); padding:14px 18px; border-radius:6px; font-size:13.5px;">
+        <div style="padding-left:16px; font-size:13.5px;">
           <strong style="color:var(--text-main); font-weight:800;">5) 기타 3세대 새마을운동 가치 확산 사업:</strong> 미래세대 교육 및 디지털 새마을 생태계 조성
         </div>
 
