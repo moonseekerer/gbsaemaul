@@ -228,3 +228,23 @@
   color: #fff;
   font-weight: 700;
 }
+
+/* Custom Scrollbar for Detail Card & News Feed */
+.region-detail-card::-webkit-scrollbar,
+.news-feed-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.region-detail-card::-webkit-scrollbar-track,
+.news-feed-scroll::-webkit-scrollbar-track {
+  background: var(--bg-sub);
+  border-radius: 4px;
+}
+.region-detail-card::-webkit-scrollbar-thumb,
+.news-feed-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.region-detail-card::-webkit-scrollbar-thumb:hover,
+.news-feed-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

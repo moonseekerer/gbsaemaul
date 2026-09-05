@@ -294,13 +294,16 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   Page Views Switcher Container
+   Page Views Switcher Container (With Micro Fade-In)
    -------------------------------------------------------------------------- */
 .page-view {
   display: none;
+  opacity: 0;
+  transition: opacity 0.18s ease-in-out;
 }
 .page-view.active {
   display: block;
+  opacity: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -1097,4 +1100,43 @@ body {
 .gaok-custom-scroll::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Academic & Official Report Table Component (GEMINI.md Rule 4)
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em;
+}
+
+.academic-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 13.5px;
+  color: var(--text-main);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.academic-table th {
+  background: var(--bg-sub);
+  color: var(--primary);
+  font-weight: 800;
+  text-align: left;
+  padding: 11px 16px;
+  border-bottom: 2px solid var(--border-color);
+  font-size: 13px;
+}
+.academic-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border-color);
+  line-height: 1.6;
+}
+.academic-table tr:last-child td {
+  border-bottom: none;
+}
+.academic-table tr:hover td {
+  background: var(--primary-light);
 }
