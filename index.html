@@ -412,33 +412,120 @@
     </section>
   </main>
 
-  <!-- ==========================================================================
-       VIEW 2: 사업구성 (Strict koreaucostarica #compos style)
+      <!-- ==========================================================================
+       VIEW 2: 사업구성 (3대 핵심 추진 축 & 지방소멸 대응 3축 융합 매칭)
        ========================================================================== -->
   <main id="view-compos" class="page-view">
     <section class="section-compos">
-      <div class="container">
+      <div class="container" style="padding-top:40px; padding-bottom:60px;">
         <div class="tt-box">
           <span class="tt-line"></span>
-          <h2><span>경상북도 3세대 디지털 새마을 사업구성</span></h2>
+          <h2>글로벌 디지털 새마을 플랫폼 <span>3대 추진 체계 및 사업구성</span></h2>
           <p>
-            본 사업은 경상북도 22개 시·군과 개발도상국 현지 커뮤니티를 <strong>디지털 센터·AI 아카이브·자조형 마을기업</strong>으로 연결하여<br>
-            지속가능한 자립 생태계를 구축하는 것을 목표로 하는 실천형 협력 사업입니다.
+            기초 지자체 단위의 자산 데이터화, 청년 참여형 실시간 정책 네트워크, 글로벌 ODA 지식 허브를 유기적으로 결합하여<br>
+            지방소멸 위기를 극복하고 3세대 새마을운동의 미래 가치를 전 세계로 확산하는 실천형 플랫폼 아키텍처입니다.
           </p>
         </div>
 
-        
-        <!-- 3-Axis Matching Engine Section inside View 2: 사업구성 -->
+        <!-- 1. 플랫폼 3대 핵심 추진 축 (Core Platform Pillars) -->
+        <div style="margin-top:36px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+            <span style="background:var(--primary); color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:4px;">핵심 아키텍처</span>
+            <h3 style="font-size:20px; font-weight:900; color:var(--text-main); margin:0;">플랫폼 3대 핵심 추진 체계</h3>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:22px;">
+            <!-- 제1축 -->
+            <div class="official-card" style="border-top:4px solid #006837; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;">
+                  <div>
+                    <span style="font-size:11.5px; font-weight:800; color:#006837; background:#e8f5e9; padding:3px 8px; border-radius:4px; border:1px solid #c8e6c9;">제1축 데이터화</span>
+                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin-top:8px; margin-bottom:0;">지자체 자산 데이터화 & 지도</h4>
+                  </div>
+                  <span style="font-size:12px; color:var(--text-muted); font-weight:700;">22개 시·군 / 176건</span>
+                </div>
+                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                  경북 22개 시·군의 역사적 새마을 자산과 대한민국시도지사협의회(GAOK) 공공데이터 기반 <strong>176건 국제교류 전수 현황</strong>을 통합 아카이빙하고, 인터랙티브 반응형 벡터 지도로 시각화합니다.
+                </p>
+                <ul style="font-size:12.5px; color:var(--text-main); line-height:1.7; padding-left:18px; margin:0 0 16px 0;">
+                  <li>시·군별 고유 농특산품 및 산업 인프라 자산화</li>
+                  <li>지자체별 해외 자매우호도시 전수 검색·필터링</li>
+                  <li>지자체 중심 지방외교 및 ODA 연계 기초 데이터 제공</li>
+                </ul>
+              </div>
+              <div>
+                <button class="btn btn-primary" onclick="switchView('map')" style="width:100%; font-size:13px; padding:9px 0;">
+                  경북 새마을 지도 및 176건 데이터 보기 →
+                </button>
+              </div>
+            </div>
+
+            <!-- 제2축 -->
+            <div class="official-card" style="border-top:4px solid #0284c7; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;">
+                  <div>
+                    <span style="font-size:11.5px; font-weight:800; color:#0284c7; background:#f0f9ff; padding:3px 8px; border-radius:4px; border:1px solid #bae6fd;">제2축 소통 네트워크</span>
+                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin-top:8px; margin-bottom:0;">청년 참여 & 실시간 정책 소통</h4>
+                  </div>
+                  <span style="font-size:12px; color:var(--text-muted); font-weight:700;">Firebase Live NoSQL</span>
+                </div>
+                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                  청년 창업가, 현장 활동가, 지자체 공무원이 <strong>실시간 클라우드 토론 광장</strong>을 통해 지역 현안과 새마을 아이디어를 직접 발의하고 즉각적인 정책 피드백을 교환합니다.
+                </p>
+                <ul style="font-size:12.5px; color:var(--text-main); line-height:1.7; padding-left:18px; margin:0 0 16px 0;">
+                  <li>실시간 동기화 클라우드 토론방(WebSocket 기반)</li>
+                  <li>시·군별 지역 맞춤형 정책 제안 및 댓글 피드백</li>
+                  <li>청년 창의 아이디어의 정책화 패스트트랙 연계</li>
+                </ul>
+              </div>
+              <div>
+                <button class="btn btn-white" onclick="switchView('chat')" style="width:100%; font-size:13px; padding:9px 0; border:1px solid #0284c7; color:#0284c7; font-weight:800;">
+                  실시간 아이디어 토론방 입장 →
+                </button>
+              </div>
+            </div>
+
+            <!-- 제3축 -->
+            <div class="official-card" style="border-top:4px solid #7c3aed; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;">
+                  <div>
+                    <span style="font-size:11.5px; font-weight:800; color:#7c3aed; background:#f5f3ff; padding:3px 8px; border-radius:4px; border:1px solid #ddd6fe;">제3축 글로벌 ODA</span>
+                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin-top:8px; margin-bottom:0;">글로벌 ODA 기술 매핑 & AI</h4>
+                  </div>
+                  <span style="font-size:12px; color:var(--text-muted); font-weight:700;">32개국 글로벌 허브</span>
+                </div>
+                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                  아시아·아프리카 32개국 ODA 거점과 경북의 산업 노하우를 매핑하고, <strong>생성형 AI 어드바이저</strong>를 통해 개도국 맞춤형 적정기술 컨설팅과 디지털 아카이브를 지원합니다.
+                </p>
+                <ul style="font-size:12.5px; color:var(--text-main); line-height:1.7; padding-left:18px; margin:0 0 16px 0;">
+                  <li>경북 특화 영농·디지털 적정기술의 글로벌 표준화</li>
+                  <li>지자체 새마을 뉴스 2,000건 데이터 연계 지식 허브</li>
+                  <li>초대형 언어모델(LLM) 기반 지능형 ODA 어드바이저</li>
+                </ul>
+              </div>
+              <div>
+                <button class="btn btn-white" onclick="switchView('ai')" style="width:100%; font-size:13px; padding:9px 0; border:1px solid #7c3aed; color:#7c3aed; font-weight:800;">
+                  AI 어드바이저 시뮬레이션 →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. 현장 실행 메커니즘: 지방소멸 대응 3축 융합 매칭 -->
         <div style="margin-top:40px; background:var(--bg-sub); padding:36px 24px; border:1px solid var(--border-color); border-radius:12px;">
           <div style="text-align:center; margin-bottom:28px;">
             <span style="background:var(--primary-light); color:var(--primary); font-size:12px; font-weight:700; padding:4px 12px; border-radius:20px; border:1px solid var(--primary-border);">
-               3세대 핵심 사업모델: 지방소멸 대응 3축 융합 매칭
+              현장 실행 메커니즘: 인구 유입 및 청년 정주 모델
             </span>
             <h3 style="font-size:24px; font-weight:900; color:var(--text-main); margin-top:10px;">
-              지방소멸 대응 <span>「시니어 - 청년유입 - 글로벌」 3축 융합 매칭 플랫폼</span>
+              지방소멸 대응 <span>「시니어 - 청년유입 - 글로벌」 3축 융합 매칭</span>
             </h3>
             <p style="font-size:14px; color:var(--text-muted); max-width:820px; margin:8px auto 0 auto; line-height:1.6;">
-              경북 22개 시·군 고유 특산품 및 자원을 기반으로 <strong>[시니어 노하우] + [외지/지역 청년 창업가] + [지역 거주 외국인 인재]</strong>를 1:1:1로 유기적으로 연계하여 선순환 인구 유입 생태계를 조성을 제안합니다.
+              경북 22개 시·군 고유 특산품 및 자원을 기반으로 <strong>[시니어 노하우] + [외지/지역 청년 창업가] + [지역 거주 외국인 인재]</strong>를 1:1:1로 유기적으로 연계하여 지속가능한 선순환 인구 유입 생태계를 조성합니다.
             </p>
           </div>
 
@@ -449,14 +536,13 @@
             <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #d97706; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
               <div>
                 <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-                  <span style="font-size:26px;"></span>
                   <div>
                     <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">1. 시니어 (Senior)</h4>
                     <span style="font-size:12px; color:#d97706; font-weight:700;">지역 토착 생산자 & 멘토</span>
                   </div>
                 </div>
                 <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
-                  평생 축적된 <strong>농특산품 재배 노하우와 유휴 토지·생산 자원</strong>을 청년에게 전수하고, 청년과 외국인 인재 유입을 통해 농가 소득 보전과 마을 공동체를 회복합니다.
+                  평생 축적된 <strong>농특산품 재배 노하우와 유휴 토지·생산 시설</strong>을 청년에게 전수하고, 청년과 외국인 인재 유입을 통해 농가 소득 보전과 마을 공동체를 회복합니다.
                 </p>
               </div>
               <div style="background:#fffbeb; border:1px solid #fde68a; padding:8px 12px; border-radius:6px; font-size:12px; color:#b45309; font-weight:700;">
@@ -468,14 +554,13 @@
             <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #10b981; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
               <div>
                 <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-                  <span style="font-size:26px;"></span>
                   <div>
                     <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">2. 청년 유입 (Youth)</h4>
                     <span style="font-size:12px; color:#10b981; font-weight:700;">외지 유입 & 지역 출신 창업가</span>
                   </div>
                 </div>
                 <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
-                  영양 고추·상주 곶감 등 <strong>지역 특산품 비즈니스를 위해 타지에서 유입되는 청년 창업가</strong>와 지역 청년이 AI·스마트 기술 기반 3세대 마을기업을 설립합니다.
+                  영양 고추·상주 곶감 등 <strong>지역 특산품 비즈니스를 위해 타지에서 유입되는 청년 창업가</strong>와 지역 청년이 AI·스마트 기술 기반 3세대 자조형 마을기업을 설립합니다.
                 </p>
               </div>
               <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:8px 12px; border-radius:6px; font-size:12px; color:#047857; font-weight:700;">
@@ -487,7 +572,6 @@
             <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #0284c7; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
               <div>
                 <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-                  <span style="font-size:26px;"></span>
                   <div>
                     <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">3. 글로벌 (Global)</h4>
                     <span style="font-size:12px; color:#0284c7; font-weight:700;">외국인 유학생·다문화·연수생</span>
@@ -510,12 +594,34 @@
               3축 융합 무한 선순환 루프 (Virtuous Cycle)
             </div>
             <div style="font-size:13px; color:#f1f5f9; font-weight:600; line-height:1.5;">
-              시니어의 영농 노하우 & 자원  청년의 AI·디지털 창업  글로벌 인재의 해외 판로 개척  지역 소득 증대 및 청년 정주 선순환!
+              시니어의 영농 노하우 & 자원 → 청년의 AI·디지털 창업 → 글로벌 인재의 해외 판로 개척 → 지역 소득 증대 및 청년 정주 선순환
             </div>
           </div>
         </div>
 
+        <!-- 3. 데모 실현가능성 검증 (Proof of Concept) -->
+        <div class="official-card" style="margin-top:36px; border-left:5px solid var(--primary);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <span style="background:var(--primary-light); color:var(--primary); font-size:11.5px; font-weight:800; padding:3px 8px; border-radius:4px;">실현가능성 검증 완료</span>
+              <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:6px 0 4px 0;">
+                아이디어에 머물지 않는 실제 작동 라이브 웹 프로토타입 구축
+              </h4>
+              <p style="font-size:13px; color:var(--text-muted); margin:0; line-height:1.6;">
+                Firebase NoSQL 실시간 토론 서버, 22개 시·군 인터랙티브 벡터 지도, GAOK 176건 국제교류 검색 엔진을 모두 사전에 구축하여 가시적 성과를 입증하였습니다.
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn btn-primary" onclick="switchView('map')" style="font-size:13px; padding:8px 16px;">
+                지도 데이터 체험
+              </button>
+              <button class="btn btn-white" onclick="switchView('chat')" style="font-size:13px; padding:8px 16px; border:1px solid var(--border-color); color:var(--primary); font-weight:700;">
+                실시간 토론방 참여
+              </button>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -663,7 +769,69 @@
   </main>
 
   <!-- ==========================================================================
-       VIEW 5: AI 어드바이저 (독립 전용 페이지)
+       VIEW 4: 실시간 아이디어 토론방 (독립 전용 페이지) (Firebase Realtime Chat)
+       ========================================================================== -->
+  <main id="view-chat" class="page-view">
+    <section class="container" style="padding-top:40px; padding-bottom:60px;">
+      <div class="tt-box">
+        <span class="tt-line"></span>
+        <h2>청년 아이디어 <span>실시간 토론방</span></h2>
+        <p>3세대 디지털 새마을운동의 미래 가치 확산을 위해 청년 창업가, 연구원, 도민이 자유롭게 아이디어를 제안하고 실시간으로 소통하는 공간입니다.</p>
+      </div>
+
+      <div class="chat-page-container">
+        <div class="chat-sidebar">
+          <div style="background:var(--primary-light); border:1px solid var(--primary-border); padding:14px; border-radius:8px;">
+            <div style="font-size:12px; font-weight:800; color:var(--primary); margin-bottom:4px;">실시간 연동 안내</div>
+            <div style="font-size:12px; color:var(--text-main); line-height:1.55;">
+              Firebase Firestore 클라우드 서버와 실시간 양방향 통신으로 연결되어 있습니다. 등록된 제안은 즉시 실시간 스트림에 게시됩니다.
+            </div>
+          </div>
+
+          <div>
+            <h4 style="font-size:13px; font-weight:800; color:var(--text-main); margin-bottom:10px;">토론 주제 분류 (5개 분야)</h4>
+            <div style="display:flex; flex-direction:column; gap:6px; font-size:12px;">
+              <span class="badge-ext-orange" style="padding:4px 8px; border-radius:4px; font-weight:700;">지방소멸대응: 청년 정주 및 빈집/유휴지 매칭</span>
+              <span class="badge-ext-green" style="padding:4px 8px; border-radius:4px; font-weight:700;">스마트영농: AI 센서 온실 및 친환경 작물</span>
+              <span class="badge-ext-blue" style="padding:4px 8px; border-radius:4px; font-weight:700;">마을기업: 지역 특산물 가공 및 협동조합 창업</span>
+              <span class="badge-ext-purple" style="padding:4px 8px; border-radius:4px; font-weight:700;">글로벌ODA: 개도국 32개국 적정기술 수출</span>
+              <span class="badge-ext-gray" style="padding:4px 8px; border-radius:4px; font-weight:700;">자유제안: 3세대 새마을 가치 확산 아이디어</span>
+            </div>
+          </div>
+
+          <div style="margin-top:auto; font-size:11.5px; color:var(--text-muted); line-height:1.5; border-top:1px solid var(--border-color); padding-top:12px;">
+            건전한 아이디어 제안 문화를 위해 상호 존중과 협동의 새마을정신을 바탕으로 의견을 나누어주세요.
+          </div>
+        </div>
+
+        <div class="chat-main-area">
+          <div class="chat-stream-box" id="chat-messages-stream">
+            <!-- Real-time chat bubbles injected by firebase-chat.js -->
+          </div>
+
+          <form class="chat-form-box" id="chat-form">
+            <div class="chat-controls-row">
+              <input type="text" id="chat-nickname-input" placeholder="작성자 / 소속" maxlength="20" required>
+              <select id="chat-category-select">
+                <option value="지방소멸대응">지방소멸대응</option>
+                <option value="스마트영농">스마트영농</option>
+                <option value="마을기업">마을기업</option>
+                <option value="글로벌ODA">글로벌ODA</option>
+                <option value="자유제안" selected>자유제안</option>
+              </select>
+            </div>
+            <div class="chat-input-row">
+              <input type="text" id="chat-message-input" placeholder="3세대 디지털 새마을운동에 기여할 아이디어를 입력하세요..." maxlength="300" required autocomplete="off">
+              <button type="submit">전송</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 5: AI 어드바이저 (지능형 컨설팅) (독립 전용 페이지)
        ========================================================================== -->
   <main id="view-ai" class="page-view">
     <section id="ai-sim-section" class="container" style="padding-top:40px; margin-bottom:60px;">
@@ -730,68 +898,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ==========================================================================
-       VIEW: 실시간 아이디어 토론방 (Firebase Realtime Chat)
-       ========================================================================== -->
-  <main id="view-chat" class="page-view">
-    <section class="container" style="padding-top:40px; padding-bottom:60px;">
-      <div class="tt-box">
-        <span class="tt-line"></span>
-        <h2>청년 아이디어 <span>실시간 토론방</span></h2>
-        <p>3세대 디지털 새마을운동의 미래 가치 확산을 위해 청년 창업가, 연구원, 도민이 자유롭게 아이디어를 제안하고 실시간으로 소통하는 공간입니다.</p>
-      </div>
-
-      <div class="chat-page-container">
-        <div class="chat-sidebar">
-          <div style="background:var(--primary-light); border:1px solid var(--primary-border); padding:14px; border-radius:8px;">
-            <div style="font-size:12px; font-weight:800; color:var(--primary); margin-bottom:4px;">실시간 연동 안내</div>
-            <div style="font-size:12px; color:var(--text-main); line-height:1.55;">
-              Firebase Firestore 클라우드 서버와 실시간 양방향 통신으로 연결되어 있습니다. 등록된 제안은 즉시 실시간 스트림에 게시됩니다.
-            </div>
-          </div>
-
-          <div>
-            <h4 style="font-size:13px; font-weight:800; color:var(--text-main); margin-bottom:10px;">토론 주제 분류 (5개 분야)</h4>
-            <div style="display:flex; flex-direction:column; gap:6px; font-size:12px;">
-              <span class="badge-ext-orange" style="padding:4px 8px; border-radius:4px; font-weight:700;">지방소멸대응: 청년 정주 및 빈집/유휴지 매칭</span>
-              <span class="badge-ext-green" style="padding:4px 8px; border-radius:4px; font-weight:700;">스마트영농: AI 센서 온실 및 친환경 작물</span>
-              <span class="badge-ext-blue" style="padding:4px 8px; border-radius:4px; font-weight:700;">마을기업: 지역 특산물 가공 및 협동조합 창업</span>
-              <span class="badge-ext-purple" style="padding:4px 8px; border-radius:4px; font-weight:700;">글로벌ODA: 개도국 32개국 적정기술 수출</span>
-              <span class="badge-ext-gray" style="padding:4px 8px; border-radius:4px; font-weight:700;">자유제안: 3세대 새마을 가치 확산 아이디어</span>
-            </div>
-          </div>
-
-          <div style="margin-top:auto; font-size:11.5px; color:var(--text-muted); line-height:1.5; border-top:1px solid var(--border-color); padding-top:12px;">
-            건전한 아이디어 제안 문화를 위해 상호 존중과 협동의 새마을정신을 바탕으로 의견을 나누어주세요.
-          </div>
-        </div>
-
-        <div class="chat-main-area">
-          <div class="chat-stream-box" id="chat-messages-stream">
-            <!-- Real-time chat bubbles injected by firebase-chat.js -->
-          </div>
-
-          <form class="chat-form-box" id="chat-form">
-            <div class="chat-controls-row">
-              <input type="text" id="chat-nickname-input" placeholder="작성자 / 소속" maxlength="20" required>
-              <select id="chat-category-select">
-                <option value="지방소멸대응">지방소멸대응</option>
-                <option value="스마트영농">스마트영농</option>
-                <option value="마을기업">마을기업</option>
-                <option value="글로벌ODA">글로벌ODA</option>
-                <option value="자유제안" selected>자유제안</option>
-              </select>
-            </div>
-            <div class="chat-input-row">
-              <input type="text" id="chat-message-input" placeholder="3세대 디지털 새마을운동에 기여할 아이디어를 입력하세요..." maxlength="300" required autocomplete="off">
-              <button type="submit">전송</button>
-            </div>
-          </form>
         </div>
       </div>
     </section>

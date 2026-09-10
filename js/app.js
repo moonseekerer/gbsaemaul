@@ -17,12 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
       'chat-send-btn'
     );
   }
+  // Handle direct hash navigation e.g. #compos, #map, #chat, #ai, #profile
+  const initialHash = window.location.hash.replace('#', '');
+  if (initialHash && ['intro', 'compos', 'map', 'chat', 'ai', 'profile'].includes(initialHash)) {
+    switchView(initialHash, null, false);
+  }
 });
 
 /* --------------------------------------------------------------------------
-   Sub-Page View Switcher (koreaucostarica.com Structure)
+   Sub-Page View Switcher (Dedicated 6-Page Navigation & Hash Routing)
    -------------------------------------------------------------------------- */
-function switchView(viewTarget, scrollToId = null) {
+function switchView(viewTarget, scrollToId = null, updateHash = true) {
+  const validViews = ['intro', 'compos', 'map', 'chat', 'ai', 'profile'];
+  if (!validViews.includes(viewTarget)) viewTarget = 'intro';
+
   const views = document.querySelectorAll('.page-view');
   const desktopItems = document.querySelectorAll('#desktop-gnb-menu .nav-item');
   const drawerItems = document.querySelectorAll('.drawer-menu-list .drawer-item');
@@ -56,6 +64,11 @@ function switchView(viewTarget, scrollToId = null) {
   // Close mobile drawer if open
   closeMobileDrawer();
 
+  // Update URL hash for direct page linking & history
+  if (updateHash && window.location.hash !== `#${viewTarget}`) {
+    history.pushState(null, '', `#${viewTarget}`);
+  }
+
   // Scroll to targeted section inside the view, or top of page
   if (scrollToId) {
     setTimeout(() => {
@@ -75,6 +88,16 @@ function switchView(viewTarget, scrollToId = null) {
     }, 100);
   }
 }
+
+// Support browser back/forward buttons seamlessly
+window.addEventListener('popstate', () => {
+  const hash = window.location.hash.replace('#', '');
+  if (hash && ['intro', 'compos', 'map', 'chat', 'ai', 'profile'].includes(hash)) {
+    switchView(hash, null, false);
+  } else {
+    switchView('intro', null, false);
+  }
+});
 
 /* --------------------------------------------------------------------------
    Master Toggle All Flip Cards System
