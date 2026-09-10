@@ -43,7 +43,7 @@
           <div style="font-weight:800; font-size:13px; color:var(--text-main); margin-bottom:8px;">주요 구현 플랫폼 기능</div>
           <ul style="padding-left:18px; margin:0; font-size:12.5px; color:var(--text-muted); line-height:1.7;">
             <li><strong>기초 지자체 새마을 지도:</strong> 경북 22개 시·군 GAOK 해외 교류 176건 및 지역 자산 시각화</li>
-            <li><strong>청년 아이디어 실시간 토론방:</strong> Firebase Firestore 클라우드 기반 실시간 의견 교류 채널</li>
+            <li><strong>청년 아이디어 실시간 토론방:</strong> 클라우드 기반 실시간 정책 소통 네트워크</li>
             <li><strong>시·군 제안 댓글 시스템:</strong> 22개 시·군별 정책 제안 및 도민 공감 피드백 창구</li>
             <li><strong>글로벌 ODA 연계 아카이브:</strong> 전 세계 5개 대륙 32개국 적정기술 매핑 및 AI 어드바이저</li>
           </ul>
@@ -469,7 +469,7 @@
                     <span style="font-size:11.5px; font-weight:800; color:#0284c7; background:#f0f9ff; padding:3px 8px; border-radius:4px; border:1px solid #bae6fd;">제2축 소통 네트워크</span>
                     <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin-top:8px; margin-bottom:0;">청년 참여 & 실시간 정책 소통</h4>
                   </div>
-                  <span style="font-size:12px; color:var(--text-muted); font-weight:700;">Firebase Live NoSQL</span>
+                  <span style="font-size:12px; color:var(--text-muted); font-weight:700;">실시간 클라우드 DB 연동</span>
                 </div>
                 <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
                   청년 창업가, 현장 활동가, 지자체 공무원이 <strong>실시간 클라우드 토론 광장</strong>을 통해 지역 현안과 새마을 아이디어를 직접 발의하고 즉각적인 정책 피드백을 교환합니다.
@@ -630,7 +630,7 @@
                 아이디어에 머물지 않는 실제 작동 라이브 웹 프로토타입 구축
               </h4>
               <p style="font-size:13px; color:var(--text-muted); margin:0; line-height:1.6;">
-                Firebase NoSQL 실시간 토론 서버, 22개 시·군 인터랙티브 벡터 지도, GAOK 176건 국제교류 검색 엔진을 모두 사전에 구축하여 가시적 성과를 입증하였습니다.
+                클라우드 실시간 토론 서버, 22개 시·군 인터랙티브 벡터 지도, GAOK 176건 국제교류 검색 엔진을 모두 사전에 구축하여 가시적 성과를 입증하였습니다.
               </p>
             </div>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -806,18 +806,18 @@
           <div style="background:var(--primary-light); border:1px solid var(--primary-border); padding:14px; border-radius:8px;">
             <div style="font-size:12px; font-weight:800; color:var(--primary); margin-bottom:4px;">실시간 연동 안내</div>
             <div style="font-size:12px; color:var(--text-main); line-height:1.55;">
-              Firebase Firestore 클라우드 서버와 실시간 양방향 통신으로 연결되어 있습니다. 등록된 제안은 즉시 실시간 스트림에 게시됩니다.
+              공공 클라우드 실시간 동기화 서버와 양방향 통신으로 연결되어 있습니다. 등록된 제안은 즉시 실시간 스트림에 게시됩니다.
             </div>
           </div>
 
           <div>
             <h4 style="font-size:13px; font-weight:800; color:var(--text-main); margin-bottom:10px;">토론 주제 분류 (5개 분야)</h4>
             <div style="display:flex; flex-direction:column; gap:6px; font-size:12px;">
-              <span class="badge-ext-orange" style="padding:4px 8px; border-radius:4px; font-weight:700;">지방소멸대응: 청년 정주 및 빈집/유휴지 매칭</span>
-              <span class="badge-ext-green" style="padding:4px 8px; border-radius:4px; font-weight:700;">스마트영농: AI 센서 온실 및 친환경 작물</span>
-              <span class="badge-ext-blue" style="padding:4px 8px; border-radius:4px; font-weight:700;">마을기업: 지역 특산물 가공 및 협동조합 창업</span>
-              <span class="badge-ext-purple" style="padding:4px 8px; border-radius:4px; font-weight:700;">글로벌ODA: 개도국 32개국 적정기술 수출</span>
-              <span class="badge-ext-gray" style="padding:4px 8px; border-radius:4px; font-weight:700;">자유제안: 3세대 새마을 가치 확산 아이디어</span>
+              <span class="badge-ext-orange" onclick="fillChatPrompt('의성청년창업네트워크', '지방소멸대응', '의성군 청년 마늘 가공 스타트업 모델을 영양군 고추 재배 청년 농가와 연결하여 공동 브랜딩 및 유휴 농가 주택 정주 패키지를 제안합니다.')" style="padding:5px 8px; border-radius:4px; font-weight:700; cursor:pointer;" title="클릭 시 제안 예시 입력">지방소멸대응: 청년 정주 및 빈집/유휴지 매칭 ↗</span>
+              <span class="badge-ext-green" onclick="fillChatPrompt('상주스마트팜연구원', '스마트영농', '상주시 스마트팜 혁신밸리의 데이터 기반 생육 관리 모델을 도내 북부권(봉화, 영양) 기후적응형 작물에 보급하여 청년 영농 정착률을 높입시다.')" style="padding:5px 8px; border-radius:4px; font-weight:700; cursor:pointer;" title="클릭 시 제안 예시 입력">스마트영농: AI 센서 온실 및 친환경 작물 ↗</span>
+              <span class="badge-ext-blue" onclick="fillChatPrompt('청도새마을협동조합', '마을기업', '새마을 발상지 청도의 주민 자조 모델에 청년 디자이너와 라이브커머스를 결합한 3세대 감말랭이 마을기업 육성을 제안합니다.')" style="padding:5px 8px; border-radius:4px; font-weight:700; cursor:pointer;" title="클릭 시 제안 예시 입력">마을기업: 지역 특산물 가공 및 협동조합 창업 ↗</span>
+              <span class="badge-ext-purple" onclick="fillChatPrompt('영남대PSPS글로벌연구원', '글로벌ODA', '아시아·아프리카 32개국 ODA 거점에 경북의 태양광 관수 펌프 및 농산물 가공 적정기술을 표준화하여 수출하고 현지 유학생을 코디네이터로 매칭합시다.')" style="padding:5px 8px; border-radius:4px; font-weight:700; cursor:pointer;" title="클릭 시 제안 예시 입력">글로벌ODA: 개도국 32개국 적정기술 수출 ↗</span>
+              <span class="badge-ext-gray" onclick="fillChatPrompt('경북디지털청년포럼', '자유제안', '도내 22개 시·군 새마을회관을 청년 공유오피스 및 디지털 코워킹 스페이스로 리모델링하여 워케이션과 지역 문제 해결을 병행하는 방안을 추천합니다.')" style="padding:5px 8px; border-radius:4px; font-weight:700; cursor:pointer;" title="클릭 시 제안 예시 입력">자유제안: 3세대 새마을 가치 확산 아이디어 ↗</span>
             </div>
           </div>
 
@@ -829,6 +829,26 @@
         <div class="chat-main-area">
           <div class="chat-stream-box" id="chat-messages-stream">
             <!-- Real-time chat bubbles injected by firebase-chat.js -->
+          </div>
+
+          <!-- 빠른 제안 예시 칩 바 (클릭 시 입력창 자동 완성) -->
+          <div style="padding:10px 14px; background:#f8fafc; border-top:1px solid var(--border-color); display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:11.5px; font-weight:800; color:var(--text-muted);">제안 예시 클릭:</span>
+            <button type="button" onclick="fillChatPrompt('의성청년창업네트워크', '지방소멸대응', '의성군 청년 마늘 가공 스타트업 모델을 영양군 고추 재배 청년 농가와 연결하여 공동 브랜딩 및 유휴 농가 주택 정주 패키지를 제안합니다.')" style="background:#fff; border:1px solid var(--border-color); padding:4px 9px; border-radius:14px; font-size:11px; color:#d97706; font-weight:700; cursor:pointer;">
+              #지방소멸대응 예시
+            </button>
+            <button type="button" onclick="fillChatPrompt('상주스마트팜연구원', '스마트영농', '상주시 스마트팜 혁신밸리의 데이터 기반 생육 관리 모델을 도내 북부권(봉화, 영양) 기후적응형 작물에 보급하여 청년 영농 정착률을 높입시다.')" style="background:#fff; border:1px solid var(--border-color); padding:4px 9px; border-radius:14px; font-size:11px; color:#059669; font-weight:700; cursor:pointer;">
+              #스마트영농 예시
+            </button>
+            <button type="button" onclick="fillChatPrompt('청도새마을협동조합', '마을기업', '새마을 발상지 청도의 주민 자조 모델에 청년 디자이너와 라이브커머스를 결합한 3세대 감말랭이 마을기업 육성을 제안합니다.')" style="background:#fff; border:1px solid var(--border-color); padding:4px 9px; border-radius:14px; font-size:11px; color:#0284c7; font-weight:700; cursor:pointer;">
+              #마을기업 예시
+            </button>
+            <button type="button" onclick="fillChatPrompt('영남대PSPS글로벌연구원', '글로벌ODA', '아시아·아프리카 32개국 ODA 거점에 경북의 태양광 관수 펌프 및 농산물 가공 적정기술을 표준화하여 수출하고 현지 유학생을 코디네이터로 매칭합시다.')" style="background:#fff; border:1px solid var(--border-color); padding:4px 9px; border-radius:14px; font-size:11px; color:#7c3aed; font-weight:700; cursor:pointer;">
+              #글로벌ODA 예시
+            </button>
+            <button type="button" onclick="fillChatPrompt('경북디지털청년포럼', '자유제안', '도내 22개 시·군 새마을회관을 청년 공유오피스 및 디지털 코워킹 스페이스로 리모델링하여 워케이션과 지역 문제 해결을 병행하는 방안을 추천합니다.')" style="background:#fff; border:1px solid var(--border-color); padding:4px 9px; border-radius:14px; font-size:11px; color:#475569; font-weight:700; cursor:pointer;">
+              #자유제안 예시
+            </button>
           </div>
 
           <form class="chat-form-box" id="chat-form">

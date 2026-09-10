@@ -21,24 +21,38 @@
   const DEFAULT_CHAT_MESSAGES = [
     {
       id: "sample-1",
-      nickname: "경북청년창업가",
+      nickname: "의성청년창업네트워크",
       category: "지방소멸대응",
-      message: "의성군 청년 마늘 가공 스타트업 모델을 영양군 고추 재배 청년 농가와 연결하여 공동 브랜딩을 제안합니다.",
+      message: "의성군 청년 마늘 가공 스타트업 모델을 영양군 고추 재배 청년 농가와 연결하여 공동 브랜딩 및 유휴 농가 주택 정주 패키지를 제안합니다.",
       time: "2026-09-10 14:20"
     },
     {
       id: "sample-2",
-      nickname: "영남대PSPS연구원",
-      category: "글로벌ODA",
-      message: "피지 및 태평양 도서국가 기후변화 대응을 위해 경북의 스마트 관수 적정기술 매핑을 지원할 수 있습니다.",
+      nickname: "상주스마트팜연구원",
+      category: "스마트영농",
+      message: "상주시 스마트팜 혁신밸리의 데이터 기반 생육 관리 모델을 도내 북부권(봉화, 영양) 기후적응형 작물에 보급하여 청년 영농 정착률을 높입시다.",
       time: "2026-09-10 15:05"
     },
     {
       id: "sample-3",
-      nickname: "디지털새마을활동가",
-      category: "스마트영농",
-      message: "기초 지자체 22개 시·군의 유휴 토지와 청년 창업가를 1:1 매칭하는 데이터베이스 기능이 매우 유용합니다.",
-      time: "2026-09-10 16:40"
+      nickname: "청도새마을협동조합",
+      category: "마을기업",
+      message: "새마을 발상지 청도의 주민 자조 모델에 청년 디자이너와 라이브커머스를 결합한 3세대 감말랭이 마을기업 육성을 제안합니다.",
+      time: "2026-09-10 16:30"
+    },
+    {
+      id: "sample-4",
+      nickname: "영남대PSPS글로벌연구원",
+      category: "글로벌ODA",
+      message: "아시아·아프리카 32개국 ODA 거점에 경북의 태양광 관수 펌프 및 농산물 가공 적정기술을 표준화하여 수출하고 현지 유학생을 코디네이터로 매칭합시다.",
+      time: "2026-09-10 17:15"
+    },
+    {
+      id: "sample-5",
+      nickname: "경북디지털청년포럼",
+      category: "자유제안",
+      message: "도내 22개 시·군 새마을회관을 청년 공유오피스 및 디지털 코워킹 스페이스로 리모델링하여 워케이션과 지역 문제 해결을 병행하는 방안을 추천합니다.",
+      time: "2026-09-10 18:40"
     }
   ];
 
@@ -178,7 +192,19 @@
     const container = document.getElementById("chat-messages-stream");
     if (!container) return;
 
-    container.innerHTML = messages
+    // Filter out test or invalid messages
+    const validMessages = messages.filter((m) => {
+      if (!m || !m.message) return false;
+      const t = m.message.trim();
+      if (t === "ㅇ" || t === "테스트" || t === "테스트입니다" || t.includes("연동 테스트")) {
+        return false;
+      }
+      return true;
+    });
+
+    const displayList = validMessages.length > 0 ? validMessages : DEFAULT_CHAT_MESSAGES;
+
+    container.innerHTML = displayList
       .map((m) => {
         const catClass = getCategoryBadgeClass(m.category);
         return `
@@ -196,6 +222,19 @@
 
     container.scrollTop = container.scrollHeight;
   }
+
+  // Quick Prompt Filling Helper
+  window.fillChatPrompt = function (nickname, category, message) {
+    const nickInput = document.getElementById("chat-nickname-input");
+    const catSelect = document.getElementById("chat-category-select");
+    const msgInput = document.getElementById("chat-message-input");
+    if (nickInput) nickInput.value = nickname;
+    if (catSelect) catSelect.value = category;
+    if (msgInput) {
+      msgInput.value = message;
+      msgInput.focus();
+    }
+  };
 
   function getCategoryBadgeClass(cat) {
     switch (cat) {
