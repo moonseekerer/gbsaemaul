@@ -31,6 +31,12 @@ function renderTeamProfiles() {
       </div>
     `).join('') : '';
 
+    const projectList = (m.projects && m.projects.length > 0) ? m.projects.map(p => `
+      <div style="font-size:12px; margin-bottom:5px; color:var(--text-main); border-left:2px solid var(--accent-blue); padding-left:8px;">
+        <strong style="color:var(--accent-blue);">${p.agency}</strong> | <strong>${p.title}</strong> <span style="color:var(--text-muted); font-size:11px;">(${p.period})</span>
+      </div>
+    `).join('') : '';
+
     let footprintHtml = '';
     if (m.footprint && Object.keys(m.footprint).length > 0) {
       for (const [region, countries] of Object.entries(m.footprint)) {
@@ -45,11 +51,12 @@ function renderTeamProfiles() {
       }
     }
 
-    extraSection = `
+    const extraSection = `
       <div style="margin-top:16px;">
         ${awardBadges}
         ${eduList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:12px 0 6px 0;">학력 사항</h4>${eduList}` : ''}
         ${careerList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">주요 활동 및 경력</h4>${careerList}` : ''}
+        ${projectList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">주요 공적개발원조(ODA) 프로젝트 수행 실적</h4>${projectList}` : ''}
         ${footprintHtml ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">글로벌 발자취 (전 세계 5개 대륙 32개국)</h4>${footprintHtml}` : ''}
       </div>
     `;
