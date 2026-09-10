@@ -309,7 +309,7 @@ class GyeongbukMapEngine {
         </div>
       `;
       
-      gaokListHtml += `<div style="font-size:12px; font-weight:700; color:var(--primary); margin:6px 0 4px 0;">🏛️ 경상북도 본청 자매/우호 도시 (${hqRecords.length}건)</div>`;
+      gaokListHtml += `<div style="font-size:12px; font-weight:700; color:var(--primary); margin:6px 0 4px 0;"> 경상북도 본청 자매/우호 도시 (${hqRecords.length}건)</div>`;
       gaokListHtml += hqRecords.map(renderItem).join('');
 
       gaokListHtml += `<div style="font-size:12px; font-weight:700; color:var(--accent-blue); margin:10px 0 4px 0;">🏙️ 안동시 자매/우호 도시 (${gaokRecords.length}건)</div>`;
@@ -332,7 +332,7 @@ class GyeongbukMapEngine {
     const actionButtons = isAndong ? `
       <div style="display:flex; gap:8px;">
         <button class="btn btn-primary" style="flex:1; font-size:12px; justify-content:center; padding:8px 10px;" onclick="window.filterGaokTableByMuni('경상북도 본청')">
-          🏛️ 본청 32건 보기
+           본청 32건 보기
         </button>
         <button class="btn btn-white" style="flex:1; font-size:12px; justify-content:center; padding:8px 10px;" onclick="window.filterGaokTableByMuni('안동시')">
           🏙️ 안동시 14건 보기
@@ -353,18 +353,18 @@ class GyeongbukMapEngine {
               <span style="font-size:12px; font-weight:800; color:var(--primary); display:flex; align-items:center; gap:4px;">
                 🤝 ${regionName} 3축 융합 매칭 모델 (예시)
               </span>
-              <span style="font-size:10.5px; background:#ffffff; color:var(--primary); border:1px solid var(--primary-border); padding:2px 6px; border-radius:4px; font-weight:700;">💡 공모전 예시 모델</span>
+              <span style="font-size:10.5px; background:#ffffff; color:var(--primary); border:1px solid var(--primary-border); padding:2px 6px; border-radius:4px; font-weight:700;"> 공모전 예시 모델</span>
             </div>
             
             <div style="display:flex; flex-direction:column; gap:6px; font-size:11.5px;">
               <div style="background:#fff; border-left:3px solid #d97706; padding:6px 9px; border-radius:0 4px 4px 0; color:var(--text-main);">
-                ${matching3.senior || '👴 [시니어] 지역 특산품 노하우 & 토지·자원 멘토링 전수'}
+                ${matching3.senior || ' [시니어] 지역 특산품 노하우 & 토지·자원 멘토링 전수'}
               </div>
               <div style="background:#fff; border-left:3px solid #10b981; padding:6px 9px; border-radius:0 4px 4px 0; color:var(--text-main);">
-                ${matching3.youth || '🌱 [청년 유입] 특산품 기반 외지 유입 청년 창업가 & AI 스마트 영농'}
+                ${matching3.youth || ' [청년 유입] 특산품 기반 외지 유입 청년 창업가 & AI 스마트 영농'}
               </div>
               <div style="background:#fff; border-left:3px solid #0284c7; padding:6px 9px; border-radius:0 4px 4px 0; color:var(--text-main);">
-                ${matching3.global || '🌐 [글로벌] 경북 거주 외국인 유학생·초청 연수생 ➔ 모국 수출 브릿지'}
+                ${matching3.global || ' [글로벌] 경북 거주 외국인 유학생·초청 연수생  모국 수출 브릿지'}
               </div>
             </div>
             <div style="font-size:10.5px; color:var(--text-muted); margin-top:6px; text-align:right; font-weight:600;">
@@ -375,7 +375,7 @@ class GyeongbukMapEngine {
 
         this.detailCard.innerHTML = `
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-        <span class="detail-badge">📍 시·군별 실제 새마을 역사 & 3축 매칭</span>
+        <span class="detail-badge"> 시·군별 실제 새마을 역사 & 3축 매칭</span>
         <span style="font-size:11px; color:var(--text-muted);">출처: GAOK & 경북 시·군 보도자료</span>
       </div>
 
@@ -384,14 +384,14 @@ class GyeongbukMapEngine {
         <a href="${odaData.officialSiteUrl || 'https://www.gb.go.kr'}" target="_blank" rel="noopener noreferrer" 
            style="font-size:11.5px; font-weight:700; color:var(--primary); background:var(--primary-light); border:1px solid var(--primary-border); padding:4px 9px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;"
            title="${regionName} 공식 누리집(홈페이지) 바로가기">
-          🏛️ ${regionName} 공식 누리집 ↗
+           ${regionName} 공식 누리집 ↗
         </a>
       </div>
 
       <!-- 📰 실제 새마을운동 역사 및 보도자료 박스 (원문보기 링크) -->
       <div style="background:var(--primary-light); border:1px solid var(--primary-border); padding:10px 12px; border-radius:6px; margin-bottom:10px;">
         <div style="font-weight:800; font-size:12.5px; color:var(--primary); margin-bottom:4px; line-height:1.35;">
-          📍 역사적 배경 & 지자체 설명
+           역사적 배경 & 지자체 설명
         </div>
         <p style="font-size:12px; color:var(--text-main); line-height:1.45; margin:0 0 8px 0;">
           ${odaData.history || '경상북도 시·군별 고유 새마을 역사 및 국제 협력 보도 내용입니다.'}
