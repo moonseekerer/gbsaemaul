@@ -16,18 +16,23 @@ function renderTeamProfiles() {
   let html = '<div class="profile-grid" style="display:grid; grid-template-columns:1fr 1.2fr; gap:24px; margin-bottom:40px;">';
 
   members.forEach(m => {
-    let extraSection = '';
+    const awardBadges = m.awards ? m.awards.map(a => `<div style="background:rgba(217, 119, 6, 0.1); color:var(--accent-gold); border:1px solid rgba(217, 119, 6, 0.3); padding:6px 12px; border-radius:6px; font-weight:700; font-size:12.5px; margin-bottom:6px;">${a}</div>`).join('') : '';
 
-    if (m.name === "박문식") {
-      const awardBadges = m.awards ? m.awards.map(a => `<div style="background:rgba(217, 119, 6, 0.1); color:var(--accent-gold); border:1px solid rgba(217, 119, 6, 0.3); padding:6px 12px; border-radius:6px; font-weight:700; font-size:12.5px; margin-bottom:6px;">${a}</div>`).join('') : '';
+    const eduList = (m.education && m.education.length > 0) ? m.education.map(e => `
+      <div style="font-size:12.5px; margin-bottom:4px; color:var(--text-main);">
+        <strong style="color:var(--primary); font-family:var(--font-mono);">${e.period}</strong> | ${e.desc}
+      </div>
+    `).join('') : '';
 
-      const eduList = m.education.map(e => `
-        <div style="font-size:12.5px; margin-bottom:4px; color:var(--text-main);">
-          <strong style="color:var(--primary); font-family:var(--font-mono);">${e.period}</strong> | ${e.desc}
-        </div>
-      `).join('');
+    const careerList = (m.careers && m.careers.length > 0) ? m.careers.map(c => `
+      <div style="font-size:12.5px; margin-bottom:6px; color:var(--text-main); border-left:2px solid var(--primary-border); padding-left:8px;">
+        <div><strong style="color:var(--primary);">${c.period}</strong> | <strong>${c.org}</strong> <span style="color:var(--accent-blue); font-size:11.5px;">(${c.role})</span></div>
+        <div style="color:var(--text-muted); font-size:12px;">${c.desc}</div>
+      </div>
+    `).join('') : '';
 
-      let footprintHtml = '';
+    let footprintHtml = '';
+    if (m.footprint && Object.keys(m.footprint).length > 0) {
       for (const [region, countries] of Object.entries(m.footprint)) {
         footprintHtml += `
           <div style="margin-bottom:8px;">
@@ -38,17 +43,16 @@ function renderTeamProfiles() {
           </div>
         `;
       }
-
-      extraSection = `
-        <div style="margin-top:16px;">
-          ${awardBadges}
-          <h4 style="font-size:14px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">🎓 학력 사항</h4>
-          ${eduList}
-          <h4 style="font-size:14px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">🌍 글로벌 발자취 (전 세계 5개 대륙 32개국)</h4>
-          ${footprintHtml}
-        </div>
-      `;
     }
+
+    extraSection = `
+      <div style="margin-top:16px;">
+        ${awardBadges}
+        ${eduList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:12px 0 6px 0;">학력 사항</h4>${eduList}` : ''}
+        ${careerList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">주요 활동 및 경력</h4>${careerList}` : ''}
+        ${footprintHtml ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">글로벌 발자취 (전 세계 5개 대륙 32개국)</h4>${footprintHtml}` : ''}
+      </div>
+    `;
 
     const roleSpan = m.role ? ` <span style="font-size:15px; color:var(--text-muted); font-weight:normal;">(${m.role})</span>` : '';
 
