@@ -233,7 +233,7 @@
         </div>
 
         <!-- 3대 Flip Card Grid -->
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px;">
+        <div class="flip-card-grid">
           
           <!-- 1. 근면 (Diligence) Flip Card -->
           <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
@@ -355,16 +355,34 @@
         </div>
 
         <!-- 이철우 경북도지사 5대 핵심 추진 과제 -->
-        <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--border-color);">
-          <h5 style="font-size:15px; font-weight:900; color:var(--primary); margin-bottom:14px;">
-            제3세대 새마을운동 성공을 위한 이철우 경북도지사 5대 핵심 실천 과제
-          </h5>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; font-size:13px; color:var(--text-main);">
-            <div style="padding:8px 0; border-bottom:1px solid var(--border-color); font-weight:700;">1. 청년 참여 지역혁신 프로젝트 확대</div>
-            <div style="padding:8px 0; border-bottom:1px solid var(--border-color); font-weight:700;">2. 주민 참여 디지털 소통 기반 마련</div>
-            <div style="padding:8px 0; border-bottom:1px solid var(--border-color); font-weight:700;">3. AI·데이터 기반 지역문제 해결 체계 구축</div>
-            <div style="padding:8px 0; border-bottom:1px solid var(--border-color); font-weight:700;">4. 지역 정주 자립형 경제모델 확산</div>
-            <div style="padding:8px 0; border-bottom:1px solid var(--border-color); font-weight:700;">5. 돌봄·교육·문화가 살아있는 생활공동체 회복</div>
+        <div style="margin-top:32px; padding-top:24px; border-top:1px solid var(--border-color);">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+            <h5 style="font-size:16px; font-weight:900; color:var(--primary); margin:0; display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--primary-light); color:var(--primary); border:1px solid var(--primary-border); font-size:11px; padding:2px 8px; border-radius:4px; font-weight:800;">5대 비전</span>
+              제3세대 새마을운동 성공을 위한 이철우 경북도지사 5대 핵심 실천 과제
+            </h5>
+          </div>
+          <div class="core-task-grid">
+            <div class="core-task-card">
+              <span class="core-task-num">01</span>
+              <span class="core-task-text">청년 참여 지역혁신 프로젝트 확대</span>
+            </div>
+            <div class="core-task-card">
+              <span class="core-task-num">02</span>
+              <span class="core-task-text">주민 참여 디지털 소통 기반 마련</span>
+            </div>
+            <div class="core-task-card">
+              <span class="core-task-num">03</span>
+              <span class="core-task-text">AI·데이터 기반 지역문제 해결 체계 구축</span>
+            </div>
+            <div class="core-task-card">
+              <span class="core-task-num">04</span>
+              <span class="core-task-text">지역 정주 자립형 경제모델 확산</span>
+            </div>
+            <div class="core-task-card">
+              <span class="core-task-num">05</span>
+              <span class="core-task-text">돌봄·교육·문화가 살아있는 생활공동체 회복</span>
+            </div>
           </div>
         </div>
       </div>
