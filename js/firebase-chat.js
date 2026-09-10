@@ -6,12 +6,13 @@
 
 (function () {
   const firebaseConfig = {
-    apiKey: "AIzaSyCkyhnqk4VTX20xEHvmzFe5r9sNYgUXYbk",
-    authDomain: "saemaul-sdgs.firebaseapp.com",
-    projectId: "saemaul-sdgs",
-    storageBucket: "saemaul-sdgs.firebasestorage.app",
-    messagingSenderId: "550605640090",
-    appId: "1:550605640090:web:4e30a84be713ec065c6a23"
+    apiKey: "AIzaSyBNY1W2zEV6-Exm7U0FDbtjX-zWNnJXivo",
+    authDomain: "gbsaemaul-2026.firebaseapp.com",
+    projectId: "gbsaemaul-2026",
+    storageBucket: "gbsaemaul-2026.firebasestorage.app",
+    messagingSenderId: "376617811749",
+    appId: "1:376617811749:web:f31130b29cb474973da4cc",
+    measurementId: "G-0Y34KT9568"
   };
 
   let db = null;

@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 실시간 채팅 메시지 (누구나 읽기 및 작성 가능)
+    match /chat_messages/{id} {
+      allow read, create: if true;
+    }
+    
+    // 시·군 참여 댓글 및 공감(좋아요)
+    match /city_comments/{id} {
+      allow read, create, update: if true;
+    }
+  }
+}
