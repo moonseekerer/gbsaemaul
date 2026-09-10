@@ -330,8 +330,8 @@
       updateAdminUI();
       if (window.currentChatMessages) renderChatMessages(window.currentChatMessages);
     } else {
-      const pw = prompt("관리자 비밀번호를 입력하세요\n(초기 관리자 암호: gb2026 또는 admin2026):");
-      if (pw === "gb2026" || pw === "admin2026" || pw === "admin1234") {
+      const pw = prompt("관리자 비밀번호를 입력하세요:");
+      if (pw === "0716") {
         sessionStorage.setItem("gbsaemaul_admin_auth", "true");
         alert("관리자 인증이 완료되었습니다.\n이제 모든 게시글에 대한 삭제 권한이 활성화됩니다.");
         updateAdminUI();
