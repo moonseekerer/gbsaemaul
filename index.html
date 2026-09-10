@@ -45,9 +45,12 @@
   <!-- Welcome Announcement Modal Popup (공모전 출품용 데모 안내 팝업) -->
   <div class="modal-backdrop active" id="welcome-modal-backdrop">
     <div class="modal-card" style="max-width:580px;">
-      <div class="modal-header" style="background:var(--primary); color:#ffffff; padding:16px 20px;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <h3 style="font-size:16px; font-weight:800; color:#ffffff; margin:0;">2026 3세대 새마을운동 실천 모델 공모</h3>
+      <div class="modal-header" style="background:var(--primary); color:#ffffff; padding:14px 20px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="background:#ffffff; padding:3px 8px; border-radius:4px; display:inline-flex; align-items:center;">
+            <img src="images/saemaul_foundation_logo.png" alt="새마을재단" style="height:24px; width:auto; object-fit:contain;">
+          </div>
+          <h3 style="font-size:15px; font-weight:800; color:#ffffff; margin:0;">2026 3세대 새마을운동 실천 모델 공모</h3>
         </div>
         <button class="modal-close" onclick="closeWelcomeModal()" style="color:#ffffff; opacity:0.9;" aria-label="팝업 닫기">✕</button>
       </div>
@@ -83,9 +86,12 @@
         <label style="font-size:12.5px; color:var(--text-muted); cursor:pointer; display:flex; align-items:center; gap:6px;">
           <input type="checkbox" id="welcome-dont-show-today" onchange="toggleWelcomeDontShow(this)"> 오늘 하루 보지 않기
         </label>
-        <button class="btn btn-primary" onclick="closeWelcomeModal()" style="font-size:13px; padding:8px 18px;">
-          플랫폼 체험하기 →
-        </button>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="images/saemaul_foundation_logo.png" alt="새마을재단" style="height:22px; width:auto; object-fit:contain;">
+          <button class="btn btn-primary" onclick="closeWelcomeModal()" style="font-size:13px; padding:8px 18px;">
+            플랫폼 체험하기 →
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -95,7 +101,8 @@
   <header class="top-header">
     <div class="container nav-wrapper">
       <a href="javascript:void(0)" onclick="switchView('intro')" class="brand-logo" style="display:flex; align-items:center; gap:12px;">
-        <img src="data/gb_mark/gb_logo_ai_p1.png" alt="경상북도 공식 로고" style="height:40px; width:auto; object-fit:contain;">
+        <img src="data/gb_mark/gb_logo_ai_p1.png" alt="경상북도 공식 로고" style="height:38px; width:auto; object-fit:contain;">
+        <img src="images/saemaul_foundation_logo.png" alt="새마을재단 로고" style="height:30px; width:auto; object-fit:contain;">
         <div style="border-left:2px solid var(--border-color); padding-left:12px;">
           <div class="logo-title" style="font-size:16.5px;">글로벌 디지털 새마을 플랫폼</div>
           <div class="logo-subtitle">기초 지자체 자산 데이터화 & 청년 아이디어 연계</div>
@@ -124,9 +131,10 @@
   <div class="mobile-backdrop" id="mobile-backdrop"></div>
   <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
     <div class="drawer-header">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <img src="data/gb_mark/gb_logo_ai_p1.png" alt="경상북도 공식 로고" style="height:28px; width:auto;">
-        <div class="logo-title" style="font-size:13.5px;">글로벌 디지털 새마을</div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <img src="data/gb_mark/gb_logo_ai_p1.png" alt="경상북도 공식 로고" style="height:26px; width:auto;">
+        <img src="images/saemaul_foundation_logo.png" alt="새마을재단" style="height:22px; width:auto;">
+        <div class="logo-title" style="font-size:13px;">디지털 새마을</div>
       </div>
       <button class="drawer-close-btn" id="drawer-close-btn" aria-label="메뉴 닫기">✕</button>
     </div>
@@ -977,14 +985,20 @@
     <div class="container">
       <div class="footer-top">
         <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; flex-wrap:wrap;">
+            <div style="background:#ffffff; padding:5px 12px; border-radius:6px; display:inline-flex; align-items:center;">
+              <img src="images/saemaul_foundation_logo.png" alt="새마을재단" style="height:30px; width:auto; object-fit:contain;">
+            </div>
+            <img src="data/gb_mark/gb_logo_ai_p1.png" alt="경상북도" style="height:32px; width:auto; object-fit:contain; filter:brightness(0) invert(1);">
+          </div>
           <div style="font-size:17px; font-weight:800; color:#fff; margin-bottom:6px;">
-            경상북도 새마을 플랫폼
+            글로벌 디지털 새마을 플랫폼
           </div>
           <div style="display:inline-block; background:rgba(16, 185, 129, 0.18); border:1px solid rgba(16, 185, 129, 0.4); color:#6ee7b7; font-size:12px; font-weight:700; padding:3px 10px; border-radius:4px; margin-bottom:10px;">
-            2026 3세대 새마을운동 실천 모델 공모 출품용 데모 페이지
+            새마을재단 2026 3세대 새마을운동 실천 모델 공모 출품작
           </div>
           <p style="color:#94a3b8; line-height:1.6; font-size:13px;">
-            본 사업은 <strong>'2026 3세대 새마을운동 실천 모델 공모'</strong> 출품을 위해 제안된 데모 플랫폼으로서, 경상북도 22개 시·군과 개발도상국 간 자조형 지속가능 새마을 생태계를 구축하기 위한 3세대 디지털 새마을 실천 모델입니다.
+            본 사업은 <strong>새마을재단 주최 '2026 3세대 새마을운동 실천 모델 공모'</strong> 출품을 위해 제안된 실증 플랫폼으로서, 경상북도 22개 시·군과 개발도상국 간 자조형 지속가능 새마을 생태계를 구축하기 위한 3세대 디지털 실천 모델입니다.
           </p>
         </div>
 
@@ -1012,7 +1026,12 @@
       </div>
 
       <div class="footer-bottom">
-        <div>Copyright © 2026 경상북도 디지털새마을 기획단. All rights reserved.</div>
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <div style="background:#ffffff; padding:2px 8px; border-radius:4px; display:inline-flex; align-items:center;">
+            <img src="images/saemaul_foundation_logo.png" alt="새마을재단" style="height:18px; width:auto; object-fit:contain;">
+          </div>
+          <span>Copyright © 2026 경상북도 디지털새마을 기획단 & 새마을재단(SAEMAUL FOUNDATION). All rights reserved.</span>
+        </div>
         <div style="display:flex; gap:16px; align-items:center;">
           <a href="javascript:void(0)" onclick="openTermsModal()" style="color:#cbd5e1; text-decoration:none; font-weight:600;">이용약관</a>
           <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:#cbd5e1; text-decoration:none; font-weight:600;">개인정보처리방침</a>

@@ -19,8 +19,8 @@ function renderTeamProfiles() {
     const awardBadges = m.awards ? m.awards.map(a => `<div style="background:rgba(217, 119, 6, 0.1); color:var(--accent-gold); border:1px solid rgba(217, 119, 6, 0.3); padding:6px 12px; border-radius:6px; font-weight:700; font-size:12.5px; margin-bottom:6px;">${a}</div>`).join('') : '';
 
     const eduList = (m.education && m.education.length > 0) ? m.education.map(e => `
-      <div style="font-size:12.5px; margin-bottom:4px; color:var(--text-main);">
-        <strong style="color:var(--primary); font-family:var(--font-mono);">${e.period}</strong> | ${e.desc}
+      <div style="font-size:12.5px; margin-bottom:5px; color:var(--text-main); line-height:1.5;">
+        <strong style="color:var(--primary); font-weight:700;">${e.period}</strong> | <span>${e.desc}</span>
       </div>
     `).join('') : '';
 
@@ -100,9 +100,14 @@ function renderProposalDocument() {
   container.innerHTML = `
     <div style="background:var(--bg-card); border:1px solid var(--border-color); padding:36px; border-radius:12px; font-size:14px; line-height:1.8; color:var(--text-main);">
       <div style="text-align:center; border-bottom:2px solid var(--primary); padding-bottom:20px; margin-bottom:24px;">
-        <span style="font-size:13px; color:var(--primary); font-weight:800; letter-spacing:1px;">[기타 분야] 3세대 새마을운동 가치 확산에 기여할 수 있는 사업</span>
+        <div style="display:flex; justify-content:center; align-items:center; gap:12px; margin-bottom:12px;">
+          <div style="background:#ffffff; padding:4px 14px; border-radius:6px; border:1px solid var(--border-color); display:inline-flex; align-items:center;">
+            <img src="images/saemaul_foundation_logo.png" alt="새마을재단" style="height:32px; width:auto; object-fit:contain;">
+          </div>
+        </div>
+        <span style="font-size:13px; color:var(--primary); font-weight:800; letter-spacing:1px;">[새마을재단 공모 출품작] 3세대 새마을운동 가치 확산 사업</span>
         <h2 style="font-size:26px; font-weight:900; margin-top:6px; color:var(--primary);">글로벌 디지털 새마을 플랫폼 구축</h2>
-        <div style="font-size:13px; color:var(--text-muted); margin-top:6px;">경상북도 디지털새마을 기획단 (최윤진 팀장 / 박문식 연구원)</div>
+        <div style="font-size:13px; color:var(--text-muted); margin-top:6px;">경상북도 디지털새마을 기획단 (팀장 최윤진 / 팀원 박문식)</div>
       </div>
 
       <h3 style="font-size:17px; font-weight:800; color:var(--primary); margin-top:24px;">1. 추진 배경 및 기획 목적</h3>
