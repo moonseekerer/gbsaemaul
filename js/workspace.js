@@ -13,7 +13,7 @@ function renderTeamProfiles() {
   if (!container || !SAEMAUL_DATA.platformInfo) return;
 
   const members = SAEMAUL_DATA.platformInfo.members;
-  let html = '<div class="profile-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; margin-bottom:40px;">';
+  let html = '<div class="profile-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:40px;">';
 
   members.forEach(m => {
     const awardBadges = m.awards ? m.awards.map(a => `<div style="background:rgba(217, 119, 6, 0.1); color:var(--accent-gold); border:1px solid rgba(217, 119, 6, 0.3); padding:6px 12px; border-radius:6px; font-weight:700; font-size:12.5px; margin-bottom:6px;">${a}</div>`).join('') : '';
@@ -98,7 +98,7 @@ function renderProposalDocument() {
   if (!container) return;
 
   container.innerHTML = `
-    <div style="background:var(--bg-card); border:1px solid var(--border-color); padding:36px; border-radius:12px; font-size:14px; line-height:1.8; color:var(--text-main);">
+    <div class="proposal-paper-wrapper" style="background:var(--bg-card); border:1px solid var(--border-color); padding:36px; border-radius:12px; font-size:14px; line-height:1.8; color:var(--text-main);">
       <div style="text-align:center; border-bottom:2px solid var(--primary); padding-bottom:20px; margin-bottom:24px;">
         <div style="display:flex; justify-content:center; align-items:center; gap:12px; margin-bottom:12px;">
           <div style="background:#ffffff; padding:4px 14px; border-radius:6px; border:1px solid var(--border-color); display:inline-flex; align-items:center;">

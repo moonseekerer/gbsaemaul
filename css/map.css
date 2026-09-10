@@ -248,3 +248,32 @@
 .news-feed-scroll::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* Touch and Mobile Map Optimization */
+@media (hover: none), (max-width: 768px) {
+  .gb-map-tooltip {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container-box {
+    padding: 8px !important;
+    border-radius: 8px !important;
+  }
+  .region-detail-card {
+    padding: 16px !important;
+    border-radius: 8px !important;
+  }
+  .detail-city-title {
+    font-size: 19px !important;
+    margin-bottom: 8px !important;
+  }
+  .detail-badge {
+    font-size: 11px !important;
+    padding: 3px 8px !important;
+  }
+}
+
