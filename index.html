@@ -515,87 +515,109 @@
           </div>
         </div>
 
-        <!-- 2. 현장 실행 메커니즘: 지방소멸 대응 3축 융합 매칭 -->
-        <div style="margin-top:40px; background:var(--bg-sub); padding:36px 24px; border:1px solid var(--border-color); border-radius:12px;">
-          <div style="text-align:center; margin-bottom:28px;">
-            <span style="background:var(--primary-light); color:var(--primary); font-size:12px; font-weight:700; padding:4px 12px; border-radius:20px; border:1px solid var(--primary-border);">
-              현장 실행 메커니즘: 인구 유입 및 청년 정주 모델
-            </span>
-            <h3 style="font-size:24px; font-weight:900; color:var(--text-main); margin-top:10px;">
-              지방소멸 대응 <span>「시니어 - 청년유입 - 글로벌」 3축 융합 매칭</span>
-            </h3>
-            <p style="font-size:14px; color:var(--text-muted); max-width:820px; margin:8px auto 0 auto; line-height:1.6;">
-              경북 22개 시·군 고유 특산품 및 자원을 기반으로 <strong>[시니어 노하우] + [외지/지역 청년 창업가] + [지역 거주 외국인 인재]</strong>를 1:1:1로 유기적으로 연계하여 지속가능한 선순환 인구 유입 생태계를 조성합니다.
+        <!-- 2. 현장 실행 메커니즘: 지방소멸 대응 3축 융합 매칭 (예시 시나리오 - 토글 가능) -->
+        <div class="official-card" style="margin-top:40px; background:var(--bg-sub); padding:0; border:1px solid var(--border-color); border-radius:12px; overflow:hidden;">
+          
+          <!-- Toggle Header Bar -->
+          <div onclick="toggleScenarioExample()" style="padding:22px 26px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:#ffffff; border-bottom:1px solid var(--border-color); user-select:none; transition:background 0.2s;" onmouseover="this.style.background='var(--bg-sub)'" onmouseout="this.style.background='#ffffff'">
+            <div>
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap;">
+                <span style="background:#e0f2fe; color:#0369a1; font-size:11.5px; font-weight:800; padding:3px 9px; border-radius:4px; border:1px solid #bae6fd;">
+                  현장 적용 시범 예시
+                </span>
+                <span style="font-size:12px; color:var(--text-muted); font-weight:600;">
+                  ※ 본 내용은 플랫폼 현장 접목을 위해 수립된 예시 시나리오 모델입니다.
+                </span>
+              </div>
+              <h3 style="font-size:20px; font-weight:900; color:var(--text-main); margin:0;">
+                지방소멸 대응 <span>「시니어 - 청년유입 - 글로벌」 3축 융합 매칭 (예시)</span>
+              </h3>
+            </div>
+            <div>
+              <button type="button" id="scenario-toggle-btn" class="btn btn-white" style="font-size:12.5px; padding:6px 14px; border-radius:20px; font-weight:700; color:var(--primary); pointer-events:none;">
+                예시 접기 ▲
+              </button>
+            </div>
+          </div>
+
+          <!-- Collapsible Content Body -->
+          <div id="scenario-example-content" style="padding:28px 24px; transition:all 0.3s ease;">
+            <p style="font-size:13.5px; color:var(--text-muted); max-width:860px; margin:0 0 22px 0; line-height:1.65;">
+              경북 22개 시·군 고유 특산품 및 자원을 기반으로 <strong>[시니어 노하우] + [외지/지역 청년 창업가] + [지역 거주 외국인 인재]</strong>를 1:1:1로 유기적으로 연계하여 지속가능한 선순환 인구 유입 생태계를 조성하는 <strong>현장 실천 예시 시나리오</strong>입니다.
             </p>
-          </div>
 
-          <!-- 3-Axis Matching Grid Cards -->
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; margin-bottom:24px;">
-            
-            <!-- 1. Senior Card -->
-            <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #d97706; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-                  <div>
-                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">1. 시니어 (Senior)</h4>
-                    <span style="font-size:12px; color:#d97706; font-weight:700;">지역 토착 생산자 & 멘토</span>
+            <!-- 3-Axis Matching Grid Cards -->
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; margin-bottom:24px;">
+              
+              <!-- 1. Senior Card -->
+              <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #d97706; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                    <div>
+                      <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">1. 시니어 (Senior)</h4>
+                      <span style="font-size:12px; color:#d97706; font-weight:700;">지역 토착 생산자 & 멘토</span>
+                    </div>
                   </div>
+                  <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                    평생 축적된 <strong>농특산품 재배 노하우와 유휴 토지·생산 시설</strong>을 청년에게 전수하고, 청년과 외국인 인재 유입을 통해 농가 소득 보전과 마을 공동체를 회복합니다.
+                  </p>
                 </div>
-                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
-                  평생 축적된 <strong>농특산품 재배 노하우와 유휴 토지·생산 시설</strong>을 청년에게 전수하고, 청년과 외국인 인재 유입을 통해 농가 소득 보전과 마을 공동체를 회복합니다.
-                </p>
+                <div style="background:#fffbeb; border:1px solid #fde68a; padding:8px 12px; border-radius:6px; font-size:12px; color:#b45309; font-weight:700;">
+                  역할: 숙련 노하우 전수 & 토지 자원 멘토링
+                </div>
               </div>
-              <div style="background:#fffbeb; border:1px solid #fde68a; padding:8px 12px; border-radius:6px; font-size:12px; color:#b45309; font-weight:700;">
-                역할: 숙련 노하우 전수 & 토지 자원 멘토링
-              </div>
-            </div>
 
-            <!-- 2. Youth Inflow Card -->
-            <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #10b981; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-                  <div>
-                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">2. 청년 유입 (Youth)</h4>
-                    <span style="font-size:12px; color:#10b981; font-weight:700;">외지 유입 & 지역 출신 창업가</span>
+              <!-- 2. Youth Inflow Card -->
+              <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #10b981; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                    <div>
+                      <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">2. 청년 유입 (Youth)</h4>
+                      <span style="font-size:12px; color:#10b981; font-weight:700;">외지 유입 & 지역 출신 창업가</span>
+                    </div>
                   </div>
+                  <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                    영양 고추·상주 곶감 등 <strong>지역 특산품 비즈니스를 위해 타지에서 유입되는 청년 창업가</strong>와 지역 청년이 AI·스마트 기술 기반 3세대 자조형 마을기업을 설립합니다.
+                  </p>
                 </div>
-                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
-                  영양 고추·상주 곶감 등 <strong>지역 특산품 비즈니스를 위해 타지에서 유입되는 청년 창업가</strong>와 지역 청년이 AI·스마트 기술 기반 3세대 자조형 마을기업을 설립합니다.
-                </p>
+                <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:8px 12px; border-radius:6px; font-size:12px; color:#047857; font-weight:700;">
+                  역할: AI·디지털 기술 융합 & 인구 유입 창업
+                </div>
               </div>
-              <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:8px 12px; border-radius:6px; font-size:12px; color:#047857; font-weight:700;">
-                역할: AI·디지털 기술 융합 & 인구 유입 창업
-              </div>
-            </div>
 
-            <!-- 3. Global Card -->
-            <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #0284c7; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
-              <div>
-                <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-                  <div>
-                    <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">3. 글로벌 (Global)</h4>
-                    <span style="font-size:12px; color:#0284c7; font-weight:700;">외국인 유학생·다문화·연수생</span>
+              <!-- 3. Global Card -->
+              <div style="background:#ffffff; border:1px solid var(--border-color); border-top:4px solid #0284c7; border-radius:10px; padding:22px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                    <div>
+                      <h4 style="font-size:18px; font-weight:900; color:var(--text-main); margin:0;">3. 글로벌 (Global)</h4>
+                      <span style="font-size:12px; color:#0284c7; font-weight:700;">외국인 유학생·다문화·연수생</span>
+                    </div>
                   </div>
+                  <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
+                    경북 관내 거주 <strong>외국인 유학생, 다문화 청년 및 개도국 초청 연수생(영남대 PSPS 등)</strong>을 모국과 경북을 연결하는 <strong>'글로벌 브릿지 코디네이터'</strong>로 매칭합니다.
+                  </p>
                 </div>
-                <p style="font-size:13.5px; color:var(--text-muted); line-height:1.65; margin-bottom:14px;">
-                  경북 관내 거주 <strong>외국인 유학생, 다문화 청년 및 개도국 초청 연수생(영남대 PSPS 등)</strong>을 모국과 경북을 연결하는 <strong>'글로벌 브릿지 코디네이터'</strong>로 매칭합니다.
-                </p>
+                <div style="background:#f0f9ff; border:1px solid #bae6fd; padding:8px 12px; border-radius:6px; font-size:12px; color:#0369a1; font-weight:700;">
+                  역할: 모국 현지화 판로 개척 & ODA 기술 이식
+                </div>
               </div>
-              <div style="background:#f0f9ff; border:1px solid #bae6fd; padding:8px 12px; border-radius:6px; font-size:12px; color:#0369a1; font-weight:700;">
-                역할: 모국 현지화 판로 개척 & ODA 기술 이식
+
+            </div>
+
+            <!-- Virtuous Loop Banner -->
+            <div style="background:linear-gradient(135deg, #006837 0%, #004d28 100%); color:#ffffff; padding:18px 24px; border-radius:8px; text-align:center; box-shadow:var(--shadow-sm);">
+              <div style="font-size:14.5px; font-weight:800; color:#86efac; margin-bottom:4px;">
+                3축 융합 무한 선순환 루프 (Virtuous Cycle)
+              </div>
+              <div style="font-size:13px; color:#f1f5f9; font-weight:600; line-height:1.5;">
+                시니어의 영농 노하우 & 자원 → 청년의 AI·디지털 창업 → 글로벌 인재의 해외 판로 개척 → 지역 소득 증대 및 청년 정주 선순환
               </div>
             </div>
 
-          </div>
-
-          <!-- Virtuous Loop Banner -->
-          <div style="background:linear-gradient(135deg, #006837 0%, #004d28 100%); color:#ffffff; padding:18px 24px; border-radius:8px; text-align:center; box-shadow:var(--shadow-sm);">
-            <div style="font-size:14.5px; font-weight:800; color:#86efac; margin-bottom:4px;">
-              3축 융합 무한 선순환 루프 (Virtuous Cycle)
-            </div>
-            <div style="font-size:13px; color:#f1f5f9; font-weight:600; line-height:1.5;">
-              시니어의 영농 노하우 & 자원 → 청년의 AI·디지털 창업 → 글로벌 인재의 해외 판로 개척 → 지역 소득 증대 및 청년 정주 선순환
-            </div>
+            <p style="font-size:12px; color:var(--text-dim); text-align:right; margin:12px 0 0 0;">
+              ※ 상기 모델은 실제 사업 추진 시 시·군별 여건에 맞추어 유연하게 변형 및 확장 적용되는 가이드라인(예시)입니다.
+            </p>
           </div>
         </div>
 

@@ -100,6 +100,24 @@ window.addEventListener('popstate', () => {
 });
 
 /* --------------------------------------------------------------------------
+   Scenario Example Accordion Toggle (사업구성 현장 적용 예시 토글)
+   -------------------------------------------------------------------------- */
+function toggleScenarioExample() {
+  const content = document.getElementById('scenario-example-content');
+  const btn = document.getElementById('scenario-toggle-btn');
+  if (!content) return;
+
+  const isHidden = content.style.display === 'none';
+  if (isHidden) {
+    content.style.display = 'block';
+    if (btn) btn.textContent = '예시 접기 ▲';
+  } else {
+    content.style.display = 'none';
+    if (btn) btn.textContent = '세부 예시 펼치기 ▼';
+  }
+}
+
+/* --------------------------------------------------------------------------
    Master Toggle All Flip Cards System
    -------------------------------------------------------------------------- */
 function toggleAllFlipCards() {
