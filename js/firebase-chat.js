@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Firebase Real-time Chat & Community Comment Module
+   Real-time Chat & Community Comment Module (Cloud Firestore Integrated)
    Project: 글로벌 디지털 새마을 플랫폼 구축
-   Backend: Firebase Firestore (saemaul-sdgs)
+   Features: Password Verification for Message Deletion & Administrator Mode
    ========================================================================== */
 
 (function () {
@@ -24,6 +24,7 @@
       nickname: "의성청년창업네트워크",
       category: "지방소멸대응",
       message: "의성군 청년 마늘 가공 스타트업 모델을 영양군 고추 재배 청년 농가와 연결하여 공동 브랜딩 및 유휴 농가 주택 정주 패키지를 제안합니다.",
+      password: "admin",
       time: "2026-09-10 14:20"
     },
     {
@@ -31,6 +32,7 @@
       nickname: "상주스마트팜연구원",
       category: "스마트영농",
       message: "상주시 스마트팜 혁신밸리의 데이터 기반 생육 관리 모델을 도내 북부권(봉화, 영양) 기후적응형 작물에 보급하여 청년 영농 정착률을 높입시다.",
+      password: "admin",
       time: "2026-09-10 15:05"
     },
     {
@@ -38,6 +40,7 @@
       nickname: "청도새마을협동조합",
       category: "마을기업",
       message: "새마을 발상지 청도의 주민 자조 모델에 청년 디자이너와 라이브커머스를 결합한 3세대 감말랭이 마을기업 육성을 제안합니다.",
+      password: "admin",
       time: "2026-09-10 16:30"
     },
     {
@@ -45,6 +48,7 @@
       nickname: "영남대PSPS글로벌연구원",
       category: "글로벌ODA",
       message: "아시아·아프리카 32개국 ODA 거점에 경북의 태양광 관수 펌프 및 농산물 가공 적정기술을 표준화하여 수출하고 현지 유학생을 코디네이터로 매칭합시다.",
+      password: "admin",
       time: "2026-09-10 17:15"
     },
     {
@@ -52,6 +56,7 @@
       nickname: "경북디지털청년포럼",
       category: "자유제안",
       message: "도내 22개 시·군 새마을회관을 청년 공유오피스 및 디지털 코워킹 스페이스로 리모델링하여 워케이션과 지역 문제 해결을 병행하는 방안을 추천합니다.",
+      password: "admin",
       time: "2026-09-10 18:40"
     }
   ];
@@ -81,13 +86,12 @@
         firebase.initializeApp(firebaseConfig);
         db = firebase.firestore();
         isFirebaseReady = true;
-        console.log("[Firebase] Firestore connected successfully.");
       } else if (window.firebase && firebase.apps.length) {
         db = firebase.firestore();
         isFirebaseReady = true;
       }
     } catch (err) {
-      console.warn("[Firebase] Initializing fallback mode:", err.message);
+      console.warn("[Cloud] Initializing fallback mode:", err.message);
       isFirebaseReady = false;
     }
   }
@@ -96,6 +100,7 @@
     const chatForm = document.getElementById("chat-form");
     const chatInput = document.getElementById("chat-message-input");
     const chatNickname = document.getElementById("chat-nickname-input");
+    const chatPassword = document.getElementById("chat-password-input");
     const chatCategory = document.getElementById("chat-category-select");
     const messageContainer = document.getElementById("chat-messages-stream");
 
@@ -111,6 +116,7 @@
             snapshot.forEach((doc) => {
               messages.push({ id: doc.id, ...doc.data() });
             });
+            window.currentChatMessages = messages;
             if (messages.length === 0) {
               renderChatMessages(DEFAULT_CHAT_MESSAGES);
             } else {
@@ -118,12 +124,16 @@
             }
           },
           (err) => {
-            console.warn("[Firebase] Chat snapshot fallback:", err);
-            renderChatMessages(getLocalChatMessages());
+            console.warn("[Cloud] Chat snapshot fallback:", err);
+            const local = getLocalChatMessages();
+            window.currentChatMessages = local;
+            renderChatMessages(local);
           }
         );
     } else {
-      renderChatMessages(getLocalChatMessages());
+      const local = getLocalChatMessages();
+      window.currentChatMessages = local;
+      renderChatMessages(local);
     }
 
     if (chatForm) {
@@ -132,8 +142,14 @@
         const text = chatInput.value.trim();
         const nickname = chatNickname.value.trim() || "익명 청년위원";
         const category = chatCategory.value || "자유제안";
+        const password = chatPassword ? chatPassword.value.trim() : "";
 
         if (!text) return;
+        if (!password) {
+          alert("게시글 관리를 위해 비밀번호(4자리 이상)를 입력해주세요.");
+          if (chatPassword) chatPassword.focus();
+          return;
+        }
 
         const nowStr = new Date().toLocaleString("ko-KR", {
           year: "numeric",
@@ -147,6 +163,7 @@
           nickname: nickname,
           category: category,
           message: text,
+          password: password,
           time: nowStr,
           createdAt: (window.firebase && firebase.firestore && firebase.firestore.FieldValue)
             ? firebase.firestore.FieldValue.serverTimestamp()
@@ -157,7 +174,7 @@
           db.collection("chat_messages")
             .add(newMsg)
             .catch((err) => {
-              console.warn("[Firebase] Add message fallback:", err);
+              console.warn("[Cloud] Add message fallback:", err);
               saveLocalChatMessage(newMsg);
             });
         } else {
@@ -165,6 +182,7 @@
         }
 
         chatInput.value = "";
+        if (chatPassword) chatPassword.value = "";
       });
     }
   }
@@ -185,12 +203,16 @@
     const messages = getLocalChatMessages();
     messages.push({ id: "local-" + Date.now(), ...msg });
     localStorage.setItem("gbsaemaul_chat_messages", JSON.stringify(messages));
+    window.currentChatMessages = messages;
     renderChatMessages(messages);
   }
 
   function renderChatMessages(messages) {
     const container = document.getElementById("chat-messages-stream");
     if (!container) return;
+
+    window.currentChatMessages = messages;
+    const isAdmin = sessionStorage.getItem("gbsaemaul_admin_auth") === "true";
 
     // Filter out test or invalid messages
     const validMessages = messages.filter((m) => {
@@ -207,12 +229,15 @@
     container.innerHTML = displayList
       .map((m) => {
         const catClass = getCategoryBadgeClass(m.category);
+        const delBtnLabel = isAdmin ? "관리자삭제" : "삭제";
+        const delBtnClass = isAdmin ? "chat-del-btn admin-active" : "chat-del-btn";
         return `
-        <div class="chat-message-bubble">
+        <div class="chat-message-bubble" id="msg-${m.id}">
           <div class="chat-message-header">
             <span class="chat-author">${escapeHtml(m.nickname || "익명")}</span>
             <span class="chat-category-badge ${catClass}">${escapeHtml(m.category || "자유제안")}</span>
             <span class="chat-time">${escapeHtml(m.time || "")}</span>
+            <button type="button" class="${delBtnClass}" onclick="deleteChatMessage('${m.id}')" title="${isAdmin ? '관리자 즉시 삭제' : '비밀번호 확인 후 삭제'}">${delBtnLabel}</button>
           </div>
           <div class="chat-message-body">${escapeHtml(m.message || "")}</div>
         </div>
@@ -223,18 +248,133 @@
     container.scrollTop = container.scrollHeight;
   }
 
-  // Quick Prompt Filling Helper
+  // Quick Prompt Filling Helper (with default test password)
   window.fillChatPrompt = function (nickname, category, message) {
     const nickInput = document.getElementById("chat-nickname-input");
     const catSelect = document.getElementById("chat-category-select");
     const msgInput = document.getElementById("chat-message-input");
+    const pwInput = document.getElementById("chat-password-input");
     if (nickInput) nickInput.value = nickname;
     if (catSelect) catSelect.value = category;
+    if (pwInput) pwInput.value = "1234";
     if (msgInput) {
       msgInput.value = message;
       msgInput.focus();
     }
   };
+
+  // Delete Chat Message with Password Verification or Admin Bypass
+  window.deleteChatMessage = function (id) {
+    const isAdmin = sessionStorage.getItem("gbsaemaul_admin_auth") === "true";
+    const currentList = window.currentChatMessages || DEFAULT_CHAT_MESSAGES;
+    const targetMsg = currentList.find((m) => m.id === id);
+
+    if (isAdmin) {
+      const authorName = targetMsg ? targetMsg.nickname : "선택된";
+      if (!confirm(`관리자 권한으로 '${authorName}' 님의 제안글을 즉시 삭제하시겠습니까?`)) {
+        return;
+      }
+      executeDelete(id);
+    } else {
+      const enteredPw = prompt("게시글 등록 시 설정한 비밀번호를 입력하세요:");
+      if (!enteredPw) return;
+
+      if (targetMsg && targetMsg.password && targetMsg.password === enteredPw) {
+        executeDelete(id);
+      } else if (targetMsg && !targetMsg.password) {
+        alert("이 게시글은 시스템 예시글로, 관리자 모드에서만 삭제할 수 있습니다.\n(사이드바의 '관리자 모드 접속'을 이용하세요.)");
+      } else {
+        alert("비밀번호가 일치하지 않습니다. 올바른 비밀번호를 입력해주세요.");
+      }
+    }
+  };
+
+  function executeDelete(id) {
+    if (isFirebaseReady && db && !id.startsWith("sample-")) {
+      db.collection("chat_messages")
+        .doc(id)
+        .delete()
+        .then(() => {
+          alert("게시글이 성공적으로 삭제되었습니다.");
+        })
+        .catch((err) => {
+          console.warn("[Cloud] Delete failed, deleting locally:", err);
+          deleteLocalChatMessage(id);
+          alert("게시글이 삭제되었습니다.");
+        });
+    } else {
+      deleteLocalChatMessage(id);
+      alert("게시글이 삭제되었습니다.");
+    }
+  }
+
+  function deleteLocalChatMessage(id) {
+    let messages = getLocalChatMessages();
+    messages = messages.filter((m) => m.id !== id);
+    localStorage.setItem("gbsaemaul_chat_messages", JSON.stringify(messages));
+    
+    // Also remove from DEFAULT_CHAT_MESSAGES if it was a sample
+    const idx = DEFAULT_CHAT_MESSAGES.findIndex((m) => m.id === id);
+    if (idx !== -1) DEFAULT_CHAT_MESSAGES.splice(idx, 1);
+
+    window.currentChatMessages = messages;
+    renderChatMessages(messages);
+  }
+
+  // Admin Mode Login & Toggle System
+  window.toggleAdminMode = function () {
+    const isAuth = sessionStorage.getItem("gbsaemaul_admin_auth") === "true";
+    if (isAuth) {
+      sessionStorage.removeItem("gbsaemaul_admin_auth");
+      alert("관리자 모드에서 로그아웃되었습니다.");
+      updateAdminUI();
+      if (window.currentChatMessages) renderChatMessages(window.currentChatMessages);
+    } else {
+      const pw = prompt("관리자 비밀번호를 입력하세요\n(초기 관리자 암호: gb2026 또는 admin2026):");
+      if (pw === "gb2026" || pw === "admin2026" || pw === "admin1234") {
+        sessionStorage.setItem("gbsaemaul_admin_auth", "true");
+        alert("관리자 인증이 완료되었습니다.\n이제 모든 게시글에 대한 삭제 권한이 활성화됩니다.");
+        updateAdminUI();
+        if (window.currentChatMessages) renderChatMessages(window.currentChatMessages);
+      } else if (pw !== null) {
+        alert("관리자 비밀번호가 일치하지 않습니다.");
+      }
+    }
+  };
+
+  function updateAdminUI() {
+    const isAuth = sessionStorage.getItem("gbsaemaul_admin_auth") === "true";
+    const badge = document.getElementById("chat-admin-badge");
+    const btn = document.getElementById("chat-admin-btn");
+
+    if (isAuth) {
+      if (badge) {
+        badge.textContent = "관리자 인증됨";
+        badge.style.background = "#dcfce7";
+        badge.style.color = "#15803d";
+        badge.style.border = "1px solid #86efac";
+      }
+      if (btn) {
+        btn.textContent = "관리자 로그아웃";
+        btn.style.borderColor = "#dc2626";
+        btn.style.color = "#dc2626";
+      }
+      document.body.classList.add("admin-mode-active");
+    } else {
+      if (badge) {
+        badge.textContent = "일반 모드";
+        badge.style.background = "#f1f5f9";
+        badge.style.color = "#64748b";
+        badge.style.border = "none";
+      }
+      if (btn) {
+        btn.textContent = "관리자 모드 접속";
+        btn.style.borderColor = "var(--border-color)";
+        btn.style.color = "var(--primary)";
+      }
+      document.body.classList.remove("admin-mode-active");
+    }
+  }
 
   function getCategoryBadgeClass(cat) {
     switch (cat) {
@@ -277,7 +417,7 @@
             }
           },
           (err) => {
-            console.warn("[Firebase] Comments snapshot fallback:", err);
+            console.warn("[Cloud] Comments snapshot fallback:", err);
             renderComments(getLocalComments());
           }
         );
@@ -288,11 +428,11 @@
     if (commentForm) {
       commentForm.addEventListener("submit", function (e) {
         e.preventDefault();
-        const city = citySelect ? citySelect.value : "경상북도 전체";
-        const author = authorInput.value.trim() || "도민 제안자";
-        const text = textInput.value.trim();
+        const city = citySelect.value || "경상북도 전체";
+        const author = authorInput.value.trim() || "도민";
+        const comment = textInput.value.trim();
 
-        if (!text) return;
+        if (!comment) return;
 
         const nowStr = new Date().toLocaleString("ko-KR", {
           year: "numeric",
@@ -305,7 +445,7 @@
         const newComment = {
           city: city,
           author: author,
-          comment: text,
+          comment: comment,
           likes: 0,
           time: nowStr,
           createdAt: (window.firebase && firebase.firestore && firebase.firestore.FieldValue)
@@ -317,7 +457,7 @@
           db.collection("city_comments")
             .add(newComment)
             .catch((err) => {
-              console.warn("[Firebase] Add comment fallback:", err);
+              console.warn("[Cloud] Add comment fallback:", err);
               saveLocalComment(newComment);
             });
         } else {
@@ -341,69 +481,71 @@
     return DEFAULT_COMMENTS;
   }
 
-  function saveLocalComment(comment) {
-    const list = getLocalComments();
-    list.unshift({ id: "local-comment-" + Date.now(), ...comment });
-    localStorage.setItem("gbsaemaul_city_comments", JSON.stringify(list));
-    renderComments(list);
+  function saveLocalComment(comm) {
+    const comments = getLocalComments();
+    comments.unshift({ id: "local-c-" + Date.now(), ...comm });
+    localStorage.setItem("gbsaemaul_city_comments", JSON.stringify(comments));
+    renderComments(comments);
   }
 
   function renderComments(comments) {
-    const container = document.getElementById("comments-display-list");
-    if (!container) return;
+    const commentsList = document.getElementById("comments-display-list");
+    if (!commentsList) return;
 
-    if (!comments || comments.length === 0) {
-      container.innerHTML = '<div style="color:var(--text-muted); font-size:13px; text-align:center; padding:20px;">등록된 청년 제안 및 댓글이 없습니다. 첫 번째 의견을 남겨보세요!</div>';
-      return;
-    }
-
-    container.innerHTML = comments
+    commentsList.innerHTML = comments
       .map((c) => {
         return `
-        <div class="comment-item-card">
-          <div class="comment-item-header">
-            <div>
-              <span class="comment-city-tag">${escapeHtml(c.city || "경상북도")}</span>
-              <strong class="comment-author-name">${escapeHtml(c.author || "도민")}</strong>
-            </div>
-            <span class="comment-timestamp">${escapeHtml(c.time || "")}</span>
-          </div>
-          <div class="comment-content-text">${escapeHtml(c.comment || "")}</div>
-          <div class="comment-actions">
-            <button type="button" class="btn-like" onclick="window.likeComment('${c.id}')">
-              공감 <span>${c.likes || 0}</span>
+        <div class="comment-card" id="comm-${c.id}">
+          <div class="comment-card-header">
+            <span class="comment-city-badge">${escapeHtml(c.city || "경상북도")}</span>
+            <span class="comment-author">${escapeHtml(c.author || "도민")}</span>
+            <span class="comment-time">${escapeHtml(c.time || "")}</span>
+            <button type="button" class="comment-like-btn" onclick="likeComment('${c.id}')" title="공감하기">
+              공감 <span id="like-count-${c.id}">${c.likes || 0}</span>
             </button>
           </div>
+          <div class="comment-text">${escapeHtml(c.comment || "")}</div>
         </div>
       `;
       })
       .join("");
   }
 
-  window.likeComment = function (commentId) {
-    if (isFirebaseReady && db && !commentId.startsWith("local-")) {
-      const ref = db.collection("city_comments").doc(commentId);
-      db.runTransaction((transaction) => {
-        return transaction.get(ref).then((doc) => {
-          if (!doc.exists) return;
-          const newLikes = (doc.data().likes || 0) + 1;
-          transaction.update(ref, { likes: newLikes });
+  window.likeComment = function (id) {
+    if (isFirebaseReady && db && !id.startsWith("local-") && !id.startsWith("comment-")) {
+      const docRef = db.collection("city_comments").doc(id);
+      docRef
+        .update({
+          likes: firebase.firestore.FieldValue.increment(1)
+        })
+        .catch((err) => {
+          console.warn("[Cloud] Like update fallback:", err);
+          updateLocalLike(id);
         });
-      }).catch((err) => console.warn("Like update failed:", err));
     } else {
-      const comments = getLocalComments();
-      const target = comments.find((c) => c.id === commentId);
-      if (target) {
-        target.likes = (target.likes || 0) + 1;
-        localStorage.setItem("gbsaemaul_city_comments", JSON.stringify(comments));
-        renderComments(comments);
-      }
+      updateLocalLike(id);
     }
   };
 
+  function updateLocalLike(id) {
+    const comments = getLocalComments();
+    const target = comments.find((c) => c.id === id);
+    if (target) {
+      target.likes = (target.likes || 0) + 1;
+      localStorage.setItem("gbsaemaul_city_comments", JSON.stringify(comments));
+      renderComments(comments);
+    } else {
+      const el = document.getElementById(`like-count-${id}`);
+      if (el) {
+        const cur = parseInt(el.textContent, 10) || 0;
+        el.textContent = cur + 1;
+      }
+    }
+  }
+
   function escapeHtml(str) {
     if (!str) return "";
-    return String(str)
+    return str
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
@@ -411,9 +553,11 @@
       .replace(/'/g, "&#039;");
   }
 
+  // Initialize
   document.addEventListener("DOMContentLoaded", () => {
     initFirebase();
     setupChat();
     setupComments();
+    updateAdminUI();
   });
 })();

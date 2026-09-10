@@ -1307,6 +1307,33 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-mono);
 }
 
+.chat-del-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+  margin-left: 6px;
+}
+
+.chat-del-btn:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #fca5a5;
+}
+
+.admin-mode-active .chat-del-btn {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #f87171;
+  font-weight: 700;
+}
+
 .chat-message-body {
   font-size: 13.5px;
   color: var(--text-main);
