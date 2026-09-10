@@ -83,7 +83,6 @@
         <li class="nav-item" data-target="map"><a onclick="switchView('map')">경북 새마을 지도</a></li>
         <li class="nav-item" data-target="chat"><a onclick="switchView('chat')">실시간 아이디어 토론방</a></li>
         <li class="nav-item" data-target="ai"><a onclick="switchView('ai')">AI 어드바이저</a></li>
-        <li class="nav-item" data-target="profile"><a onclick="switchView('profile')">기획단 프로필</a></li>
       </ul>
 
       <!-- Hamburger Button (Mobile / Narrow Screens) -->
@@ -112,7 +111,6 @@
       <li class="drawer-item" data-target="map"><a onclick="switchView('map')">경북 새마을 지도</a></li>
       <li class="drawer-item" data-target="chat"><a onclick="switchView('chat')">실시간 아이디어 토론방</a></li>
       <li class="drawer-item" data-target="ai"><a onclick="switchView('ai')">AI 어드바이저</a></li>
-      <li class="drawer-item" data-target="profile"><a onclick="switchView('profile')">기획단 프로필</a></li>
     </ul>
   </aside>
 
@@ -1012,23 +1010,27 @@
             <li><a onclick="switchView('map')">경북 새마을 지도</a></li>
             <li><a onclick="switchView('chat')">실시간 아이디어 토론방</a></li>
             <li><a onclick="switchView('ai')">AI 어드바이저</a></li>
-            <li><a onclick="switchView('profile')">기획단 프로필</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-title">기획단 안내</div>
-          <p style="color:#94a3b8; margin-bottom:6px;"> 경상북도 디지털새마을 기획단</p>
-          <p style="color:#94a3b8; margin-bottom:6px;"> 팀장 최윤진 / 박문식</p>
-          <p style="color:#94a3b8;"> </p>
+          <p style="color:#94a3b8; margin-bottom:5px; font-size:12.5px;">경상북도 디지털새마을 기획단</p>
+          <p style="color:#94a3b8; margin-bottom:8px; font-size:12.5px;">팀장 최윤진 / 전임 박문식</p>
+          <p style="margin:0;">
+            <a href="javascript:void(0)" onclick="switchView('profile')" style="color:#64748b; font-size:11.5px; text-decoration:none; opacity:0.75; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'; this.style.color='#94a3b8'" onmouseout="this.style.opacity='0.75'; this.style.color='#64748b'" title="기획단 상세 안내">
+              기획단 안내 상세 보기 →
+            </a>
+          </p>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>Copyright © 2026 경상북도 디지털새마을 기획단. All rights reserved.</div>
-        <div style="display:flex; gap:16px;">
+        <div style="display:flex; gap:16px; align-items:center;">
           <a href="javascript:void(0)" onclick="openTermsModal()" style="color:#cbd5e1; text-decoration:none; font-weight:600;">이용약관</a>
           <a href="javascript:void(0)" onclick="openPrivacyModal()" style="color:#cbd5e1; text-decoration:none; font-weight:600;">개인정보처리방침</a>
+          <a href="javascript:void(0)" onclick="switchView('profile')" style="color:#475569; text-decoration:none; font-size:11px; opacity:0.65; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'; this.style.color='#94a3b8'" onmouseout="this.style.opacity='0.65'; this.style.color='#475569'" title="기획단 안내">기획단 안내</a>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ function renderTeamProfiles() {
   if (!container || !SAEMAUL_DATA.platformInfo) return;
 
   const members = SAEMAUL_DATA.platformInfo.members;
-  let html = '<div class="profile-grid" style="display:grid; grid-template-columns:1fr 1.2fr; gap:24px; margin-bottom:40px;">';
+  let html = '<div class="profile-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; margin-bottom:40px;">';
 
   members.forEach(m => {
     const awardBadges = m.awards ? m.awards.map(a => `<div style="background:rgba(217, 119, 6, 0.1); color:var(--accent-gold); border:1px solid rgba(217, 119, 6, 0.3); padding:6px 12px; border-radius:6px; font-weight:700; font-size:12.5px; margin-bottom:6px;">${a}</div>`).join('') : '';
@@ -56,8 +56,8 @@ function renderTeamProfiles() {
         ${awardBadges}
         ${eduList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:12px 0 6px 0;">학력 사항</h4>${eduList}` : ''}
         ${careerList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">주요 활동 및 경력</h4>${careerList}` : ''}
-        ${projectList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">주요 공적개발원조(ODA) 프로젝트 수행 실적</h4>${projectList}` : ''}
-        ${footprintHtml ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">글로벌 발자취 (전 세계 5개 대륙 32개국)</h4>${footprintHtml}` : ''}
+        ${projectList ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">주요 공적개발원조(ODA) 및 글로벌 프로젝트 실적</h4>${projectList}` : ''}
+        ${footprintHtml ? `<h4 style="font-size:13.5px; font-weight:700; color:var(--primary); margin:14px 0 6px 0;">글로벌 발자취 및 협력 거점</h4>${footprintHtml}` : ''}
       </div>
     `;
 
